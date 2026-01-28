@@ -105,12 +105,13 @@ class QuestionGenerator:
 
         messages = [{"role": "user", "content": full_prompt}]
 
-        input_ids = self.tokenizer.apply_chat_template(
+        encoded = self.tokenizer.apply_chat_template(
             messages,
             tokenize=True,
             add_generation_prompt=True,
             return_tensors="pt",
-        ).to(self.device)
+        )
+        input_ids = encoded["input_ids"].to(self.device)
 
         with torch.no_grad():
             outputs = self.model.generate(

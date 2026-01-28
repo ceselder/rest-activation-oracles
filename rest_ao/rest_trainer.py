@@ -71,10 +71,12 @@ class RESTTrainer:
         set_seed(self.cfg.seed)
 
         self.tokenizer = load_tokenizer(self.cfg.model_name)
-        self.model = load_model(
+        # Load model with eager attention (no flash attention)
+        self.model = AutoModelForCausalLM.from_pretrained(
             self.cfg.model_name,
-            self.dtype,
+            torch_dtype=self.dtype,
             device_map=self.device,
+            attn_implementation="eager",
         )
 
         # Setup LoRA
