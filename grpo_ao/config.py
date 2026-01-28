@@ -35,8 +35,9 @@ class GRPOConfig:
     oracle_temperature: float = 0.9  # For diverse samples
 
     # Training settings
-    num_train_steps: int = 1000
-    checkpoint_every: int = 200
+    num_train_steps: int = 1000  # Total training steps (for true GRPO)
+    num_rounds: int = 10  # Number of rounds (for ReST-style loop)
+    checkpoint_every: int = 2  # Save checkpoint every N rounds
     batch_size: int = 8
     gradient_accumulation_steps: int = 2
     learning_rate: float = 1e-6  # Lower than SFT for RL stability

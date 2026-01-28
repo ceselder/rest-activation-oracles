@@ -325,7 +325,7 @@ class GRPOTrainer:
         Returns:
             List of (pair, responses) tuples
         """
-        print(f"GROW phase: Generating {self.cfg.samples_per_question} responses per question (batched)")
+        print(f"GROW phase: Generating {self.cfg.num_generations} responses per question (batched)")
 
         # Pre-extract all activations
         print("  Extracting activations...")
@@ -342,8 +342,8 @@ class GRPOTrainer:
         results = {i: [] for i in range(len(pairs))}
         batch_size = self.cfg.grow_batch_size
 
-        for sample_idx in range(self.cfg.samples_per_question):
-            print(f"  Sample {sample_idx + 1}/{self.cfg.samples_per_question}")
+        for sample_idx in range(self.cfg.num_generations):
+            print(f"  Sample {sample_idx + 1}/{self.cfg.num_generations}")
 
             for batch_start in tqdm(range(0, len(pairs), batch_size), desc=f"    Generating"):
                 batch_pairs = pairs[batch_start:batch_start + batch_size]
@@ -861,10 +861,10 @@ class GRPOTrainer:
         )
 
         round_num = 0
-        infinite = self.cfg.num_rest_rounds == 0
+        infinite = self.cfg.num_rounds == 0
 
-        while infinite or round_num < self.cfg.num_rest_rounds:
-            total_rounds = "∞" if infinite else self.cfg.num_rest_rounds
+        while infinite or round_num < self.cfg.num_rounds:
+            total_rounds = "∞" if infinite else self.cfg.num_rounds
             print(f"\n{'='*60}")
             print(f"GRPO Step {round_num + 1}/{total_rounds}")
             print(f"{'='*60}\n")
