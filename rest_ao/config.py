@@ -24,9 +24,9 @@ class RESTConfig:
     num_prompts: int = 10_000  # Number of prompts to use
     questions_per_prompt: int = 10  # Questions generated per prompt
     question_temperature: float = 1.75  # Very high temp for maximum question diversity
-    question_batch_size: int = 64  # Batch size for question generation (variable prompt lengths)
-    grow_batch_size: int = 64  # Batch size for GROW phase
-    judge_batch_size: int = 64  # Batch size for SCORE phase
+    question_batch_size: int = 32  # Batch size for question generation (variable prompt lengths)
+    grow_batch_size: int = 32  # Batch size for GROW phase
+    judge_batch_size: int = 32  # Batch size for SCORE phase
 
     # ReST settings
     num_rest_rounds: int = 10  # Total rounds to run
