@@ -120,6 +120,8 @@ Calibration = mean(|confidence - accuracy|) per bin → ECE
 - Question generation is unbatched (~25s/prompt, bottleneck)
 - Need to implement batched question generation like sft.py's `construct_batch()`
 
+**Important:** Classification datasets (geometry_of_truth, sst2, etc.) are for EVALUATION only, not training. The pretrained AO checkpoint was already trained on those datasets. ReST training must use novel prompts (lmsys-chat-1m) with generated questions to provide new training signal.
+
 **To run evaluation:**
 ```bash
 python evaluate.py --checkpoint checkpoints/round_2 --datasets sst2 geometry_of_truth
