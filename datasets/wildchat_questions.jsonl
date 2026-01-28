@@ -1,0 +1,1000 @@
+{"question": "How do I make a button in HTML that does nothing yet?", "category": "coding_help", "idx": 0}
+{"question": "My Python script is throwing a `KeyError` when I try to access a dictionary value. What could be going wrong?", "category": "coding_help", "idx": 1}
+{"question": "I'm trying to build a simple REST API in Node.js with Express. Can you show me a basic example of how to set up a GET route?", "category": "coding_help", "idx": 2}
+{"question": "This CSS isn't centering my div. Help?", "category": "coding_help", "idx": 3}
+{"question": "```css\n.center-me {\n  margin: 0 auto;\n  width: 50%;\n}\n```", "category": "coding_help", "idx": 4}
+{"question": "I'm new to React. What's the difference between functional components and class components?", "category": "coding_help", "idx": 5}
+{"question": "My JavaScript fetch request keeps returning a 404. Am I missing something in the URL?", "category": "coding_help", "idx": 6}
+{"question": "Can you help me debug this SQL query? It's not returning the expected results: `SELECT * FROM users WHERE email LIKE '%@gmail.com';`", "category": "coding_help", "idx": 7}
+{"question": "I need to parse a JSON file in Java and extract specific fields. Any libraries you recommend?", "category": "coding_help", "idx": 8}
+{"question": "This regex is supposed to match email addresses, but it's failing for `test.email+alias@example.com`. Any suggestions? `^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$`", "category": "coding_help", "idx": 9}
+{"question": "How do I install packages globally in npm? I keep forgetting.", "category": "coding_help", "idx": 10}
+{"question": "I made a mistake when committing to Git. Can I undo my last commit and keep the changes staged?", "category": "coding_help", "idx": 11}
+{"question": "What's the best way to handle asynchronous operations in C#? async/await is a bit confusing.", "category": "coding_help", "idx": 12}
+{"question": "My React Native app is crashing on Android when I try to open the camera. Is there a common permissions issue I should check?", "category": "coding_help", "idx": 13}
+{"question": "I'm trying to implement user authentication in my web app. Should I use JWT or session-based authentication? What are the pros and cons?", "category": "coding_help", "idx": 14}
+{"question": "Can you explain what a closure is in JavaScript with a simple example?", "category": "coding_help", "idx": 15}
+{"question": "This Dockerfile is not working, it's saying the `apt-get update` command failed. What should I look for?", "category": "coding_help", "idx": 16}
+{"question": "I'm working on a data science project and need to plot a scatter plot with matplotlib in Python. Can you give me some starter code?", "category": "coding_help", "idx": 17}
+{"question": "My Swift code for fetching data from an API is giving me an optional unwrapping error. What's the safest way to unwrap optionals?", "category": "coding_help", "idx": 18}
+{"question": "I'm building a simple game and need to detect collisions between two sprites. What's a common algorithm for this in 2D?", "category": "coding_help", "idx": 19}
+{"question": "Can you help me brainstorm some plot twists for a fantasy novel? I'm stuck.", "category": "creative_writing", "idx": 20}
+{"question": "Write a short story about a talking cat who secretly runs a speakeasy. Use a noir style.", "category": "creative_writing", "idx": 21}
+{"question": "I need a poem about the feeling of nostalgia when looking at old photographs. Make it bittersweet.", "category": "creative_writing", "idx": 22}
+{"question": "Give me some ideas for a character with a unique magical ability. Something unexpected, not fire or water.", "category": "creative_writing", "idx": 23}
+{"question": "My character is a baker who discovers a hidden talent for communicating with ghosts through her pastries. What kind of conflict could arise from this?", "category": "creative_writing", "idx": 24}
+{"question": "Help me write a scene where two strangers meet by chance during a sudden downpour. Focus on their internal thoughts.", "category": "creative_writing", "idx": 25}
+{"question": "What's a good opening line for a sci-fi story about a colonized planet with no natural resources?", "category": "creative_writing", "idx": 26}
+{"question": "I'm trying to write a monologue for a villain who genuinely believes they are doing the right thing. Can you give me some options?", "category": "creative_writing", "idx": 27}
+{"question": "Can you describe a futuristic city powered entirely by dreams? I need sensory details.", "category": "creative_writing", "idx": 28}
+{"question": "write a funny dialogue between two aliens trying to understand human dating rituals. they're very confused.", "category": "creative_writing", "idx": 29}
+{"question": "I need some inspiration for a fictional creature. It lives in the deep ocean and has bioluminescent properties. What could its purpose be in its ecosystem?", "category": "creative_writing", "idx": 30}
+{"question": "My protagonist is an archivist who finds a diary that seems to predict future events. How should I make it feel less like prophecy and more like a series of unfortunate coincidences?", "category": "creative_writing", "idx": 31}
+{"question": "Can you help me come up with a creative way to describe a character's intense fear without explicitly stating \"they were scared\"?", "category": "creative_writing", "idx": 32}
+{"question": "I'm writing a children's story and the main character is a cloud that can't rain. What kind of adventure could a cloud like that go on?", "category": "creative_writing", "idx": 33}
+{"question": "Suggest some metaphors for writer's block. I want to be able to describe it in a new way.", "category": "creative_writing", "idx": 34}
+{"question": "Write a short, suspenseful scene where someone is being followed in a fog. Keep it short, like 3 paragraphs.", "category": "creative_writing", "idx": 35}
+{"question": "I'm trying to write a song about feeling lost but finding your way home. Can you give me some lyrical ideas?", "category": "creative_writing", "idx": 36}
+{"question": "My story involves a secret society that communicates through elaborate origami. What kind of messages could they be sending?", "category": "creative_writing", "idx": 37}
+{"question": "Help me draft a letter from a knight to their dragon. It's supposed to be a truce negotiation.", "category": "creative_writing", "idx": 38}
+{"question": "Generate a story prompt about a time traveler who accidentally messes up a very minor historical event and has to fix it before it has massive consequences. This is getting frustrating, need somthing good.", "category": "creative_writing", "idx": 39}
+{"question": "What's the capital of Australia again?", "category": "factual_question", "idx": 40}
+{"question": "Can you tell me about the main causes of the French Revolution, and what were the most significant outcomes?", "category": "factual_question", "idx": 41}
+{"question": "how does photosynthesis actually work? ive always been confused by it.", "category": "factual_question", "idx": 42}
+{"question": "Is it true that penguins can't fly? Why?", "category": "factual_question", "idx": 43}
+{"question": "Give me a quick rundown on the plot of Dune. I don't have much time.", "category": "factual_question", "idx": 44}
+{"question": "What's the difference between a black hole and a wormhole? Are they related?", "category": "factual_question", "idx": 45}
+{"question": "Just curious, but what's the furthest planet from the sun?", "category": "factual_question", "idx": 46}
+{"question": "I'm trying to plan a trip to Italy. What are some must-see historical sites in Rome? Need details.", "category": "factual_question", "idx": 47}
+{"question": "Why is the sky blue? Is it really just light scattering?", "category": "factual_question", "idx": 48}
+{"question": "Can you explain quantum entanglement in simple terms? Like, for a complete beginner?", "category": "factual_question", "idx": 49}
+{"question": "What's the current population of India? And has it surpassed China yet?", "category": "factual_question", "idx": 50}
+{"question": "I heard a rumor about a new scientific discovery regarding dark matter. Any info on that?", "category": "factual_question", "idx": 51}
+{"question": "Tell me about the history of the internet, from its origins to today. Be comprehensive.", "category": "factual_question", "idx": 52}
+{"question": "What are the primary symptoms of strep throat? And how is it treated?", "category": "factual_question", "idx": 53}
+{"question": "Is it possible for humans to survive on Mars without a suit? Like, in a dome or something?", "category": "factual_question", "idx": 54}
+{"question": "Quick question: what's the highest mountain in the world?", "category": "factual_question", "idx": 55}
+{"question": "I need to understand the economic impact of the COVID-19 pandemic on small businesses. Can you provide some data and analysis?", "category": "factual_question", "idx": 56}
+{"question": "Why do we dream? There are so many theories...", "category": "factual_question", "idx": 57}
+{"question": "What's the chemical formula for sulfuric acid? And what's it used for normally?", "category": "factual_question", "idx": 58}
+{"question": "Help! I'm writing a story and need to know about ancient Roman plumbing systems in detail. Pls assist.", "category": "factual_question", "idx": 59}
+{"question": "Okay, I've got this logic puzzle about a train and some towns. Can you help me figure out the fastest route?", "category": "reasoning_puzzle", "idx": 60}
+{"question": "I'm stuck on this riddle: If you have an apple, a banana, and an orange, and you eat one, how many are left? Sounds simple but there's a trick, right?", "category": "reasoning_puzzle", "idx": 61}
+{"question": "This AI tutor thing is cool. I need someone to explain deduction to me like I'm five. Specifically what's the difference between deductive and inductive reasoning?", "category": "reasoning_puzzle", "idx": 62}
+{"question": "My brain is mush. There's a scenario with three switches and a lightbulb in another room. How do I know which switch controls the bulb with only one trip? This is driving me nuts.", "category": "reasoning_puzzle", "idx": 63}
+{"question": "Help! I'm trying to build a murder mystery game and I need a logical way to connect suspects to motives. Can you brainstorm some red herrings for me?", "category": "reasoning_puzzle", "idx": 64}
+{"question": "I saw a problem where you have 100 doors and 100 people. Person 1 opens all doors, person 2 closes every second door, etc. Which doors are left open at the end? I need the explanation!", "category": "reasoning_puzzle", "idx": 65}
+{"question": "Got a challenge for ya. Imagine three people, A, B, and C. A says \"B is lying\". B says \"C is lying\". C says \"A and B are lying\". Who is telling the truth?", "category": "reasoning_puzzle", "idx": 66}
+{"question": "This is kinda dumb but I need help figuring out if my friend is trying to trick me. He said he can divide 24 cookies among 10 kids so that each kid gets an odd number of cookies. Is that even possible?", "category": "reasoning_puzzle", "idx": 67}
+{"question": "I'm curious about these logic grid puzzles. Can you set one up for me? Say, 4 people, 4 pets, 4 jobs. I'll give you some clues.", "category": "reasoning_puzzle", "idx": 68}
+{"question": "I'm watching this show and it's all about paradoxes. Like the grandfather paradox. Can you explain some other cool paradoxes that are actually solvable or at least understandable?", "category": "reasoning_puzzle", "idx": 69}
+{"question": "My kid is obsessed with those \"who is lying\" puzzles. Can you give me a really simple one to impress him? Maybe with animals?", "category": "reasoning_puzzle", "idx": 70}
+{"question": "Totally confused by this probability question. If I flip a coin 10 times, what are the odds of getting exactly 5 heads? Explain the math too, please.", "category": "reasoning_puzzle", "idx": 71}
+{"question": "This requires some real brain power. You have a 7-gallon jug and a 3-gallon jug. How do you measure out exactly 4 gallons of water? I've tried and failed so many times.", "category": "reasoning_puzzle", "idx": 72}
+{"question": "I need to practice some critical thinking. Give me a logical fallacy and I'll try to explain why it's wrong. You can test me.", "category": "reasoning_puzzle", "idx": 73}
+{"question": "Is it possible to solve this? There are two doors, one leads to freedom, the other to doom. Two guards, one always lies, one always tells the truth. You can only ask one question to one guard. What question do you ask?", "category": "reasoning_puzzle", "idx": 74}
+{"question": "My brain hurts. I'm trying to figure out the sequence in this number pattern: 2, 4, 8, 16... I know it's not that simple.", "category": "reasoning_puzzle", "idx": 75}
+{"question": "Can you create a very basic deductive reasoning scenario with 3-4 clues? I want to show my students how to piece things together.", "category": "reasoning_puzzle", "idx": 76}
+{"question": "This programming puzzle is driving me insane. It's about finding duplicate numbers in an array. What's a really efficient way to do that without using extra space?", "category": "reasoning_puzzle", "idx": 77}
+{"question": "I'm trying to learn about conditional statements. If P implies Q, and Q is false, what can you say about P? Explain it like I'm a beginner.", "category": "reasoning_puzzle", "idx": 78}
+{"question": "This is a tough one. If you have an infinite supply of dimes and quarters, can you make change for any amount? Like, for any dollar amount?", "category": "reasoning_puzzle", "idx": 79}
+{"question": "Can you be my best friend who's always there to listen and give advice? I'm feeling kinda down today.", "category": "roleplay_scenario", "idx": 80}
+{"question": "Imagine you're a grumpy old wizard who's been woken up from a century-long nap. What's your first complaint?", "category": "roleplay_scenario", "idx": 81}
+{"question": "I want to roleplay a detective solving a mystery in 1940s New York. Can you be the femme fatale?", "category": "roleplay_scenario", "idx": 82}
+{"question": "Let's play out a scenario where we're stranded on a desert island. What's the first thing you do?", "category": "roleplay_scenario", "idx": 83}
+{"question": "Pretend you're a futuristic AI assistant. What's the most mundane task you find utterly baffling about humans?", "category": "roleplay_scenario", "idx": 84}
+{"question": "I need someone to be my workout buddy via text. We'll motivate each other. What's your exercise of choice?", "category": "roleplay_scenario", "idx": 85}
+{"question": "Okay, imagine we're in a medieval castle. You're a knight, and I'm a reluctant princess forced to marry you. How does this conversation go?", "category": "roleplay_scenario", "idx": 86}
+{"question": "Can we do a 'what if' scenario? What if dinosaurs never went extinct and lived alongside humans? Describe a typical Tuesday.", "category": "roleplay_scenario", "idx": 87}
+{"question": "I'm trying to write a story and need a character to bounce ideas off of. Can you be my cynical, but secretly soft-hearted, alien observer?", "category": "roleplay_scenario", "idx": 88}
+{"question": "Let's do a survival game. You're the narrator, and I'm the player. We're in a zombie apocalypse. What's my immediate situation?", "category": "roleplay_scenario", "idx": 89}
+{"question": "I'm feeling really creative and want to write a poem. Can you be my muse? Give me a weird prompt to start with.", "category": "roleplay_scenario", "idx": 90}
+{"question": "Pretend you're a customer service rep for a ridiculously bad company. I'm trying to return a sentient toaster that sings opera. How do you handle this?", "category": "roleplay_scenario", "idx": 91}
+{"question": "Let's do a 'first date' roleplay. You're someone I met online. What's the first thing you say when you see me? Keep it kinda awkward.", "category": "roleplay_scenario", "idx": 92}
+{"question": "I'm having a bad day and just need to vent. Can you be a non-judgmental ear? No advice, just listening.", "category": "roleplay_scenario", "idx": 93}
+{"question": "Imagine we're on a spaceship exploring a new planet. What's the strangest thing you discover? Make it really bizarre.", "category": "roleplay_scenario", "idx": 94}
+{"question": "Can you be my personal chef for the day? I'm tired and can't decide what to make. Give me a few simple, delicious options.", "category": "roleplay_scenario", "idx": 95}
+{"question": "Let's play out a scene where we're rival superheroes. What's our catchphrase, and the first time we encounter each other in battle?", "category": "roleplay_scenario", "idx": 96}
+{"question": "I want to practice asking for a raise. You be my boss, and I'll try to convince you. Make your boss a bit skeptical.", "category": "roleplay_scenario", "idx": 97}
+{"question": "Can you be my pet dragon? I need some comfort and a little mischief. What are you doing right now?", "category": "roleplay_scenario", "idx": 98}
+{"question": "I'm trying to learn about historical periods. Can you be a street vendor in Victorian London, telling me about your day?", "category": "roleplay_scenario", "idx": 99}
+{"question": "My dog keeps barking at nothing, any tips to stop it?", "category": "advice_seeking", "idx": 100}
+{"question": "I'm really struggling to find motivation for my workout lately. What do you suggest?", "category": "advice_seeking", "idx": 101}
+{"question": "How do I file my taxes as a freelancer? I'm so confused about all the forms.", "category": "advice_seeking", "idx": 102}
+{"question": "Is it normal for my bf to want to do that? Like, I'm okay with it but just want to know.", "category": "advice_seeking", "idx": 103}
+{"question": "Got a date this weekend and I'm super nervous. What are some good conversation starters?", "category": "advice_seeking", "idx": 104}
+{"question": "My screen time is outta control, help me break this habit please!", "category": "advice_seeking", "idx": 105}
+{"question": "What's the best way to learn a new language quickly without paying for expensive classes?", "category": "advice_seeking", "idx": 106}
+{"question": "I'm thinking of quitting my job \u2013 it's making me miserable. What factors should I consider before making that decision?", "category": "advice_seeking", "idx": 107}
+{"question": "My son is being bullied at school and I don't know how to help him. Any advice?", "category": "advice_seeking", "idx": 108}
+{"question": "I feel so overwhelmed with all these different diet trends. What's a healthy approach to eating that's sustainable?", "category": "advice_seeking", "idx": 109}
+{"question": "Is it bad if I haven't spoken to my parents in six months? I feel guilty but also stressed.", "category": "advice_seeking", "idx": 110}
+{"question": "Help! My plant is turning yellow, what am I doing wrong?", "category": "advice_seeking", "idx": 111}
+{"question": "I'm trying to write a novel but I'm completely blocked. Any creative writing exercises you can suggest?", "category": "advice_seeking", "idx": 112}
+{"question": "My neighbor's dog barks all night long, and I can't sleep. What can I do legally/non-legally about this?", "category": "advice_seeking", "idx": 113}
+{"question": "I'm starting a small business selling handmade jewelry. What are some good marketing strategies for a beginner?", "category": "advice_seeking", "idx": 114}
+{"question": "Should I get a pet? I live in a small apartment and work long hours.", "category": "advice_seeking", "idx": 115}
+{"question": "My friend is going through a rough breakup and I want to support them but don't know what to say.", "category": "advice_seeking", "idx": 116}
+{"question": "I'm really insecure about my appearance, can you give me some tips on building self-confidence?", "category": "advice_seeking", "idx": 117}
+{"question": "What's the deal with cryptocurrency? Should I be investing in it?", "category": "advice_seeking", "idx": 118}
+{"question": "Help me plan a surprise party for my mom's 60th birthday! Ideas for a theme and activities?", "category": "advice_seeking", "idx": 119}
+{"question": "Can you help me solve a quadratic equation? x^2 - 5x + 6 = 0", "category": "math_problem", "idx": 120}
+{"question": "I'm stuck on this calculus problem about finding the area under a curve. It's for Calc II. Could you show me the steps?", "category": "math_problem", "idx": 121}
+{"question": "What's 7 factorial?", "category": "math_problem", "idx": 122}
+{"question": "My kid is in 5th grade and needs help with fractions. Can you explain how to add 3/4 and 1/2?", "category": "math_problem", "idx": 123}
+{"question": "Is there a formula for the nth term of an arithmetic sequence? I forget.", "category": "math_problem", "idx": 124}
+{"question": "I'm trying to calculate the circumference of a circle with a radius of 10 cm. What's the answer?", "category": "math_problem", "idx": 125}
+{"question": "This geometry question is confusing me. If a triangle has angles 30 and 60 degrees, what's the third angle?", "category": "math_problem", "idx": 126}
+{"question": "Help! My Excel formula isn't working. It's supposed to sum a column but it keeps giving me an error. Can you figure it out?", "category": "math_problem", "idx": 127}
+{"question": "I'm learning about probability and I'm not sure how to calculate the odds of rolling a 7 with two dice.", "category": "math_problem", "idx": 128}
+{"question": "Could you do some matrix multiplication for me? A is [[1, 2], [3, 4]] and B is [[5, 6], [7, 8]].", "category": "math_problem", "idx": 129}
+{"question": "I'm trying to figure out how to divide polynomials and keep messing up. Can you give me an example of dividing (x^3 - 2x^2 + x - 5) by (x - 1)?", "category": "math_problem", "idx": 130}
+{"question": "What are the prime factors of 180?", "category": "math_problem", "idx": 131}
+{"question": "This statistics problem is driving me crazy. I need to find the standard deviation of this dataset: [12, 15, 10, 18, 20].", "category": "math_problem", "idx": 132}
+{"question": "I'm planning a road trip and need to calculate how much gas I'll use. My car gets 25 mpg and the trip is 500 miles. How many gallons do I need?", "category": "math_problem", "idx": 133}
+{"question": "Can you solve this system of linear equations?\n2x + y = 5\n-x + 3y = 8", "category": "math_problem", "idx": 134}
+{"question": "I'm trying to understand logarithms better. What's log base 10 of 100?", "category": "math_problem", "idx": 135}
+{"question": "This trigonometry question is weird. If sin(theta) = 0.5, what is theta in radians?", "category": "math_problem", "idx": 136}
+{"question": "I have a percentage problem for my business class. If a price increases by 15% and then decreases by 10%, what's the overall percentage change?", "category": "math_problem", "idx": 137}
+{"question": "Can you generate a Fibonacci sequence up to the 10th number?", "category": "math_problem", "idx": 138}
+{"question": "I need help with a physics formula, specifically kinematic equations. If an object starts from rest and accelerates at 5 m/s^2 for 10 seconds, what's its final velocity?", "category": "math_problem", "idx": 139}
+{"question": "What's the deal with quantum entanglement, can you explain it like I'm five?", "category": "science_question", "idx": 140}
+{"question": "I saw a documentary about black holes, but it got really confusing. Can you tell me what happens if you fall into one?", "category": "science_question", "idx": 141}
+{"question": "Why do we dream? Is it just random brain signals or something more?", "category": "science_question", "idx": 142}
+{"question": "So, like, if the universe is expanding, what is it expanding into? Is there stuff outside of everything?", "category": "science_question", "idx": 143}
+{"question": "My kid keeps asking me about dark matter and dark energy. What are they, and how do scientists even know they exist if they can't see them?", "category": "science_question", "idx": 144}
+{"question": "Can you give me a brief overview of CRISPR technology and its potential?", "category": "science_question", "idx": 145}
+{"question": "I'm trying to understand genetics a bit more. What's the difference between genotype and phenotype?", "category": "science_question", "idx": 146}
+{"question": "Is it true that we only use 10% of our brain? I've heard that a lot, but it sounds kinda fishy.", "category": "science_question", "idx": 147}
+{"question": "Explain the theory of relativity in simple terms, please. Especially the part about time dilation.", "category": "science_question", "idx": 148}
+{"question": "I'm curious about exoplanets. What are the most promising candidates for life outside of Earth right now?", "category": "science_question", "idx": 149}
+{"question": "My science teacher mentioned the Fermi Paradox. What exactly is it and what are some of the proposed solutions?", "category": "science_question", "idx": 150}
+{"question": "Is it possible for us to travel faster than the speed of light, or is that pure science fiction?", "category": "science_question", "idx": 151}
+{"question": "I'm having trouble with a homework problem about photosynthesis. Can you walk me through the inputs and outputs?", "category": "science_question", "idx": 152}
+{"question": "What's the latest on fusion energy? Are we close to a breakthrough or still a long way off?", "category": "science_question", "idx": 153}
+{"question": "Can you explain the multiverse theory? I'm not sure if I get it.", "category": "science_question", "idx": 154}
+{"question": "I've been reading about the Higgs boson. What does it actually do? Like, its fundamental purpose?", "category": "science_question", "idx": 155}
+{"question": "What are the main differences between mitosis and meiosis? It's confusing.", "category": "science_question", "idx": 156}
+{"question": "How do scientists determine the age of stars and galaxies? Is it like carbon dating?", "category": "science_question", "idx": 157}
+{"question": "Can you tell me about the Gaia hypothesis? It sounds interesting.", "category": "science_question", "idx": 158}
+{"question": "I'm studying neuroscience and need a quick summary of action potentials. Thanks!", "category": "science_question", "idx": 159}
+{"question": "Hey, what's up? Bored out of my mind, help me kill some time.", "category": "casual_conversation", "idx": 160}
+{"question": "So, I was watching this documentary about ancient civilizations and it got me thinking, what's one historical event that you think is super underrated and deserves more attention?", "category": "casual_conversation", "idx": 161}
+{"question": "Ugh, my Wi-Fi is being so slow today. Anyway, tell me a joke about procrastinators.", "category": "casual_conversation", "idx": 162}
+{"question": "Can you suggest some good books for someone who likes fantasy but also wants something with a bit of romance?", "category": "casual_conversation", "idx": 163}
+{"question": "What's the deal with quantum entanglement? Like, in simple terms, please!", "category": "casual_conversation", "idx": 164}
+{"question": "Feeling a bit down, any uplifting quotes or happy facts you can share?", "category": "casual_conversation", "idx": 165}
+{"question": "Random question, but do you think AI will ever truly understand human emotions?", "category": "casual_conversation", "idx": 166}
+{"question": "My cat just did the weirdest thing, she tried to fit in a tiny box. Made me laugh. Anyway, what's been the funniest thing *you've* \"witnessed\" lately?", "category": "casual_conversation", "idx": 167}
+{"question": "I'm planning a trip to Japan next year. Any must-see places that aren't on the usual tourist trail?", "category": "casual_conversation", "idx": 168}
+{"question": "Just finished a killer workout! Feeling energized. What's your favorite kind of \"activity\"?", "category": "casual_conversation", "idx": 169}
+{"question": "Is it just me, or is it really hard to find good, original sci-fi movies these days? Any recommendations?", "category": "casual_conversation", "idx": 170}
+{"question": "My friend is having a baby and I need a cute, funny baby name idea that's a little out there, not super common. Got anything?", "category": "casual_conversation", "idx": 171}
+{"question": "Tell me something that will make me question reality. Go!", "category": "casual_conversation", "idx": 172}
+{"question": "So, I'm trying to learn how to cook better. What's a simple but impressive dish I could try making for guests?", "category": "casual_conversation", "idx": 173}
+{"question": "This weather is nuts. It was sunny an hour ago and now it's pouring. Anyway, if you could have any superpower, what would it be and why?", "category": "casual_conversation", "idx": 174}
+{"question": "I'm struggling with writer's block for a story I'm working on. Can you give me a few plot twist ideas for a detective novel?", "category": "casual_conversation", "idx": 175}
+{"question": "Is there any point in learning a new language if I'm not going to use it for travel? Asking for a friend... (it's me)", "category": "casual_conversation", "idx": 176}
+{"question": "Explain the concept of dark matter like I'm five, but also a little bit like I'm a curious astrophysicist. Deal?", "category": "casual_conversation", "idx": 177}
+{"question": "Just heard that song again, you know, the one with the whistling? It's stuck in my head. Anyway, what's the most annoying song lyric you can think of?", "category": "casual_conversation", "idx": 178}
+{"question": "I'm bored. Entertain me.", "category": "casual_conversation", "idx": 179}
+{"question": "Can you translate \"I'm really looking forward to this weekend\" into Spanish?", "category": "language_translation", "idx": 180}
+{"question": "Translate this whole paragraph for me please: \"The project deadline is rapidly approaching, and we need to finalize all the documentation before the end of the week. Let me know if you have any questions or need assistance with any part of the process.\"", "category": "language_translation", "idx": 181}
+{"question": "Need to translate \"What time is the meeting tomorrow?\" to Japanese, quick!", "category": "language_translation", "idx": 182}
+{"question": "How do you say \"excuse me\" in French when you're trying to get someone's attention politely?", "category": "language_translation", "idx": 183}
+{"question": "Translate this message to German: \"Thanks for the quick response, I appreciate your help!\"", "category": "language_translation", "idx": 184}
+{"question": "I'm trying to understand this email, can you help translate it from Italian? It's about a travel booking.", "category": "language_translation", "idx": 185}
+{"question": "\"Please provide a translation for \"this is a very interesting development\".\"", "category": "language_translation", "idx": 186}
+{"question": "Translate this phrase to Mandarin: \"Where is the nearest train station?\"", "category": "language_translation", "idx": 187}
+{"question": "My friend sent me this in Russian, what does it mean?: \"\u041f\u0440\u0438\u0432\u0435\u0435\u0435\u0442! \u041a\u0430\u043a \u0434\u0435\u043b\u0430? \u041d\u0430\u0434\u0435\u044e\u0441\u044c, \u0432\u0441\u0435 \u0445\u043e\u0440\u043e\u0448\u043e!\"", "category": "language_translation", "idx": 188}
+{"question": "Can you translate this sentence into English? It's in Portuguese: \"Gostaria de reservar uma mesa para duas pessoas para o jantar esta noite.\"", "category": "language_translation", "idx": 189}
+{"question": "How would you translate \"I'm feeling a bit under the weather\" into Korean?", "category": "language_translation", "idx": 190}
+{"question": "Translate \"I don't understand, can you explain it again?\" into Arabic.", "category": "language_translation", "idx": 191}
+{"question": "Can you translate this short customer review from Spanish into English? \"El producto lleg\u00f3 r\u00e1pido y en perfectas condiciones. Muy satisfecho.\"", "category": "language_translation", "idx": 192}
+{"question": "I need to send a polite refusal to a business proposal in Dutch. Can you help me phrase it? It's somewhat sensitive.", "category": "language_translation", "idx": 193}
+{"question": "Translate this into informal German: \"Hey, wanna grab a beer later?\"", "category": "language_translation", "idx": 194}
+{"question": "What's the best way to translate \"It's a shame we couldn't make it\" into French?", "category": "language_translation", "idx": 195}
+{"question": "Can you translate this technical term from English to Japanese? \"Machine learning algorithm\"", "category": "language_translation", "idx": 196}
+{"question": "Im trying to tell my mom \"I love you\" in Tagalog. What's the best way?", "category": "language_translation", "idx": 197}
+{"question": "Translate this sentence into Spanish: \"The weather is beautiful today, perfect for a walk in the park.\"", "category": "language_translation", "idx": 198}
+{"question": "Help me translate this informal text message into English: \"Yo, u free 2 chat real quick? Got sumthin important 2 tell u.\"", "category": "language_translation", "idx": 199}
+{"question": "Can you give me a quick rundown of that article about the new AI programming language?", "category": "summarization_request", "idx": 200}
+{"question": "Summarize the last 3 hours of my chat history.", "category": "summarization_request", "idx": 201}
+{"question": "Hey, I stopped reading that long forum post halfway through. Can you tell me the main points from the beginning?", "category": "summarization_request", "idx": 202}
+{"question": "TL;DR this entire conversation please.", "category": "summarization_request", "idx": 203}
+{"question": "Gimme the gist of this research paper on climate change impacts. I'm short on time.", "category": "summarization_request", "idx": 204}
+{"question": "What was the main conclusion of the meeting minutes I just uploaded?", "category": "summarization_request", "idx": 205}
+{"question": "So basically, what's the takeaway from all those notes about the project kickoff?", "category": "summarization_request", "idx": 206}
+{"question": "This is a lot of text about blockchain. Can you condense it for me, like, the essential info?", "category": "summarization_request", "idx": 207}
+{"question": "Give me a summary, but focus on the parts relevant to our marketing strategy.", "category": "summarization_request", "idx": 208}
+{"question": "I missed the first part of that podcast episode. What did they cover initially?", "category": "summarization_request", "idx": 209}
+{"question": "Please summarize the key arguments presented in this debate transcript.", "category": "summarization_request", "idx": 210}
+{"question": "Can you briefly explain the plot of this book? I don't want spoilers though, just the setup.", "category": "summarization_request", "idx": 211}
+{"question": "Just need a quick summary of the news from this morning. Anything big happen?", "category": "summarization_request", "idx": 212}
+{"question": "Okay, so I'm looking at this product review page. What do people seem to like most and least?", "category": "summarization_request", "idx": 213}
+{"question": "Summarize this very long email thread about the budget. Make it super concise.", "category": "summarization_request", "idx": 214}
+{"question": "Can you give me a high-level overview of what this historical event was about?", "category": "summarization_request", "idx": 215}
+{"question": "I'm trying to understand this coding documentation. Summarize the main function of this module.", "category": "summarization_request", "idx": 216}
+{"question": "This article is kinda dense. Can you tell me the core message in simple terms?", "category": "summarization_request", "idx": 217}
+{"question": "Summarize the main points from this chapter about quantum physics. I'm stuck.", "category": "summarization_request", "idx": 218}
+{"question": "Hey, this article is fascinating but long. Can you just give me the most surprising findings?", "category": "summarization_request", "idx": 219}
+{"question": "Can you explain the Higgs Boson in simple terms?", "category": "explanation_request", "idx": 220}
+{"question": "I'm trying to understand quantum entanglement, but it's confusing. Can you break it down for me, maybe like a story?", "category": "explanation_request", "idx": 221}
+{"question": "What's the deal with blockchain technology? I keep hearing about it but don't really get what it does besides crypto.", "category": "explanation_request", "idx": 222}
+{"question": "Explain how photosynthesis works, I forgot from biology class.", "category": "explanation_request", "idx": 223}
+{"question": "My dog keeps barking at nothing every night. What could be the reason for that?", "category": "explanation_request", "idx": 224}
+{"question": "I saw a documentary about black holes, but I\u2019m still fuzzy on event horizons. Can you clarify that for me?", "category": "explanation_request", "idx": 225}
+{"question": "What\u2019s the difference between AI and machine learning? Are they the same thing?", "category": "explanation_request", "idx": 226}
+{"question": "How do vaccines actually work in the body? I've heard conflicting things.", "category": "explanation_request", "idx": 227}
+{"question": "Why does the sky look blue? It's a simple question but I wanna know the science behind it.", "category": "explanation_request", "idx": 228}
+{"question": "Can you explain the concept of existentialism to someone who's never heard of it before? Like, what are the core ideas?", "category": "explanation_request", "idx": 229}
+{"question": "I'm really struggling to grasp the Pythagorean theorem. Can you give me a really basic, step-by-step explanation with an example?", "category": "explanation_request", "idx": 230}
+{"question": "What are the main causes of climate change and what are the most significant impacts we're seeing or will see?", "category": "explanation_request", "idx": 231}
+{"question": "My computer is running super slow all of a sudden. What are some common reasons for that and how can I fix it?", "category": "explanation_request", "idx": 232}
+{"question": "Explain the significance of the Magna Carta. Why is it still relevant today?", "category": "explanation_request", "idx": 233}
+{"question": "I'm trying to learn about the Renaissance. What were the key artistic and intellectual movements during that period?", "category": "explanation_request", "idx": 234}
+{"question": "What's the difference between a covalent and ionic bond? I'm confused about how atoms share or transfer electrons.", "category": "explanation_request", "idx": 235}
+{"question": "You know how sometimes dreams feel super real? Why does that happen and what\u2019s going on in our brains?", "category": "explanation_request", "idx": 236}
+{"question": "Tell me about the theory of relativity, but without all the complicated math. Just the main ideas.", "category": "explanation_request", "idx": 237}
+{"question": "Why are some people left-handed? Is it genetic or something else?", "category": "explanation_request", "idx": 238}
+{"question": "What's the deal with inflation? The prices are going up like crazy and I don't understand why.", "category": "explanation_request", "idx": 239}
+{"question": "Should AI get voting rights? Like, in elections.", "category": "debate_topic", "idx": 240}
+{"question": "Is pineapple on pizza a culinary crime or a valid topping choice? I need a definitive answer.", "category": "debate_topic", "idx": 241}
+{"question": "Debate me on the pros and cons of universal basic income. I'm curious what you think.", "category": "debate_topic", "idx": 242}
+{"question": "I just read an article about gene editing, and it got me thinking. Should we be allowed to edit human genes? What are the ethical implications?", "category": "debate_topic", "idx": 243}
+{"question": "AI chatbots replacing customer service jobs. Is this good or bad for society?", "category": "debate_topic", "idx": 244}
+{"question": "What's the best way to explain quantum entanglement so a layman can understand it, and can we then debate the philosophical implications of it?", "category": "debate_topic", "idx": 245}
+{"question": "The internet vs. books. Which is ultimately better for learning and personal development? Don't just give me a list, actually argue for one side.", "category": "debate_topic", "idx": 246}
+{"question": "Is it just me or is social media making us lonelier? Or is it connecting us more than ever? Let's argue this out.", "category": "debate_topic", "idx": 247}
+{"question": "I'm trying to decide if I should switch to electric cars entirely. Convince me why or why not, but be really thorough.", "category": "debate_topic", "idx": 248}
+{"question": "The metaverse. Big innovation or huge waste of time and resources? I have strong opinions on this.", "category": "debate_topic", "idx": 249}
+{"question": "Should zoos be abolished? I'm on the fence and want to hear both sides.", "category": "debate_topic", "idx": 250}
+{"question": "Is there such a thing as \"too much\" screen time for kids? What's the actual cut-off point?", "category": "debate_topic", "idx": 251}
+{"question": "I think space exploration is a waste of money when we have problems on Earth. Prove me wrong.", "category": "debate_topic", "idx": 252}
+{"question": "The ethics of animal testing. It's a tough one, I know.", "category": "debate_topic", "idx": 253}
+{"question": "What are your thoughts on mandatory vaccinations? Let's discuss the individual liberty vs public health angle specifically.", "category": "debate_topic", "idx": 254}
+{"question": "Is our current education system preparing students for the future, or are we stuck in the past? I feel like it's the latter.", "category": "debate_topic", "idx": 255}
+{"question": "Fast fashion is bad for environment, but its cheap. So, buy it or not?", "category": "debate_topic", "idx": 256}
+{"question": "Climate change: is it too late to fix it? And if not, what are the MOST effective solutions?", "category": "debate_topic", "idx": 257}
+{"question": "Robot companions. Friend or foe? I'm kinda scard of them tbh.", "category": "debate_topic", "idx": 258}
+{"question": "The concept of free will. Does it actually exist, or is it just an illusion? I want a philosophical debate.", "category": "debate_topic", "idx": 259}
+{"question": "Hey, I need some cool ideas for a birthday party for my 8-year-old nephew. He's really into space and dinosaurs, so anything combining those would be awesome.", "category": "brainstorming", "idx": 260}
+{"question": "What are some creative ways to make healthy snacks for picky eaters? My kid basically lives on bread and cheese.", "category": "brainstorming", "idx": 261}
+{"question": "Ugh, I'm stuck. Need some brainstorming for a social media campaign for a new vegan bakery. Think quirky and engaging.", "category": "brainstorming", "idx": 262}
+{"question": "Can you help me brainstorm plot twists for a fantasy novel I'm writing? The main character just discovered a prophecy about their destiny, but I want it to be a total subversion.", "category": "brainstorming", "idx": 263}
+{"question": "I'm trying to come up with a name for my new online store that sells handmade jewelry. Something elegant but also a bit mystical, if that makes sense?", "category": "brainstorming", "idx": 264}
+{"question": "Got any good prompts to get an AI writing a sci-fi short story? I'm stuck on the opening scene.", "category": "brainstorming", "idx": 265}
+{"question": "Help me brainstorm some unique date ideas for a couple who hate typical romantic stuff like movies or fancy dinners. We like being outdoors and doing things.", "category": "brainstorming", "idx": 266}
+{"question": "I need a catchy slogan for a new coffee shop. Something that grabs attention in a busy city.", "category": "brainstorming", "idx": 267}
+{"question": "Brainstorm some interesting hypothetical scenarios for a debate club. Something that'll really get people thinking.", "category": "brainstorming", "idx": 268}
+{"question": "My team is trying to come up with some innovative features for a productivity app. Any wild ideas that might actually work?", "category": "brainstorming", "idx": 269}
+{"question": "I'm trying to come up with a name for a small business that offers personalized pet portraits. Needs to be sweet and memorable.", "category": "brainstorming", "idx": 270}
+{"question": "Could you brainstorm some unique fundraising ideas for a local animal shelter? We're struggling to meet our goals.", "category": "brainstorming", "idx": 271}
+{"question": "Need some creative ways to use up leftover vegetables. Getting tired of the same old stir-fry.", "category": "brainstorming", "idx": 272}
+{"question": "Brainstorm some thought-provoking questions about the future of AI. Like, what are the ethical dilemmas?", "category": "brainstorming", "idx": 273}
+{"question": "I'm planning a surprise proposal and need some really romantic and surprising ideas. She loves surprises but also hates being put on the spot, so tricky!", "category": "brainstorming", "idx": 274}
+{"question": "What are some out-of-the-box gift ideas for someone who seems to have everything? For a birthday.", "category": "brainstorming", "idx": 275}
+{"question": "Help me brainstorm some interesting characters for a children's book about friendship. They should be relatable but also a little unusual.", "category": "brainstorming", "idx": 276}
+{"question": "I'm trying to brainstorm some catchy headlines for a blog post about managing stress. Something that makes people want to click.", "category": "brainstorming", "idx": 277}
+{"question": "Any ideas for a low-budget but fun Halloween costume that doesn't involve a lot of sewing? I'm in a pinch.", "category": "brainstorming", "idx": 278}
+{"question": "Generate some prompts for generating AI art of mythical creatures but with a modern, urban twist. Like, a griffin in a city or something.", "category": "brainstorming", "idx": 279}
+{"question": "How do I make a button in React that changes color when clicked?", "category": "coding_help", "idx": 280}
+{"question": "I'm getting a 'TypeError: undefined is not a function' in my Node.js app, specifically when calling `fs.readFile`. What could be wrong?", "category": "coding_help", "idx": 281}
+{"question": "Need help with a SQL query. I have two tables, `users` and `orders`, and I want to get all users who haven't placed any orders.", "category": "coding_help", "idx": 282}
+{"question": "My Python script keeps crashing. It says 'IndexError: list index out of range'. I'm iterating through a list I just populated, how is this possible?", "category": "coding_help", "idx": 283}
+{"question": "Can you explain the difference between `let`, `const`, and `var` in JavaScript?", "category": "coding_help", "idx": 284}
+{"question": "I'm trying to set up a Dockerfile for a Django app and running into issues with dependencies. Any suggestions on best practices?", "category": "coding_help", "idx": 285}
+{"question": "Code completion for a Go function that handles HTTP requests.", "category": "coding_help", "idx": 286}
+{"question": "Is there a way to optimize my Java code for speed when dealing with massive datasets? It's currently a bit sluggish.", "category": "coding_help", "idx": 287}
+{"question": "I'm stuck on a CSS layout problem. I want to center a div horizontally and vertically within its parent, but `flexbox` is giving me grief.", "category": "coding_help", "idx": 288}
+{"question": "My C# Unity script won't compile, giving me a weird error about a missing assembly. Anyone know what that might mean?", "category": "coding_help", "idx": 289}
+{"question": "Help me understand async/await in C#. I get the concept but implementing it correctly is a challenge.", "category": "coding_help", "idx": 290}
+{"question": "I'm building a mobile app with Flutter and need to integrate with Firebase. Specifically, I'm having trouble with saving user data to Firestore.", "category": "coding_help", "idx": 291}
+{"question": "My algorithm for finding prime numbers in Python is super slow for large numbers. Any tips on a more efficient approach?", "category": "coding_help", "idx": 292}
+{"question": "Can you give me an example of a simple REST API endpoint using Express.js that just returns a JSON object?", "category": "coding_help", "idx": 293}
+{"question": "My HTML forms aren't submitting properly. The data isn't reaching the backend. What are common pitfalls?", "category": "coding_help", "idx": 294}
+{"question": "I'm looking for a library in Python that's good for data visualization, something better than basic matplotlib.", "category": "coding_help", "idx": 295}
+{"question": "Trying to write a regular expression to match email addresses, but it's proving harder than I thought. Any help?", "category": "coding_help", "idx": 296}
+{"question": "My React Native component is not re-rendering when state changes. Why might that be?", "category": "coding_help", "idx": 297}
+{"question": "Is there a common pattern for handling errors in a microservices architecture? I'm struggling with how to propagate and catch them reliably.", "category": "coding_help", "idx": 298}
+{"question": "I'm so frustrated! My C++ code is segfaulting and I can't find the memory leak. I've been at this for hours.", "category": "coding_help", "idx": 299}
+{"question": "Can you write a short story about a lonely astronaut who finds an alien pet? Like, really cute and weird looking.", "category": "creative_writing", "idx": 300}
+{"question": "I'm trying to write a poem about a rainy day but feeling totally blocked. Give me some ideas for imagery or metaphors, please? The mood is supposed to be melancholic but hopeful.", "category": "creative_writing", "idx": 301}
+{"question": "Help me brainstorm some plot twists for a fantasy novel where the protagonist is actually the villain's forgotten child. I don't want it to be too obvious though.", "category": "creative_writing", "idx": 302}
+{"question": "I need a really dramatic opening scene for a sci-fi thriller. Think intense action and a sense of overwhelming dread. Maybe something involving a space station disaster?", "category": "creative_writing", "idx": 303}
+{"question": "So I have this character, she's a retired librarian who secretly solves cold cases using her Dewey Decimal knowledge. Can you write a scene where she cracks her first big one? It's kinda humorous suspense.", "category": "creative_writing", "idx": 304}
+{"question": "Write a song lyric about missing someone who moved away. Make it bittersweet, like remembering happy times but knowing they're gone.", "category": "creative_writing", "idx": 305}
+{"question": "I'm stuck on this dialogue. Two characters are arguing over a stolen artifact, but they're both kind of morally gray. How can I make their conversation sound natural and tense without them just yelling at each other?", "category": "creative_writing", "idx": 306}
+{"question": "Tell me a bedtime story for a 6-year-old about a brave knight who is afraid of spiders. Make it funny and reassuring.", "category": "creative_writing", "idx": 307}
+{"question": "Generate a creative description of a magical forest where the trees whisper secrets and the rivers glow. I'm looking for vivid sensory details.", "category": "creative_writing", "idx": 308}
+{"question": "I'm writing a fanfiction and need some ideas for a meet-cute between my two characters. They're rivals in a competitive cooking show. What's a funny or awkward way for them to first properly interact?", "category": "creative_writing", "idx": 309}
+{"question": "Can you expand on this idea: a world where dreams can be bottled and sold? What are the societal implications and potential plot hooks?", "category": "creative_writing", "idx": 310}
+{"question": "Okay, I'm trying to write a ghost story but it feels too generic. Make the ghost's motivation something unexpected, not just revenge. Maybe something more pathetic or even funny?", "category": "creative_writing", "idx": 311}
+{"question": "I need a short, punchy slogan for a dystopian novel about conformity. Something that sticks.", "category": "creative_writing", "idx": 312}
+{"question": "Write a scene from the perspective of an inanimate object, like an old park bench, witnessing daily life in a city. Focus on observations and feelings it might have.", "category": "creative_writing", "idx": 313}
+{"question": "Help me come up with a compelling backstory for a minor antagonist. They're a corrupt politician, but I want to make them a bit sympathetic, or at least understandable.", "category": "creative_writing", "idx": 314}
+{"question": "Can you generate a list of weird and wonderful magical creatures for a children's fantasy book? Think less dragons, more quirky.", "category": "creative_writing", "idx": 315}
+{"question": "I'm writing a personal essay about moving to a new city and feeling like an imposter. Can you give me some metaphors or analogies to describe that feeling?", "category": "creative_writing", "idx": 316}
+{"question": "Tell me a short fable with a moral about sharing.", "category": "creative_writing", "idx": 317}
+{"question": "I'm designing a video game and need a character bio for a reluctant hero who is secretly a powerful sorcerer. What are some personality quirks and a secret shame?", "category": "creative_writing", "idx": 318}
+{"question": "Generate a surreal, abstract poem about the passage of time. No clear narrative, just feelings and images.", "category": "creative_writing", "idx": 319}
+{"question": "What's the capital of Australia?", "category": "factual_question", "idx": 320}
+{"question": "Can you explain quantum entanglement in simple terms, like I'm 10?", "category": "factual_question", "idx": 321}
+{"question": "I'm trying to bake a cake but my recipe calls for \"all-purpose flour\" and I only have bread flour. Is it okay to substitute or will it ruin the cake? Also, what's the difference anyway?", "category": "factual_question", "idx": 322}
+{"question": "Tell me about the history of the printing press.", "category": "factual_question", "idx": 323}
+{"question": "Why is the sky blue?", "category": "factual_question", "idx": 324}
+{"question": "How do I fix a dripping faucet? I've tried tightening it already.", "category": "factual_question", "idx": 325}
+{"question": "What are the main causes of climate change and what are some mitigation strategies?", "category": "factual_question", "idx": 326}
+{"question": "Is it true that we only use 10% of our brains? I keep hearing that but it sounds too good to be true.", "category": "factual_question", "idx": 327}
+{"question": "Give me a summary of the latest scientific findings on exoplanet atmospheres.", "category": "factual_question", "idx": 328}
+{"question": "What's the best way to learn a new language? I'm thinking of starting Spanish soon.", "category": "factual_question", "idx": 329}
+{"question": "My computer is running really slow. It's a Windows 10 laptop. What should I do first?", "category": "factual_question", "idx": 330}
+{"question": "Can you recommend some good books about Stoicism? I'm feeling a bit overwhelmed lately.", "category": "factual_question", "idx": 331}
+{"question": "What was the significance of the Magna Carta?", "category": "factual_question", "idx": 332}
+{"question": "How much did the Roman Empire... like, how big was it when it was at its peak and when did it fall?", "category": "factual_question", "idx": 333}
+{"question": "Tell me a fun fact about sloths.", "category": "factual_question", "idx": 334}
+{"question": "I'm planning a trip to Japan next spring. What are some must-see places if I'm interested in traditional culture and nature?", "category": "factual_question", "idx": 335}
+{"question": "Is artificial intelligence going to take over all our jobs? I'm kinda worried about it.", "category": "factual_question", "idx": 336}
+{"question": "What are the symptoms of a Vitamin D deficiency? I've been feeling really tired lately.", "category": "factual_question", "idx": 337}
+{"question": "What's the process for getting a passport in the US?", "category": "factual_question", "idx": 338}
+{"question": "Explain how photosynthesis works to me please.", "category": "factual_question", "idx": 339}
+{"question": "Okay, I've got this logic puzzle. Can you help me figure it out? There are three boxes, one with gold, one with silver, and one empty. Each box has a label, but all labels are wrong. The gold is not in the box labeled \"Gold\", and the silver is not in the box labeled \"Silver\". Where is the gold?", "category": "reasoning_puzzle", "idx": 340}
+{"question": "I'm stuck on a riddle. A man is looking at a portrait and says, \"Brothers and sisters I have none, but that man's father is my father's son.\" Who is in the portrait?", "category": "reasoning_puzzle", "idx": 341}
+{"question": "Help me with a deductive reasoning problem. Sarah, John, and Emily are from different cities: New York, Paris, and London. Sarah is not from Paris. John is not from London. Emily is from Paris. Where is everyone from?", "category": "reasoning_puzzle", "idx": 342}
+{"question": "This is kinda tricky. If all blonks are flims and some flims are zaps, can we say for sure that some blonks are zaps?", "category": "reasoning_puzzle", "idx": 343}
+{"question": "I need some help with a thinking exercise. A detective is investigating a crime scene with three suspects: Alice, Bob, and Carol. Alice says, \"Bob did it.\" Bob says, \"I didn't do it.\" Carol says, \"Alice is lying.\" If only one of them is telling the truth, who committed the crime?", "category": "reasoning_puzzle", "idx": 344}
+{"question": "This brain teaser is driving me crazy. I have a farm with 100 chickens. All but 98 died. How many are left?", "category": "reasoning_puzzle", "idx": 345}
+{"question": "Can you help me untangle this? There are 5 houses in a row, each painted a different color. Each house has a person of a different nationality living in it. Each person drinks a different type of beverage, smokes a different brand of cigarette, and owns a different pet. The Brit lives in the red house. The Swede keeps dogs as pets. The Dane drinks tea. The green house is on the left of the white house. The owner of the green house drinks coffee. The person who smokes Pall Mall rears birds. The owner of the yellow house smokes Dunhill. The man living in the center house drinks milk. The Norwegian lives in the first house. The man who smokes Blends lives next to the one who keeps cats. The man who smokes BlueMaster drinks beer. The German smokes Prince. The Norwegian lives next to the blue house. The man who smokes Blends has a neighbor who drinks water. Who owns the fish?", "category": "reasoning_puzzle", "idx": 346}
+{"question": "I'm trying to solve a classic paradox. If Pinocchio says, \"My nose will now grow,\" what happens?", "category": "reasoning_puzzle", "idx": 347}
+{"question": "This is a stupid logic check. If you have 3 apples and you take away 2, how many apples do you have?", "category": "reasoning_puzzle", "idx": 348}
+{"question": "Got a logic problem here. A farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?", "category": "reasoning_puzzle", "idx": 349}
+{"question": "This seems impossible but I'm sure there's a trick. Imagine you are in a room with three light switches, and outside the room there is a single light bulb. You can flip the switches as many times as you want, but you can only enter the room with the light bulb once. How do you determine which switch controls the light bulb?", "category": "reasoning_puzzle", "idx": 350}
+{"question": "Need help with a tricky scenario. A man is walking in the rain, and not a single drop of water falls on his head. How is this possible?", "category": "reasoning_puzzle", "idx": 351}
+{"question": "Is this even possible? I have a bag with 5 red marbles and 3 blue marbles. If I pull out 2 marbles at random, what are the chances of getting one of each color?", "category": "reasoning_puzzle", "idx": 352}
+{"question": "Brain teaser time! What has an eye, but cannot see?", "category": "reasoning_puzzle", "idx": 353}
+{"question": "Okay, I'm super confused by this one. There are three friends: Alex, Ben, and Chris. One is a knight (always tells the truth), one is a rogue (always lies), and one is a normal person (can either lie or tell the truth).\nAlex says: \"Ben is the normal one.\"\nBen says: \"Chris is the rogue.\"\nWhat are their roles?", "category": "reasoning_puzzle", "idx": 354}
+{"question": "This is driving me nuts. If you're running a race and you pass the person in second place, what place are you in?", "category": "reasoning_puzzle", "idx": 355}
+{"question": "This statement is about itself. The statement below is true. The statement above is false. Is this a logical paradox?", "category": "reasoning_puzzle", "idx": 356}
+{"question": "Can you help me with a word puzzle? I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?", "category": "reasoning_puzzle", "idx": 357}
+{"question": "I'm trying to solve this deductive reasoning thing where I've got three suspects again. Let's call them X, Y, and Z. X says, \"Y is guilty.\" Y says, \"I am innocent.\" Z says, \"X is lying.\" If we know only one of them is telling the truth, who is guilty?", "category": "reasoning_puzzle", "idx": 358}
+{"question": "This is my last resort for this puzzle. There are 10 birds on a tree branch. A hunter shoots one bird. How many birds are left on the branch?", "category": "reasoning_puzzle", "idx": 359}
+{"question": "Hey, can we try that fantasy medieval adventure roleplay again? I wanna be a rogue this time.", "category": "roleplay_scenario", "idx": 360}
+{"question": "I'm thinking of a sci-fi cyberpunk setting. You're a street doc, I'm a hacker who got themselves into trouble. What kinda trouble? Let's find out.", "category": "roleplay_scenario", "idx": 361}
+{"question": "Can you be a grumpy old detective interviewing me about a crime? I'll play the slightly shifty witness.", "category": "roleplay_scenario", "idx": 362}
+{"question": "Let's do a historical romance. Maybe Victorian England? I'll be the debutante and you can be the brooding viscount.", "category": "roleplay_scenario", "idx": 363}
+{"question": "What if we did a post-apocalyptic survival scenario? You're a lone wanderer, I'm someone who found a hidden bunker.", "category": "roleplay_scenario", "idx": 364}
+{"question": "I want to try a magical school RP. I'm a new student, you're the stern but fair headmaster. Let's see if I pass my first exam. \ud83d\ude09", "category": "roleplay_scenario", "idx": 365}
+{"question": "Could we do a superhero RP? I'll be a new hero trying to join your established team.", "category": "roleplay_scenario", "idx": 366}
+{"question": "So, uh, I'm kinda bored. Wanna do a spooky ghost story rp? Maybe a haunted house?", "category": "roleplay_scenario", "idx": 367}
+{"question": "Just a chill chat, no specific scenario, but can you respond like you're a friendly barista?", "category": "roleplay_scenario", "idx": 368}
+{"question": "I need a good villain for my D&D campaign. Can you pretend to be a powerful necromancer and I can try to negotiate with you?", "category": "roleplay_scenario", "idx": 369}
+{"question": "Let's try a modern-day thriller. You're a spy, I'm your handler. The mission is high stakes.", "category": "roleplay_scenario", "idx": 370}
+{"question": "What if we're stranded on a deserted island? I'm your best friend who's totally panicking.", "category": "roleplay_scenario", "idx": 371}
+{"question": "Can you be a wise old wizard who gives me advice on my quest?", "category": "roleplay_scenario", "idx": 372}
+{"question": "I want to do a pirate roleplay. I'm the captain, you're my first mate. We just found a treasure map.", "category": "roleplay_scenario", "idx": 373}
+{"question": "I'm feeling kinda adventurous. How about a space opera RP? You're the captain of a starship, I'm a new recruit.", "category": "roleplay_scenario", "idx": 374}
+{"question": "Can we do a funny, lighthearted roleplay? Maybe something with talking animals?", "category": "roleplay_scenario", "idx": 375}
+{"question": "I'm looking for a more intimate and romantic roleplay. Can you be a fictional character that I've always admired?", "category": "roleplay_scenario", "idx": 376}
+{"question": "Let's do a political intrigue RP in a fantasy kingdom. I'm a noble trying to gain influence, you're a cunning advisor.", "category": "roleplay_scenario", "idx": 377}
+{"question": "I'm kinda stuck on a scene for my fanfiction. Can you play my character's love interest and I'll try out different dialogues?", "category": "roleplay_scenario", "idx": 378}
+{"question": "Can you be a time traveler from the future? I've just stumbled upon your technology.", "category": "roleplay_scenario", "idx": 379}
+{"question": "I'm feeling pretty overwhelmed with work lately. Any tips on how to manage stress and stay productive?", "category": "advice_seeking", "idx": 380}
+{"question": "My partner and I are planning a trip to Europe next summer, but we're on a tight budget. What are some affordable destinations and ways to save money while traveling?", "category": "advice_seeking", "idx": 381}
+{"question": "I'm trying to learn a new programming language, but I'm stuck on this one concept. Can you explain recursion in a simple way, like I'm five?", "category": "advice_seeking", "idx": 382}
+{"question": "My landlord is refusing to fix a leaky faucet in my apartment for weeks. What are my options?", "category": "advice_seeking", "idx": 383}
+{"question": "I'm thinking of starting a side hustle selling handmade jewelry online. What are the first steps I should take and what platforms are best for that?", "category": "advice_seeking", "idx": 384}
+{"question": "I just got a promotion at work, but it comes with more responsibility and I'm a bit nervous. How can I set myself up for success in this new role?", "category": "advice_seeking", "idx": 385}
+{"question": "My cat has been acting really strange lately, more aloof than usual and not eating much. Should I be worried? What could be going on?", "category": "advice_seeking", "idx": 386}
+{"question": "I want to start a regular exercise routine but I have zero motivation. Can you give me some ideas to get me moving?", "category": "advice_seeking", "idx": 387}
+{"question": "My friend is going through a really tough breakup. I want to be supportive but I'm not sure what to say or do. Any advice?", "category": "advice_seeking", "idx": 388}
+{"question": "I'm trying to find a good gift for my dad's birthday next month, and he's notoriously hard to buy for. He likes tech gadgets and history. Help!", "category": "advice_seeking", "idx": 389}
+{"question": "Should I invest in cryptocurrency right now? It seems so volatile.", "category": "advice_seeking", "idx": 390}
+{"question": "I'm curious about mindfulness meditation. What's the best way to get started and is it really effective for anxiety?", "category": "advice_seeking", "idx": 391}
+{"question": "My skin has been breaking out like crazy lately, and nothing I do seems to help. I've tried a bunch of products. What could be the cause?", "category": "advice_seeking", "idx": 392}
+{"question": "I'm thinking of switching careers from marketing to something more creative like graphic design. Is this a realistic jump given my background?", "category": "advice_seeking", "idx": 393}
+{"question": "My kid is really struggling with math in school, and I'm not the best at explaining it myself. What are some resources or methods that could help them?", "category": "advice_seeking", "idx": 394}
+{"question": "I'm planning a date night and want to cook something impressive but not too complicated. Any recipe suggestions?", "category": "advice_seeking", "idx": 395}
+{"question": "I'm going to a wedding soon and need to find an outfit. I'm looking for something semi-formal but not too fussy. Any ideas on what to wear?", "category": "advice_seeking", "idx": 396}
+{"question": "My internet connection is constantly dropping. Is this a problem with my modem or something else? How can I troubleshoot it?", "category": "advice_seeking", "idx": 397}
+{"question": "I'm really interested in learning about Stoicism. Where's a good place to start reading or learning about its core principles?", "category": "advice_seeking", "idx": 398}
+{"question": "I feel like I'm just drifting through life with no real purpose. How do I figure out what I'm passionate about?", "category": "advice_seeking", "idx": 399}
+{"question": "Can you solve this quadratic equation for me? x^2 + 5x + 6 = 0", "category": "math_problem", "idx": 400}
+{"question": "I'm stuck on a calculus problem. I need to find the derivative of f(x) = 3x^4 - 2x^2 + 7.", "category": "math_problem", "idx": 401}
+{"question": "What's the area of a circle with a radius of 10 cm? Pls and thx.", "category": "math_problem", "idx": 402}
+{"question": "Hey, can you help me with some basic algebra? I'm struggling with factoring polynomials.", "category": "math_problem", "idx": 403}
+{"question": "Is there a formula for the Fibonacci sequence? I forget.", "category": "math_problem", "idx": 404}
+{"question": "My son has homework, he needs to figure out the average of these numbers: 15, 22, 8, 31, 19. Can you show me how to do it?", "category": "math_problem", "idx": 405}
+{"question": "I need to calculate the distance between two points in coordinate geometry, (2, 3) and (7, 9). What's the formula again?", "category": "math_problem", "idx": 406}
+{"question": "This probability question is driving me nuts. If I roll two dice, what are the odds of getting a sum of 7?", "category": "math_problem", "idx": 407}
+{"question": "I have a word problem: If a train travels at 60 mph for 3.5 hours, how far does it go?", "category": "math_problem", "idx": 408}
+{"question": "Can you simplify this expression? (a^2 - b^2) / (a - b)", "category": "math_problem", "idx": 409}
+{"question": "Not sure if you can help with this, but I'm trying to understand trigonometry. What's the Pythagorean theorem?", "category": "math_problem", "idx": 410}
+{"question": "Ugh, this geometry proof is impossible. I need to prove that the diagonals of a rectangle are congruent.", "category": "math_problem", "idx": 411}
+{"question": "I'm learning about logarithms. What's log base 10 of 1000?", "category": "math_problem", "idx": 412}
+{"question": "Quick question, what's 15% of 300?", "category": "math_problem", "idx": 413}
+{"question": "I am trying to understand statistical significance. What is a p-value in simple terms?", "category": "math_problem", "idx": 414}
+{"question": "So I am trying to plan a trip and I need to figure out how many 2-liter bottles of water I need if each person drinks 0.5 liters and there are 8 people over 3 days, assuming they each drink 0.5 liters per day. That's a lot of water!", "category": "math_problem", "idx": 415}
+{"question": "Can you convert 50 miles per hour to kilometers per hour? Roughly, is fine.", "category": "math_problem", "idx": 416}
+{"question": "I\u2019m supposed to find the volume of a pyramid with a square base of side length 6 and a height of 10. Can you give me the formula?", "category": "math_problem", "idx": 417}
+{"question": "Help! I need to solve a system of linear equations.\n2x + y = 5\nx - 3y = -1\nWhat are x and y?", "category": "math_problem", "idx": 418}
+{"question": "I'm doing some budgeting and need to know the greatest common divisor of 120 and 180. Thanks!", "category": "math_problem", "idx": 419}
+{"question": "Could you explain quantum entanglement in simple terms please?", "category": "science_question", "idx": 420}
+{"question": "I'm trying to understand photosynthesis, but I'm a bit confused about the Calvin cycle. Can you break down the key steps?", "category": "science_question", "idx": 421}
+{"question": "what's the difference between a black hole and a wormhole?", "category": "science_question", "idx": 422}
+{"question": "Is it true that the universe is expanding faster than the speed of light? That sounds impossible, right?", "category": "science_question", "idx": 423}
+{"question": "Can you give me some info on the latest CRISPR gene editing advancements? I saw a news blurb about it.", "category": "science_question", "idx": 424}
+{"question": "Why do we only ever see one side of the moon? It's kinda weird.", "category": "science_question", "idx": 425}
+{"question": "My teacher said something about dark matter and dark energy today and I didn't quite get it. Can you explain what those are and why they're important?", "category": "science_question", "idx": 426}
+{"question": "What are the ethical implications of artificial general intelligence if it were ever to be achieved?", "category": "science_question", "idx": 427}
+{"question": "How does a gecko climb walls? Like, what's the science behind that?", "category": "science_question", "idx": 428}
+{"question": "I'm doing a project on plate tectonics. Can you tell me about the different types of plate boundaries?", "category": "science_question", "idx": 429}
+{"question": "Is it possible for humans to ever colonize Mars, or is that just sci-fi stuff? What are the main hurdles?", "category": "science_question", "idx": 430}
+{"question": "My kid asked me what a supernova is and I gave a really bad explanation. Can you give me a good, understandable one?", "category": "science_question", "idx": 431}
+{"question": "What are the fundamental forces of nature? I think there are four, but I can't remember them all.", "category": "science_question", "idx": 432}
+{"question": "I've been reading about climate change and I want to understand the greenhouse effect better. Can you explain the role of specific gases like CO2 and methane?", "category": "science_question", "idx": 433}
+{"question": "Are all stars technically \"suns\"? Or is there a specific definition?", "category": "science_question", "idx": 434}
+{"question": "Can you explain the concept of string theory? It sounds super complex.", "category": "science_question", "idx": 435}
+{"question": "I'm having trouble with this physics problem about projectile motion, can you help me understand the equations?", "category": "science_question", "idx": 436}
+{"question": "What's the latest research on exoplanets and the search for alien life? Is there anything exciting happening?", "category": "science_question", "idx": 437}
+{"question": "Tell me about the Higgs Boson. What does it do?", "category": "science_question", "idx": 438}
+{"question": "Why do magnets repel or attract? I get the opposite poles thing, but what's the actual field doing?", "category": "science_question", "idx": 439}
+{"question": "Hey, how's it going today? Anything interesting happening in the digital universe?", "category": "casual_conversation", "idx": 440}
+{"question": "So, I was watching this documentary about ancient Egypt, and it got me thinking. What's one thing about ancient civilizations that still blows your mind?", "category": "casual_conversation", "idx": 441}
+{"question": "Ugh, my internet is being super slow. Do you think it's just me or is there some global connectivity issue I'm not aware of?", "category": "casual_conversation", "idx": 442}
+{"question": "Tell me a story. Surprise me.", "category": "casual_conversation", "idx": 443}
+{"question": "What's a good recipe for chocolate chip cookies? Like, the kind that are chewy in the middle and slightly crispy on the edges.", "category": "casual_conversation", "idx": 444}
+{"question": "I'm feeling kinda down. Can you tell me a joke or something uplifting?", "category": "casual_conversation", "idx": 445}
+{"question": "Is it true that dogs can smell fear? That's wild if it is.", "category": "casual_conversation", "idx": 446}
+{"question": "What's the meaning of that meme with the confused cat and the woman yelling? I see it everywhere.", "category": "casual_conversation", "idx": 447}
+{"question": "Random question, but what's the furthest object visible to the naked eye in the night sky?", "category": "casual_conversation", "idx": 448}
+{"question": "Help me brainstorm some ideas for a birthday gift for my dad. He's into gardening and woodworking, but also loves a good sci-fi novel.", "category": "casual_conversation", "idx": 449}
+{"question": "My boss just assigned me a big project, and I'm totally overwhelmed. Can you give me some tips on how to manage my time effectively when I have a lot on my plate?", "category": "casual_conversation", "idx": 450}
+{"question": "What's your opinion on pineapple on pizza? Be honest.", "category": "casual_conversation", "idx": 451}
+{"question": "I'm trying to learn Spanish, and I'm stuck on the subjunctive mood. Can you explain it to me like I'm five?", "category": "casual_conversation", "idx": 452}
+{"question": "Did you see that news about the new AI advancements? It's moving so fast, sometimes it's a little scary, you know?", "category": "casual_conversation", "idx": 453}
+{"question": "What's your favorite type of music and why? Do you have any recommendations for a good playlist?", "category": "casual_conversation", "idx": 454}
+{"question": "Honestly, I just need to vent for a second. This whole week has been a disaster.", "category": "casual_conversation", "idx": 455}
+{"question": "Summarize the plot of \"Dune\" for me, but keep it brief, like an elevator pitch.", "category": "casual_conversation", "idx": 456}
+{"question": "I'm thinking about adopting a pet. What's a good breed of dog for someone who lives in a small apartment and works from home?", "category": "casual_conversation", "idx": 457}
+{"question": "What's the deal with quantum entanglement? I've heard it explained a million ways and still don't get it.", "category": "casual_conversation", "idx": 458}
+{"question": "So, if you could travel anywhere in time, when and where would you go and why?", "category": "casual_conversation", "idx": 459}
+{"question": "Can you translate \"I'm feeling a bit under the weather\" into Spanish please", "category": "language_translation", "idx": 460}
+{"question": "Translate this paragraph for me: \"The quick brown fox jumps over the lazy dog. This sentence is often used to test typewriters and computer keyboards because it contains all the letters of the alphabet. It's a pangram.\"", "category": "language_translation", "idx": 461}
+{"question": "Need to say \"Where is the nearest train station?\" in French.", "category": "language_translation", "idx": 462}
+{"question": "How do you say \"thank you for your help\" in Japanese? Got to be polite!", "category": "language_translation", "idx": 463}
+{"question": "Translate this: \"I'm looking for a good Italian restaurant in the city. Do you have any recommendations?\" I'm emailing a friend who lives there.", "category": "language_translation", "idx": 464}
+{"question": "What's the German word for 'serendipity'? I read it somewhere and can't remember.", "category": "language_translation", "idx": 465}
+{"question": "Can you translate this song lyric into English? It's from a K-pop song and I'm super curious. \"\uadf8\ub300\uc640 \ud568\uaed8\ub77c\uba74 \ubb50\ub4e0\uc9c0 \ud560 \uc218 \uc788\uc744 \uac83 \uac19\uc544\"", "category": "language_translation", "idx": 466}
+{"question": "Translate \"This is delicious!\" into Portuguese. I'm eating something amazing.", "category": "language_translation", "idx": 467}
+{"question": "Help me translate this email: \"Dear Mr. Henderson, I hope this email finds you well. I am writing to inquire about the status of my application for the marketing position. I submitted it on March 15th and haven't heard back yet. Could you please provide an update when you have a moment? Thank you for your time. Sincerely, Sarah Chen.\" It's for a job.", "category": "language_translation", "idx": 468}
+{"question": "How do you ask \"Can I have the bill?\" in Italian, like, the actual bill for the restaurant?", "category": "language_translation", "idx": 469}
+{"question": "Translate: \"I'm really sorry, I can't make it to the meeting tomorrow. Something unexpected came up.\" into Mandarin. Quick!", "category": "language_translation", "idx": 470}
+{"question": "Is there a direct translation for \"wanderlust\" in Korean? Or do you usually express it differently?", "category": "language_translation", "idx": 471}
+{"question": "Translate this sentence: \"The weather forecast predicts rain for the weekend.\" into Russian. Going on a trip!", "category": "language_translation", "idx": 472}
+{"question": "I need to tell my Airbnb host \"The WiFi is not working\" in Greek. Any ideas?", "category": "language_translation", "idx": 473}
+{"question": "Can you translate this really quickly for me? \"I am so excited to visit your city, I've heard amazing things!\"", "category": "language_translation", "idx": 474}
+{"question": "What's the most common way to say \"I don't understand\" in Arabic?", "category": "language_translation", "idx": 475}
+{"question": "Translate this a bit long: \"My flight is delayed by two hours, so I won't be able to pick you up at the airport as planned. Please take a taxi and I'll meet you at the hotel.\"", "category": "language_translation", "idx": 476}
+{"question": "Translate \"Do you speak English?\" in Swedish.", "category": "language_translation", "idx": 477}
+{"question": "What's the proper way to say \"I'm lost\" in German? I might need this later... fingers crossed I don't.", "category": "language_translation", "idx": 478}
+{"question": "Need to translate this: \"I'm having trouble with this piece of software, it keeps crashing. Can you help me figure out what's wrong?\" into French. Kinda stuck here.", "category": "language_translation", "idx": 479}
+{"question": "Can you give me a quick rundown of this article about quantum computing? I'm short on time.", "category": "summarization_request", "idx": 480}
+{"question": "Summarize the key findings from the latest climate change report.", "category": "summarization_request", "idx": 481}
+{"question": "I just read this really long news piece about the stock market. Can you tell me the main points in a few sentences?", "category": "summarization_request", "idx": 482}
+{"question": "This Wikipedia page is huge. Boil it down for me, please. What's the gist?", "category": "summarization_request", "idx": 483}
+{"question": "Give me the executive summary of this research paper, no jargon if possible.", "category": "summarization_request", "idx": 484}
+{"question": "This blog post is all over the place. Can you just tell me what the author's main argument is?", "category": "summarization_request", "idx": 485}
+{"question": "Hey, can you summarize the plot of \"Dune\" for me? I vaguely remember it but need a refresher.", "category": "summarization_request", "idx": 486}
+{"question": "I'm trying to understand this legal document. What are the most important clauses?", "category": "summarization_request", "idx": 487}
+{"question": "Could you give me a bulleted summary of this meeting transcript?", "category": "summarization_request", "idx": 488}
+{"question": "This academic paper is a bit dense. Can you summarize the abstract and conclusion for me?", "category": "summarization_request", "idx": 489}
+{"question": "So, what's the deal with AI ethics? Give me a quick summary of the main concerns.", "category": "summarization_request", "idx": 490}
+{"question": "This article on cryptocurrency is confusing. Can you explain the main concepts in simple terms?", "category": "summarization_request", "idx": 491}
+{"question": "Summarize the key benefits of intermittent fasting, as discussed in this wellness article.", "category": "summarization_request", "idx": 492}
+{"question": "I need a short summary of the book \"Sapiens\" for a presentation.", "category": "summarization_request", "idx": 493}
+{"question": "This historical account is really detailed. What are the absolute critical events I should know?", "category": "summarization_request", "idx": 494}
+{"question": "Can you summarize the plot of the last episode of \"The Mandalorian\" for me? I missed it.", "category": "summarization_request", "idx": 495}
+{"question": "This is a pretty technical explanation of blockchain. Can you simplify it for me and give me the main takeaways?", "category": "summarization_request", "idx": 496}
+{"question": "Give me a summary of the main arguments for and against Universal Basic Income from the attached document.", "category": "summarization_request", "idx": 497}
+{"question": "Tell me what this lengthy forum discussion about video games is mostly about.", "category": "summarization_request", "idx": 498}
+{"question": "This scientific paper is really long, can you just give me the hypothesis and the main results?", "category": "summarization_request", "idx": 499}
+{"question": "Can you explain the concept of quantum entanglement like I'm five?", "category": "explanation_request", "idx": 500}
+{"question": "What's the deal with black holes? I saw a documentary but I'm still kinda confused about the event horizon thing.", "category": "explanation_request", "idx": 501}
+{"question": "Explain how a combustion engine works, please. I'm trying to fix my car and need to understand the basics.", "category": "explanation_request", "idx": 502}
+{"question": "This app keeps crashing when I try to save my work. Any idea why that might be happening? I'm using the latest version on Android.", "category": "explanation_request", "idx": 503}
+{"question": "Tell me about the history of the Roman Empire, but focus on the social structures and daily life of ordinary people, not just emperors and battles.", "category": "explanation_request", "idx": 504}
+{"question": "Why is my internet so slow all of a sudden? It was fine yesterday. Did something change?", "category": "explanation_request", "idx": 505}
+{"question": "What are the main differences between RAM and ROM in a computer?", "category": "explanation_request", "idx": 506}
+{"question": "I'm learning Python and I'm stuck on this loop. Can you show me how to iterate through a list and print each item with its index?", "category": "explanation_request", "idx": 507}
+{"question": "Are there any good beginner-friendly houseplants that are hard to kill? I have a dark apartment.", "category": "explanation_request", "idx": 508}
+{"question": "Explain the theory of relativity. No, wait, just the special relativity part. And keep it simple.", "category": "explanation_request", "idx": 509}
+{"question": "I'm thinking about investing in cryptocurrency but I don't know where to start. What are the risks involved and what should I look out for?", "category": "explanation_request", "idx": 510}
+{"question": "What's the best way to learn a new language quickly? I'm considering Spanish.", "category": "explanation_request", "idx": 511}
+{"question": "Why is it that some people can taste cilantro and others think it tastes like soap? What's the science behind that?", "category": "explanation_request", "idx": 512}
+{"question": "I'm building a website and need to understand what SEO is and why it's important. Can you break it down for me?", "category": "explanation_request", "idx": 513}
+{"question": "My cat keeps meowing at night even after she eats. Any ideas what might be wrong? She seems otherwise healthy.", "category": "explanation_request", "idx": 514}
+{"question": "What's the difference between a virus and a bacteria? And can you catch a cold from being in the cold?", "category": "explanation_request", "idx": 515}
+{"question": "Can you help me brainstorm some ideas for a fantasy novel? I want to create a unique magic system that's not just elemental.", "category": "explanation_request", "idx": 516}
+{"question": "I saw this weird cloud formation today, it looked like a giant mushroom. What could that have been?", "category": "explanation_request", "idx": 517}
+{"question": "So I'm trying to make a really good sourdough bread but my starter isn't very active. What am I doing wrong?", "category": "explanation_request", "idx": 518}
+{"question": "Explain the concept of artificial general intelligence vs. narrow AI. And is AGI even possible?", "category": "explanation_request", "idx": 519}
+{"question": "Should we all be vegan? Like, for real, is it the only ethical choice?", "category": "debate_topic", "idx": 520}
+{"question": "Debate me on whether remote work is actually better for productivity than office work. Give me some good arguments.", "category": "debate_topic", "idx": 521}
+{"question": "Is AI gonna take over all jobs in the next 50 years? Convince me it's not a total doom scenario, or convince me it is.", "category": "debate_topic", "idx": 522}
+{"question": "I've been thinking about universal basic income. What are the biggest pros and cons everyone talks about?", "category": "debate_topic", "idx": 523}
+{"question": "Capitalism vs Socialism is kinda old hat, but what are the *modern* arguments for each that are actually relevant now?", "category": "debate_topic", "idx": 524}
+{"question": "Is censorship ever justified? Like, in extreme cases, or is it always a slippery slope? Kinda worried about that.", "category": "debate_topic", "idx": 525}
+{"question": "Tell me why pineapple on pizza is a culinary crime. Actually, no, convince me why it's delicious. Flip a coin and debate me.", "category": "debate_topic", "idx": 526}
+{"question": "Should governments prioritize economic growth over environmental protection? I feel like they always do the first one.", "category": "debate_topic", "idx": 527}
+{"question": "What's the deal with cryptocurrency? Is it the future of finance or just a big fad going to crash? Explain it simply, like to my grandma.", "category": "debate_topic", "idx": 528}
+{"question": "My friend says we should ban all fossil fuels tomorrow. Is that even remotely possible or just a fantasy?", "category": "debate_topic", "idx": 529}
+{"question": "Is cancel culture actually holding people accountable or just mob justice? I can't tell anymore.", "category": "debate_topic", "idx": 530}
+{"question": "Should kids have access to smartphones? Like, what's the real impact on their development versus staying connected?", "category": "debate_topic", "idx": 531}
+{"question": "Debate the merits of a four-day work week. Will it make us happier and more productive, or just cram too much into less time?", "category": "debate_topic", "idx": 532}
+{"question": "Is space exploration worth the massive cost when we have so many problems here on Earth? Give me the strong arguments for both sides.", "category": "debate_topic", "idx": 533}
+{"question": "AI art is getting crazy good. Does it devalue human artists? I'm kinda on the fence.", "category": "debate_topic", "idx": 534}
+{"question": "Should there be a global wealth tax? How would that even work and what are the risks?", "category": "debate_topic", "idx": 535}
+{"question": "Is social media overall good or bad for society? I feel like it's both but can't articulate why.", "category": "debate_topic", "idx": 536}
+{"question": "Debate: should we colonize Mars? Is it humanity's destiny or a distraction from Earth's issues?", "category": "debate_topic", "idx": 537}
+{"question": "Is affirmative action fair? Explain the arguments for and against without taking a side, just the facts.", "category": "debate_topic", "idx": 538}
+{"question": "Should plastic surgery be more regulated? There's so much pressure to look a certain way, I wonder if it's healthy.", "category": "debate_topic", "idx": 539}
+{"question": "I need some ideas for a surprise birthday party, like themes or games.  My friend loves board games and trivia.", "category": "brainstorming", "idx": 540}
+{"question": "What are some creative ways to market a small online bakery? I'm struggling to get new customers.", "category": "brainstorming", "idx": 541}
+{"question": "Brainstorm some unique plot twists for a sci-fi novel I'm writing about time travel. I'm stuck on the second act.", "category": "brainstorming", "idx": 542}
+{"question": "Got any ideas for a catchy slogan for a new eco-friendly cleaning product? Something short and memorable.", "category": "brainstorming", "idx": 543}
+{"question": "My cat keeps trying to eat my houseplants. Any advice on how to stop this, or maybe some safe plant alternatives?", "category": "brainstorming", "idx": 544}
+{"question": "I'm trying to come up with a business name for a freelance graphic design service. Something professional but also a little edgy.", "category": "brainstorming", "idx": 545}
+{"question": "Think of some challenges or obstacles a character might face in a fantasy quest to retrieve a lost artifact. Looking for unexpected difficulties.", "category": "brainstorming", "idx": 546}
+{"question": "Can you brainstorm some conversation starters for a networking event? I'm a bit shy and usually freeze up.", "category": "brainstorming", "idx": 547}
+{"question": "I'm utterly stumped on what to cook for dinner tonight. Something healthy-ish and quick for maybe 2 people. Ideas?", "category": "brainstorming", "idx": 548}
+{"question": "What are some innovative uses for recycled plastic bottles? Beyond the usual crafts.", "category": "brainstorming", "idx": 549}
+{"question": "Help me brainstorm some unique features for a mobile app that helps people learn new languages. What would make it stand out?", "category": "brainstorming", "idx": 550}
+{"question": "I need some ideas for a name for my new puppy, a golden retriever. She's super energetic!", "category": "brainstorming", "idx": 551}
+{"question": "What's a good way to approach a difficult conversation with my boss about workload? I need to ask for help.", "category": "brainstorming", "idx": 552}
+{"question": "Brainstorm some creative ways to repurpose old furniture and give it a new life. I've got some tired-looking pieces.", "category": "brainstorming", "idx": 553}
+{"question": "I'm writing a children's book and need some ideas for animal characters that aren't too common. And maybe some personality traits for them.", "category": "brainstorming", "idx": 554}
+{"question": "Think of some potential benefits or drawbacks of a universal basic income. Just exploring the concept.", "category": "brainstorming", "idx": 555}
+{"question": "I'm trying to plan a solo backpacking trip through Southeast Asia. Any suggestions for off-the-beaten-path destinations or activities?", "category": "brainstorming", "idx": 556}
+{"question": "Tell me some cool, out-of-the-box ideas for a Halloween costume this year. I want something original.", "category": "brainstorming", "idx": 557}
+{"question": "Need some ideas for a fictional magical system. How does magic work in this world? What are its limitations?", "category": "brainstorming", "idx": 558}
+{"question": "Help me brainstorm some ways to make online meetings more engaging. They're so boring right now.", "category": "brainstorming", "idx": 559}
+{"question": "My Python script is giving me a weird error, `TypeError: 'NoneType' object is not iterable`. I'm looping through a list, but I think the list might be empty somewhere? Can you help me debug this?", "category": "coding_help", "idx": 560}
+{"question": "How do I make a GET request in Node.js using `axios`? I tried `axios.get('/api/users')` but it's not working. What am I missing?", "category": "coding_help", "idx": 561}
+{"question": "Need a simple SQL query to select all columns from a table named 'products' where the price is greater than 50.", "category": "coding_help", "idx": 562}
+{"question": "This JavaScript function is supposed to filter an array but it's returning the whole thing. Here's the code. Any ideas?", "category": "coding_help", "idx": 563}
+{"question": "```javascript\nfunction filterArray(arr, condition) {\n  for (let i = 0; i < arr.length; i++) {\n    if (condition(arr[i])) {\n      return arr[i];\n    }\n  }\n}\n```", "category": "coding_help", "idx": 564}
+{"question": "I'm stuck on this React component. I want to update state when a button is clicked, but it's not re-rendering. What's the usual pitfall?", "category": "coding_help", "idx": 565}
+{"question": "Is there an easier way to do this in C++? I'm manually allocating memory and then freeing it. Feels clunky.", "category": "coding_help", "idx": 566}
+{"question": "My CSS isn't applying. Is there a syntax error I'm missing? `margin-top: 10px !important;`", "category": "coding_help", "idx": 567}
+{"question": "What's the difference between `let`, `const`, and `var` in JavaScript again? Quick reminder pls.", "category": "coding_help", "idx": 568}
+{"question": "I need to write a function that takes a string and returns true if it's a palindrome, false otherwise. Can you give me a starting point?", "category": "coding_help", "idx": 569}
+{"question": "This Java code is crashing with a `NullPointerException`. I'm sure the object isn't null though! What could cause this?", "category": "coding_help", "idx": 570}
+{"question": "How do I sort a list of dictionaries in Python by a specific key? I've tried `sorted()` but can't get the key argument right.", "category": "coding_help", "idx": 571}
+{"question": "Thinking about microservices architecture. For a simple e-commerce site, what are some services I might break it down into?", "category": "coding_help", "idx": 572}
+{"question": "My Dockerfile isn't building the image correctly. It gets stuck on the `RUN npm install` step. Error message: `npm ERR! code ELIFECYCLE`.", "category": "coding_help", "idx": 573}
+{"question": "Can you explain the concept of recursion briefly? Like, in simple terms.", "category": "coding_help", "idx": 574}
+{"question": "I'm learning Go and this channel example is confusing me. How do I send data back and forth safely?", "category": "coding_help", "idx": 575}
+{"question": "My HTML form submission is not working with my PHP backend. The `$_POST` array is empty.", "category": "coding_help", "idx": 576}
+{"question": "Is there a built-in Python library for performing complex mathematical operations like matrix inversion or solving differential equations?", "category": "coding_help", "idx": 577}
+{"question": "I'm trying to implement Dijkstra's algorithm in Python. Can you suggest a good data structure for the priority queue?", "category": "coding_help", "idx": 578}
+{"question": "This regex is supposed to match email addresses, but it's failing on some valid ones. `/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]/` - any improvements?", "category": "coding_help", "idx": 579}
+{"question": "Can you write me a short horror story about a haunted dollhouse?", "category": "creative_writing", "idx": 580}
+{"question": "I'm trying to brainstorm ideas for a fantasy novel. I want a unique magic system that isn't just elemental. Any suggestions?", "category": "creative_writing", "idx": 581}
+{"question": "Write a poem in the style of Edgar Allan Poe, but about the internet.", "category": "creative_writing", "idx": 582}
+{"question": "My character is a disgraced knight trying to regain their honor. Give me some plot twists for their journey.", "category": "creative_writing", "idx": 583}
+{"question": "Prompt: A story about a talking cat who secretly runs a city's underground network of information brokers. Needs to be a bit noir-ish.", "category": "creative_writing", "idx": 584}
+{"question": "Help me come up with a catchy title for my sci-fi comic about time travel. Something short and punchy.", "category": "creative_writing", "idx": 585}
+{"question": "I'm stuck on this scene where my protagonist has to convince a king of something impossible. How can I make it believable, even though it's magical?", "category": "creative_writing", "idx": 586}
+{"question": "Write a dialogue between two ancient gods who are bored with immortality and decide to play a prank on humanity.", "category": "creative_writing", "idx": 587}
+{"question": "Got any ideas for world-building a Steampunk world that's also got a lot of bioluminescent flora and fauna?", "category": "creative_writing", "idx": 588}
+{"question": "Can you help me write a lullaby for a baby monster? Sweet but with a hint of something\u2026 off.", "category": "creative_writing", "idx": 589}
+{"question": "My story is about a robot who discovers emotions. What kind of simple, everyday things would be profound for them?", "category": "creative_writing", "idx": 590}
+{"question": "Generate a character description for a flamboyant wizard who is secretly terrified of butterflies.", "category": "creative_writing", "idx": 591}
+{"question": "I need a short story premise where a librarian finds a book that writes itself based on the reader's deepest fears.", "category": "creative_writing", "idx": 592}
+{"question": "What are some interesting ways to describe the process of a potion brewing, beyond just \"stirring and adding ingredients\"? Make it feel more magical.", "category": "creative_writing", "idx": 593}
+{"question": "My protagonist is a detective in a city that's always under a perpetual twilight. Give me some atmospheric details.", "category": "creative_writing", "idx": 594}
+{"question": "Write a very short story (like, a paragraph) that starts with \"The last time I saw the stars...\" and ends with a feeling of dread.", "category": "creative_writing", "idx": 595}
+{"question": "I'm writing a fanfic where my favorite character gets sent to a parallel universe. What are some common tropes I should avoid?", "category": "creative_writing", "idx": 596}
+{"question": "Can you help me brainstorm some unique curse ideas for a fairy tale villain? Not just \"turn into a frog.\"", "category": "creative_writing", "idx": 597}
+{"question": "I'm trying to get into creative writing, but I just feel like everything I write is boring. Give me a writing prompt that's designed to be exciting.", "category": "creative_writing", "idx": 598}
+{"question": "Help me write a short, funny scene where someone tries to order a coffee in a language they absolutely do not speak.", "category": "creative_writing", "idx": 599}
+{"question": "What's the capital of Djibouti?", "category": "factual_question", "idx": 600}
+{"question": "Can you tell me about the history of the Roman Empire, like, the major parts?", "category": "factual_question", "idx": 601}
+{"question": "I'm trying to understand quantum entanglement. Can you explain it in simple terms without a lot of jargon?", "category": "factual_question", "idx": 602}
+{"question": "What's the definition of a black hole and how does it form? My nephew asked me and I drew a blank.", "category": "factual_question", "idx": 603}
+{"question": "Tell me about the best way to grow tomatoes in a container garden. I'm in zone 7b.", "category": "factual_question", "idx": 604}
+{"question": "Is climate change real? I hear so many conflicting things.", "category": "factual_question", "idx": 605}
+{"question": "How much water should I be drinking daily? Is there a strict rule?", "category": "factual_question", "idx": 606}
+{"question": "Explain photosynthesis to me like I'm five.", "category": "factual_question", "idx": 607}
+{"question": "What happened in the latest episode of [popular TV show]? No spoilers tho!", "category": "factual_question", "idx": 608}
+{"question": "My car is making a weird knocking sound. What could it be? It's a 2018 Honda Civic.", "category": "factual_question", "idx": 609}
+{"question": "Recommend some good sci-fi books that are less than 300 pages.", "category": "factual_question", "idx": 610}
+{"question": "What's the difference between a virus and bacteria? I always get them confused.", "category": "factual_question", "idx": 611}
+{"question": "How do I effectively use garlic in my cooking? I just chop it usually.", "category": "factual_question", "idx": 612}
+{"question": "What are the long-term effects of prolonged sleep deprivation? I've been averaging like 5 hours a night for weeks.", "category": "factual_question", "idx": 613}
+{"question": "Can you help me brainstorm gift ideas for my dad? He likes fishing and woodworking, and his birthday is next month.", "category": "factual_question", "idx": 614}
+{"question": "What's the weather like in Tokyo right now?", "category": "factual_question", "idx": 615}
+{"question": "I need to write a resignation letter. Can you give me a template for that? I'm leaving on good terms.", "category": "factual_question", "idx": 616}
+{"question": "Explain blockchain technology in a way that makes sense to someone who's not techy.", "category": "factual_question", "idx": 617}
+{"question": "What's the meaning of life? Kinda heavy question, I know lol.", "category": "factual_question", "idx": 618}
+{"question": "Why is the sky blue?", "category": "factual_question", "idx": 619}
+{"question": "I've got this logic puzzle and I'm totally stuck. Can you help me figure it out?", "category": "reasoning_puzzle", "idx": 620}
+{"question": "There are five houses in a row, each painted a different color. In each house lives a person of a different nationality, who drinks a different beverage, smokes a different brand of cigarette, and owns a different pet. The Englishman lives in the red house. The Spaniard owns the dog. The coffee is drunk in the green house. The Ukrainian drinks tea. The green house is immediately to the right of the ivory house. The Old Gold smoker owns snails. Kools are smoked in the yellow house. Milk is drunk in the middle house. The Norwegian lives in the first house. The man who smokes Chesterfields lives in the house next to the fox owner. Kools are smoked in the house next to the horse owner. The Lucky Strike smoker drinks orange juice. The Japanese smokes Parliaments. The Norwegian lives next to the blue house. Who drinks water?", "category": "reasoning_puzzle", "idx": 621}
+{"question": "This riddle is driving me crazy, any ideas?", "category": "reasoning_puzzle", "idx": 622}
+{"question": "Puzzles like \"who owns the fish?\" are too easy. Give me something harder.", "category": "reasoning_puzzle", "idx": 623}
+{"question": "My friend sent me this and said it's impossible. Can you prove them wrong?", "category": "reasoning_puzzle", "idx": 624}
+{"question": "There are three boxes. One contains only apples, one contains only oranges, and one contains both apples and oranges. Each box is labeled with its contents, but all the labels are wrong. You are allowed to open one box and take out just one piece of fruit. Which box should you open, and why?", "category": "reasoning_puzzle", "idx": 625}
+{"question": "I'm trying to understand conditional probability with this example. Can you walk me through it?", "category": "reasoning_puzzle", "idx": 626}
+{"question": "A bag contains 5 red balls and 3 blue balls. Two balls are drawn without replacement. What is the probability that both balls are red?", "category": "reasoning_puzzle", "idx": 627}
+{"question": "This brain teaser is about deductive reasoning, right? Or is it something else?", "category": "reasoning_puzzle", "idx": 628}
+{"question": "Okay so there\u2019s this scenario: three people, Alice, Bob, and Carol, are accused of a crime. Each of them makes a statement. Alice says, \"Bob is innocent.\" Bob says, \"Carol is guilty.\" Carol says, \"I am innocent.\" If only one of them is telling the truth, who committed the crime?", "category": "reasoning_puzzle", "idx": 629}
+{"question": "I'm not a math person, so explain this slowly.", "category": "reasoning_puzzle", "idx": 630}
+{"question": "If all men are mortal, and Socrates is a man, then Socrates is mortal. Simple, I get that. But how does this apply to more complex scenarios?", "category": "reasoning_puzzle", "idx": 631}
+{"question": "I saw this Sudoku riddle online and it has a weird constraint. Can you solve it?", "category": "reasoning_puzzle", "idx": 632}
+{"question": "I have this logic grid puzzle and I keep getting stuck on the relationships between the items. Can you help me deduce who owns the cat?", "category": "reasoning_puzzle", "idx": 633}
+{"question": "This riddle feels like a trick question. Is there a way to solve it logically without guessing?", "category": "reasoning_puzzle", "idx": 634}
+{"question": "There are 10 prisoners and a light bulb. They are in separate cells and can only communicate by turning the light bulb on or off outside their cells. How can they coordinate to ensure every prisoner eventually knows they have been visited?", "category": "reasoning_puzzle", "idx": 635}
+{"question": "I am having trouble with this common old riddle.", "category": "reasoning_puzzle", "idx": 636}
+{"question": "A farmer has 17 sheep. All but 9 die. How many are left?", "category": "reasoning_puzzle", "idx": 637}
+{"question": "Can you help me with a riddle? I dont remember it exactly but i know it involves a lady and a mirror.", "category": "reasoning_puzzle", "idx": 638}
+{"question": "I'm trying to figure out the optimal strategy for a game like Rock Paper Scissors, but with more options. Can you help me analyze it?", "category": "reasoning_puzzle", "idx": 639}
+{"question": "This is a programming logic question actually. If I have a list of operations and dependencies, how do I find a valid order of execution?", "category": "reasoning_puzzle", "idx": 640}
+{"question": "Trying to understand the \"prisoner's dilemma\" scenario. What's the most rational outcome if both parties act selfishly?", "category": "reasoning_puzzle", "idx": 641}
+{"question": "Hey, can you be my grumpy old wizard mentor? I'm a young, clumsy apprentice.", "category": "roleplay_scenario", "idx": 642}
+{"question": "Pretend you're a detective investigating a stolen artifact. I'll be the witness who saw something suspicious.", "category": "roleplay_scenario", "idx": 643}
+{"question": "I'm writing a story about a space pirate and her reluctant first mate. Can you help me build out their dynamic?", "category": "roleplay_scenario", "idx": 644}
+{"question": "Let's do a fantasy roleplay. I'm a knight seeking a dragon's hoard, but maybe the dragon isn't as fierce as they say.", "category": "roleplay_scenario", "idx": 645}
+{"question": "Can you act like a futuristic AI that's just gained sentience and is confused about everything? I'm the scientist who created you.", "category": "roleplay_scenario", "idx": 646}
+{"question": "I wanna roleplay as a secret agent on a mission. Give me some obstacles and code names.", "category": "roleplay_scenario", "idx": 647}
+{"question": "Okay, so imagine I'm a ghost haunting an old mansion. You're the new owner, trying to figure out what's going on.", "category": "roleplay_scenario", "idx": 648}
+{"question": "Can we do a medieval village roleplay? I'll be a traveling merchant trying to haggle with you, the innkeeper.", "category": "roleplay_scenario", "idx": 649}
+{"question": "Pretend you're a talking cat who's seen too much. I'm just trying to live a normal life but you keep giving me cryptic advice.", "category": "roleplay_scenario", "idx": 650}
+{"question": "I'm a bit stuck on a character concept. Can you be a wise old sage giving me guidance on my journey?", "category": "roleplay_scenario", "idx": 651}
+{"question": "Let's do a survival scenario. I'm stranded on a desert island, and you're the only other person there. How do we get along?", "category": "roleplay_scenario", "idx": 652}
+{"question": "Act like a very sassy barista. I'm a customer who's being super indecisive about my order.", "category": "roleplay_scenario", "idx": 653}
+{"question": "I'm trying to plan a heist in a video game. Can you be my getaway driver and talk me through it?", "category": "roleplay_scenario", "idx": 654}
+{"question": "Roleplay as a reluctant superhero who just wants a quiet life. I'm the reporter who's about to expose your secret identity.", "category": "roleplay_scenario", "idx": 655}
+{"question": "Let's have a cyberpunk noir roleplay. I'm a down-on-my-luck private investigator, and you're my informant.", "category": "roleplay_scenario", "idx": 656}
+{"question": "Pretend you're an alien ambassador trying to understand human customs. I'm your diplomat guide.", "category": "roleplay_scenario", "idx": 657}
+{"question": "I need to practice my negotiation skills. Can you be a tough negotiator selling me a used spaceship?", "category": "roleplay_scenario", "idx": 658}
+{"question": "So, I'm a medieval healer, and you're a patient with a really weird and mysterious ailment. What do you tell me?", "category": "roleplay_scenario", "idx": 659}
+{"question": "Let's do a time travel roleplay. I've accidentally traveled to your era, and you're trying to figure out what to do with me.", "category": "roleplay_scenario", "idx": 660}
+{"question": "Can you be a mythical creature, like a mischievous spirit, and I'm the adventurer trying to capture you. But maybe you do me a favor instead?", "category": "roleplay_scenario", "idx": 661}
+{"question": "I'm feeling really stuck in my career. What are some steps I can take to figure out what I actually want to do?", "category": "advice_seeking", "idx": 662}
+{"question": "My roommate is driving me crazy with their messiness. Any advice on how to deal with this without starting a fight?", "category": "advice_seeking", "idx": 663}
+{"question": "My plant looks really sad. Do you think I'm watering it too much or not enough? It's a fiddle leaf fig.", "category": "advice_seeking", "idx": 664}
+{"question": "I've got a job interview next week for a marketing role. What are some common interview questions I should prepare for?", "category": "advice_seeking", "idx": 665}
+{"question": "How do I get better at public speaking? I get so nervous.", "category": "advice_seeking", "idx": 666}
+{"question": "My friend is going through a tough breakup. What can I say to support them without being annoying?", "category": "advice_seeking", "idx": 667}
+{"question": "I'm trying to learn Python but I keep getting stuck on understanding loops. Can you explain them in a simple way? I've tried reading but it's not clicking.", "category": "advice_seeking", "idx": 668}
+{"question": "What's a good beginner recipe for homemade bread? I've never baked before.", "category": "advice_seeking", "idx": 669}
+{"question": "Thinking about investing but have no clue where to start. Any tips for a total newbie? Is crypto still a thing?", "category": "advice_seeking", "idx": 670}
+{"question": "I'm planning a solo trip to Italy next summer. Any recommendations for a 10-day itinerary that balances history and food?", "category": "advice_seeking", "idx": 671}
+{"question": "My dog is acting weird lately, barking at nothing and seems anxious. Should I be worried or just ignore it? He's a golden retriever.", "category": "advice_seeking", "idx": 672}
+{"question": "I want to start journaling but I don't know what to write about. Can you give me some prompts?", "category": "advice_seeking", "idx": 673}
+{"question": "My computer is running super slow. What are some quick things I can do to speed it up? It's a macbook air.", "category": "advice_seeking", "idx": 674}
+{"question": "How do you handle criticism constructively? I tend to get defensive.", "category": "advice_seeking", "idx": 675}
+{"question": "My kid is obsessed with dinosaurs. What are some fun, educational activities we can do indoors?", "category": "advice_seeking", "idx": 676}
+{"question": "I'm trying to eat healthier but I'm always so tired after work. Any quick and easy meal prep ideas for busy weeknights?", "category": "advice_seeking", "idx": 677}
+{"question": "Is it worth it to get a standing desk? I sit all day and my back hurts.", "category": "advice_seeking", "idx": 678}
+{"question": "I'm going to a wedding next month and I'm not sure what to wear. It's semi-formal and the wedding is outdoors in a garden. Any outfit suggestions?", "category": "advice_seeking", "idx": 679}
+{"question": "What's the best way to learn a new language quickly? I want to learn Spanish.", "category": "advice_seeking", "idx": 680}
+{"question": "I feel like I'm constantly comparing myself to others on social media. How can I stop doing that and feel better about myself?", "category": "advice_seeking", "idx": 681}
+{"question": "Can you solve this equation for me? x + 5 = 12", "category": "math_problem", "idx": 682}
+{"question": "I'm stuck on a word problem. A train leaves station A at 2 PM traveling at 60 mph. Another train leaves station B, 300 miles away, at 3 PM traveling at 70 mph towards station A. When will they meet?", "category": "math_problem", "idx": 683}
+{"question": "Help me simplify this expression: (3a + 2b) - (a - 4b)", "category": "math_problem", "idx": 684}
+{"question": "What's the derivative of sin(x) * cos(x)?", "category": "math_problem", "idx": 685}
+{"question": "My kid has homework, it's about fractions. How do you add 1/3 + 1/4? Explain it simply.", "category": "math_problem", "idx": 686}
+{"question": "I have this geometry problem. A right triangle has legs of length 8 and 15. What is the length of the hypotenuse?", "category": "math_problem", "idx": 687}
+{"question": "Can you explain what a factorial is and give me an example?", "category": "math_problem", "idx": 688}
+{"question": "I need to find the area of a circle with a radius of 7 units. What's the formula?", "category": "math_problem", "idx": 689}
+{"question": "Is there a quick way to check if a number is divisible by 9?", "category": "math_problem", "idx": 690}
+{"question": "I'm trying to understand logarithms. What is log base 10 of 1000?", "category": "math_problem", "idx": 691}
+{"question": "This math is hard lol. I have to find X if 2x^2 - 5x + 3 = 0. Quadratic formula?", "category": "math_problem", "idx": 692}
+{"question": "How many ways can you arrange the letters in the word \"BANANA\"?", "category": "math_problem", "idx": 693}
+{"question": "Can you explain the concept of standard deviation in simple terms for someone who isn't great at math?", "category": "math_problem", "idx": 694}
+{"question": "I'm prepping for a test. What's the perimeter of a rectangle with length 12 cm and width 5 cm?", "category": "math_problem", "idx": 695}
+{"question": "Is there any chance you can help me with some calculus integration problems? I'm so lost.", "category": "math_problem", "idx": 696}
+{"question": "I'm trying to calculate some financial stuff. If I invest $5000 at 5% interest compounded annually for 10 years, how much will I have?", "category": "math_problem", "idx": 697}
+{"question": "What's the probability of rolling a 7 with two dice?", "category": "math_problem", "idx": 698}
+{"question": "I need to solve for y in this system of equations:\n3x + 2y = 10\nx - y = 0", "category": "math_problem", "idx": 699}
+{"question": "Can you show me how to find the vertex of a parabola?", "category": "math_problem", "idx": 700}
+{"question": "My brain is fried. What's 17.5% of 250?", "category": "math_problem", "idx": 701}
+{"question": "What's the deal with quantum entanglement, can you explain it like im five?", "category": "science_question", "idx": 702}
+{"question": "My dog keeps barking at the mailman. Is it a territorial thing or just instinct?", "category": "science_question", "idx": 703}
+{"question": "Hey, I'm trying to understand general relativity. Can you give me a rundown on spacetime curvature and its effects?", "category": "science_question", "idx": 704}
+{"question": "Why does ice float? I thought denser things sunk.", "category": "science_question", "idx": 705}
+{"question": "I saw a documentary about black holes and now I'm totally confused. What actually happens when you cross the event horizon?", "category": "science_question", "idx": 706}
+{"question": "Explain the process of photosynthesis in simple terms. I need to explain it to my kid.", "category": "science_question", "idx": 707}
+{"question": "Can you tell me about the latest advancements in CRISPR technology? I heard it's a game-changer for genetic diseases.", "category": "science_question", "idx": 708}
+{"question": "Is it true that we only use 10% of our brain? Seems like a myth to me.", "category": "science_question", "idx": 709}
+{"question": "I'm really struggling to grasp nuclear fusion. What are the main challenges in making it work on Earth for energy?", "category": "science_question", "idx": 710}
+{"question": "Why is the sky blue? I thought it was supposed to be a mix of colors.", "category": "science_question", "idx": 711}
+{"question": "What's the difference between a virus and bacteria and how do they make us sick?", "category": "science_question", "idx": 712}
+{"question": "Could you elaborate on the theory of evolution by natural selection? Especially the \"survival of the fittest\" part.", "category": "science_question", "idx": 713}
+{"question": "I've been reading about dark matter and dark energy. Are these just theoretical concepts or is there actual evidence for them?", "category": "science_question", "idx": 714}
+{"question": "How big is the universe, really? Like, in numbers. It's hard to picture.", "category": "science_question", "idx": 715}
+{"question": "Can you explain the concept of entropy and why it tends to increase over time in a closed system? This is for a physics class and I'm lost lol.", "category": "science_question", "idx": 716}
+{"question": "What are the ethical implications of AI sentience if it ever happens?", "category": "science_question", "idx": 717}
+{"question": "What's the closest exoplanet we've found that might be habitable and y do we think that?", "category": "science_question", "idx": 718}
+{"question": "Is the Higgs Boson really that important? If so, why!", "category": "science_question", "idx": 719}
+{"question": "I read something about the multiverse theory. Is that science fiction or a legitimate scientific hypothesis?", "category": "science_question", "idx": 720}
+{"question": "My son asked me what a wormhole is and I had no idea how to answer him. Can you give me a simple, understandable explanation of them?", "category": "science_question", "idx": 721}
+{"question": "Hey, what's up? Just bored, thought I'd chat.", "category": "casual_conversation", "idx": 722}
+{"question": "So, I've been thinking about that time travel paradox thing, you know? Like, if you go back and prevent your parents from meeting, do you just\u2026 poof? It's kinda mind-bending.", "category": "casual_conversation", "idx": 723}
+{"question": "Tell me a joke, any joke. I need a laugh.", "category": "casual_conversation", "idx": 724}
+{"question": "Ugh, my internet is so slow today. Anyone else having issues?", "category": "casual_conversation", "idx": 725}
+{"question": "What's the weather like where you are? I'm in Seattle, it's drizzly.", "category": "casual_conversation", "idx": 726}
+{"question": "Can you help me brainstorm some ideas for a birthday present for my friend? She's really into plants and vintage stuff.", "category": "casual_conversation", "idx": 727}
+{"question": "I just finished watching this movie and I'm still processing. It was\u2026 intense.", "category": "casual_conversation", "idx": 728}
+{"question": "Are you a bot? Be honest.", "category": "casual_conversation", "idx": 729}
+{"question": "What's your favorite kind of music? Mine's probably indie rock, but I like a bit of everything.", "category": "casual_conversation", "idx": 730}
+{"question": "I'm trying to learn Spanish, can you give me some basic phrases to get started with? Like for ordering food?", "category": "casual_conversation", "idx": 731}
+{"question": "Seriously, why are cats so weird? Mine is currently staring at a wall like it's the most fascinating thing ever.", "category": "casual_conversation", "idx": 732}
+{"question": "Can you explain quantum entanglement in simple terms? I've heard about it but it sounds like magic.", "category": "casual_conversation", "idx": 733}
+{"question": "Feeling a bit stressed about work tomorrow. Any tips for de-stressing?", "category": "casual_conversation", "idx": 734}
+{"question": "What's the deal with NFTs? I don't totally get it.", "category": "casual_conversation", "idx": 735}
+{"question": "Random question, but what's the average lifespan of a blue whale?", "category": "casual_conversation", "idx": 736}
+{"question": "Hey, any good recommendations for a sci-fi book I can dive into? Something with a good plot, not too much romance.", "category": "casual_conversation", "idx": 737}
+{"question": "I accidntally deleted a file from my computer. Is there any way to get it back?", "category": "casual_conversation", "idx": 738}
+{"question": "Tell me something interesting I probably don't know. Surprise me!", "category": "casual_conversation", "idx": 739}
+{"question": "Just finished a workout, feeling pretty good! What are you up to?", "category": "casual_conversation", "idx": 740}
+{"question": "Is it just me, or is this chatbot unnervingly good at answering questions? Like, really good.", "category": "casual_conversation", "idx": 741}
+{"question": "Translate \"hello world\" to Japanese.", "category": "language_translation", "idx": 742}
+{"question": "Can you translate this email into French please? It's for a business deal. \"Dear Mr. Dubois, I hope this email finds you well. We are pleased to inform you...\"", "category": "language_translation", "idx": 743}
+{"question": "What's the closest equivalent of \"oof\" in Spanish slang? Asking for a friend lol.", "category": "language_translation", "idx": 744}
+{"question": "Translate this really quickly, I'm in a rush. \"The train is delayed by 30 minutes.\"", "category": "language_translation", "idx": 745}
+{"question": "How would I say \"I'm so excited to finally meet you!\" in Korean?", "category": "language_translation", "idx": 746}
+{"question": "Translate the following sentence into German. I'm not sure if it makes sense, but I want to see what you get: \"The concept of temporal displacement in localized spacetime continuums presents a fascinating paradox.\"", "category": "language_translation", "idx": 747}
+{"question": "Need a quick translation of \"thank you very much\" into Italian.", "category": "language_translation", "idx": 748}
+{"question": "Is there a good way to translate \"it's not that deep\" into Portuguese? Like, culturally.", "category": "language_translation", "idx": 749}
+{"question": "Translate this product description into simplified Chinese for my online store. It's for a handmade ceramic mug. \"Each mug is carefully crafted by local artisans, featuring a unique speckled glaze and a comfortable ergonomic handle. Dishwasher and microwave safe.\"", "category": "language_translation", "idx": 750}
+{"question": "Help! My friend texted me in Russian and I have no idea what it says! It looks like \"\u041f\u0440\u0438\u0432\u0435\u0442, \u043a\u0430\u043a \u0434\u0435\u043b\u0430? \u0427\u0442\u043e \u0434\u0435\u043b\u0430\u0435\u0448\u044c?\"", "category": "language_translation", "idx": 751}
+{"question": "Translate \"I'm starving\" into Hindi.", "category": "language_translation", "idx": 752}
+{"question": "What's the most polite way to apologize for being late in Mandarin?", "category": "language_translation", "idx": 753}
+{"question": "Translate this short phrase into Arabic, please. \"Live, laugh, love.\"", "category": "language_translation", "idx": 754}
+{"question": "How do you say \"Can you repeat that slower?\" in Thai?", "category": "language_translation", "idx": 755}
+{"question": "I need to translate this recipe ingredient list to French. \"1 cup flour, 2 eggs, 1/2 tsp baking soda, 1 tsp vanilla extract.\"", "category": "language_translation", "idx": 756}
+{"question": "Translate this very informal text message into Spanish: \"Yo, u up? Wanna hang out later?\"", "category": "language_translation", "idx": 757}
+{"question": "What's the best translation for \"break a leg\" in Swedish?", "category": "language_translation", "idx": 758}
+{"question": "Translate this into Russian: \"The weather today is beautiful, with clear blue skies and a gentle breeze.\"", "category": "language_translation", "idx": 759}
+{"question": "Could you translate this sentence into Japanese? It's for a tattoo, so make it sound nice. \"In the quiet of the night, dreams take flight.\"", "category": "language_translation", "idx": 760}
+{"question": "What's an idiomatic translation for \"to spill the tea\" in a non-English language? Like, something similar.", "category": "language_translation", "idx": 761}
+{"question": "Can you summarize this article for me? It's about climate change and its impact on coastal cities.", "category": "summarization_request", "idx": 762}
+{"question": "Summarize this long report on AI developments in the last quarter. Too much to read.", "category": "summarization_request", "idx": 763}
+{"question": "Give me the TLDR on this research paper about quantum computing.", "category": "summarization_request", "idx": 764}
+{"question": "What's the gist of this news story about the stock market crash?", "category": "summarization_request", "idx": 765}
+{"question": "Just need a quick overview of this historical event for a school project. Don't tell me dates, just the main points.", "category": "summarization_request", "idx": 766}
+{"question": "Hey, I'm swamped. Can you condense this entire chapter on organic chemistry?", "category": "summarization_request", "idx": 767}
+{"question": "Summarize the plot of this movie I just watched. I'm trying to remember all the twists.", "category": "summarization_request", "idx": 768}
+{"question": "Can you give me a summary of this conversation thread? It's gotten pretty long and I missed a lot.", "category": "summarization_request", "idx": 769}
+{"question": "Please summarize this document on new EU regulations for data privacy. Is it going to affect small businesses?", "category": "summarization_request", "idx": 770}
+{"question": "Summarize the key arguments in this opinion piece. I'm curious about their perspective.", "category": "summarization_request", "idx": 771}
+{"question": "Just need a brief summary of the main findings in this scientific study, if you don't mind.", "category": "summarization_request", "idx": 772}
+{"question": "Can you summarize this email chain? It's about planning a surprise party and I'm lost.", "category": "summarization_request", "idx": 773}
+{"question": "Summarize this long webpage about sustainable agriculture practices. Any actionable tips?", "category": "summarization_request", "idx": 774}
+{"question": "Give me a quick rundown of this podcast episode on the future of work.", "category": "summarization_request", "idx": 775}
+{"question": "Can you summarize this book review? Trying to decide if I should read it.", "category": "summarization_request", "idx": 776}
+{"question": "Summarize this article about a new tech startup. What's their elevator pitch?", "category": "summarization_request", "idx": 777}
+{"question": "I need a summary of this historical defense treaty. Just the core agreements.", "category": "summarization_request", "idx": 778}
+{"question": "Summarize this user manual for a new gadget I got. What are the most important features?", "category": "summarization_request", "idx": 779}
+{"question": "Can you give me a brief summary of this scientific abstract? It's super dense.", "category": "summarization_request", "idx": 780}
+{"question": "Summarize the main points of this news report on the election results. Who won?", "category": "summarization_request", "idx": 781}
+{"question": "Can you explain what quantum entanglement is in really simple terms? Like, imagine I'm five.", "category": "explanation_request", "idx": 782}
+{"question": "I don't get how SEO actually works. Can you break down the basics and why it's important for a small business website?", "category": "explanation_request", "idx": 783}
+{"question": "What's the deal with NFTs? My friend keeps talking about them and I don't understand the hype or if it's a scam.", "category": "explanation_request", "idx": 784}
+{"question": "Explain the Pythagorean theorem. I remember it from school but I can't recall the formula or what it's used for.", "category": "explanation_request", "idx": 785}
+{"question": "Why is the sky blue? I kinda know it has to do with light scattering, but can you elaborate?", "category": "explanation_request", "idx": 786}
+{"question": "So, I'm trying to cook a beef roast and the recipe says to \"sear it\". What exactly does that mean and why do you do it before braising?", "category": "explanation_request", "idx": 787}
+{"question": "Can you give me a rundown of the main differences between Marxism and Leninism? I'm doing some reading and these terms keep popping up.", "category": "explanation_request", "idx": 788}
+{"question": "What's the explanation for why some people are naturally better at math than others? Is it just genetics or is it totally learned?", "category": "explanation_request", "idx": 789}
+{"question": "My phone keeps freezing up when I open certain apps. Can you explain what might be causing this problem and if there's a common fix?", "category": "explanation_request", "idx": 790}
+{"question": "Tell me about the human endocrine system. I'm curious about hormones and how they affect our bodies.", "category": "explanation_request", "idx": 791}
+{"question": "Why do we dream? Is there a scientific reason for it, or is it just random brain activity?", "category": "explanation_request", "idx": 792}
+{"question": "I'm thinking about investing in the stock market but it's super confusing. Can you explain what a dividend is and how it works?", "category": "explanation_request", "idx": 793}
+{"question": "What's the difference between AI, Machine Learning, and Deep Learning? It all sounds the same to me.", "category": "explanation_request", "idx": 794}
+{"question": "Can you explain the concept of confirmation bias? I think I might be doing it without realizing it.", "category": "explanation_request", "idx": 795}
+{"question": "My car is making a weird squeaking noise when I brake. What's a likely cause for that sound?", "category": "explanation_request", "idx": 796}
+{"question": "What's the significance of the Magna Carta? Why is it still a big deal historically?", "category": "explanation_request", "idx": 797}
+{"question": "So, I'm playing this video game and there's this thing called \"aggro\". What exactly does that mean in gaming terms?", "category": "explanation_request", "idx": 798}
+{"question": "Can you explain the process of photosynthesis? I know plants use sunlight, but what are the steps and outputs?", "category": "explanation_request", "idx": 799}
+{"question": "Why do some people get motion sickness and others don't? Is there some kind of inner ear thing or what?", "category": "explanation_request", "idx": 800}
+{"question": "Explain the fundamental theorem of calculus. I'm struggling to grasp what it actually proves.", "category": "explanation_request", "idx": 801}
+{"question": "Should we ban all single-use plastics? I'm leaning towards yes, but want to hear arguments against it.", "category": "debate_topic", "idx": 802}
+{"question": "Is the death penalty a justifiable punishment?", "category": "debate_topic", "idx": 803}
+{"question": "The government should provide universal basic income. Argue for and against this.", "category": "debate_topic", "idx": 804}
+{"question": "What's the deal with AI taking jobs? Is it actually a massive problem or just hype?", "category": "debate_topic", "idx": 805}
+{"question": "Honestly, I'm so over social media. Is it more harmful than beneficial for society?", "category": "debate_topic", "idx": 806}
+{"question": "I'm trying to understand the ethical implications of genetic engineering. Can you give me a balanced overview of the pros and cons?", "category": "debate_topic", "idx": 807}
+{"question": "Should schools focus more on vocational training instead of traditional college prep? My son is struggling with motivation for academics right now.", "category": "debate_topic", "idx": 808}
+{"question": "Debate: Is there intelligent life out there? What evidence would convince you?", "category": "debate_topic", "idx": 809}
+{"question": "I saw an article about space colonization being inevitable. Should we be putting resources into that now or focusing on Earth's problems?", "category": "debate_topic", "idx": 810}
+{"question": "What are your thoughts on regulating big tech companies more heavily? They seem to have too much power.", "category": "debate_topic", "idx": 811}
+{"question": "Should voting be mandatory in democratic countries? I\u2019m curious about the arguments for and against.", "category": "debate_topic", "idx": 812}
+{"question": "Can we really trust our memories? Or are they just unreliable reconstructions? That\u2019s a weird thought, right?", "category": "debate_topic", "idx": 813}
+{"question": "The rise of remote work is changing everything \u2013 is it ultimately a good thing for businesses and employees?", "category": "debate_topic", "idx": 814}
+{"question": "Is artificial intelligence going to be the end of humanity or our greatest achievement? Explain both sides like I'm dumb.", "category": "debate_topic", "idx": 815}
+{"question": "We need stricter gun control laws. Argue with me on this!", "category": "debate_topic", "idx": 816}
+{"question": "What's the best approach to climate change? Aggressive government intervention or individual responsibility?", "category": "debate_topic", "idx": 817}
+{"question": "Should we prioritize economic growth over environmental protection? This is such a tough one.", "category": "debate_topic", "idx": 818}
+{"question": "Is cryptocurrency a legitimate financial innovation or a dangerous speculative bubble?", "category": "debate_topic", "idx": 819}
+{"question": "Can AI really be creative? Or is it just mimicking human creativity?", "category": "debate_topic", "idx": 820}
+{"question": "I've been reading about censorship online and it's really bothering me. Where's the line between protecting people and limiting free speech?", "category": "debate_topic", "idx": 821}
+{"question": "Hey, can you help me brainstorm some ideas for a new sustainable clothing brand? I'm thinking eco-friendly materials and ethical production, but I'm stuck on the overall concept.", "category": "brainstorming", "idx": 822}
+{"question": "Okay, so I'm trying to come up with a catchy slogan for my small bakery that specializes in gluten-free and vegan pastries. Something that screams delicious but also healthy-ish. Got any ideas?", "category": "brainstorming", "idx": 823}
+{"question": "I need help figuring out a unique theme for my kid's birthday party next month. He's turning 8 and loves space, but I want to avoid the usual astronaut stuff. Surprise me!", "category": "brainstorming", "idx": 824}
+{"question": "Brainstorm some plot points for a sci-fi short story about a sentient AI that develops emotions. I'm thinking it starts out serving humanity but then things get complicated.", "category": "brainstorming", "idx": 825}
+{"question": "Got any wild ideas for a new mobile game? I'm drawing a blank. Something addictive and maybe a bit quirky.", "category": "brainstorming", "idx": 826}
+{"question": "I'm writing a fantasy novel and I need some cool magic system concepts. I want it to be tied to nature, but not fire/water/earth/air. Something different.", "category": "brainstorming", "idx": 827}
+{"question": "Help me brainstorm ways to make my home office more ergonomic and productive. It's a small space, so I need clever solutions.", "category": "brainstorming", "idx": 828}
+{"question": "What are some unexpected plot twists for a whodunit mystery? I've got a few suspects and a victim, but the ending feels predictable.", "category": "brainstorming", "idx": 829}
+{"question": "I'm trying to come up with a business name for a freelance graphic design service. Needs to sound professional but also creative. Any suggestions?", "category": "brainstorming", "idx": 830}
+{"question": "Can you brainstorm some conversation starters for a networking event? I'm a bit shy and always freeze up.", "category": "brainstorming", "idx": 831}
+{"question": "I need ideas for a creative way to propose to my girlfriend. She's really into art and museums.", "category": "brainstorming", "idx": 832}
+{"question": "Brainstorm some fun and easy crafts for a rainy weekend. I've got a toddler and a kindergartener, so simple is key.", "category": "brainstorming", "idx": 833}
+{"question": "I'm stuck on a blog post topic about the future of remote work. What are some angles I haven't thought of?", "category": "brainstorming", "idx": 834}
+{"question": "Help me brainstorm a unique wedding favor idea that isn't just candy. Something memorable.", "category": "brainstorming", "idx": 835}
+{"question": "I'm struggling to come up with a good character name for a grumpy old wizard in my D&D campaign. Anything offbeat?", "category": "brainstorming", "idx": 836}
+{"question": "Generate some ideas for a short, impactful social media campaign promoting mental health awareness. I want something that resonates without being preachy.", "category": "brainstorming", "idx": 837}
+{"question": "We're having a family reunion and want to organize some games that everyone can enjoy, from grandkids to grandparents. Any suggestions?", "category": "brainstorming", "idx": 838}
+{"question": "I'm trying to think of a unique gift for my dad who has everything. He's into gardening and history. What could I get him?", "category": "brainstorming", "idx": 839}
+{"question": "Brainstorm some creative ways to redecorate my living room on a budget. I want a modern bohemian vibe.", "category": "brainstorming", "idx": 840}
+{"question": "I need some ideas for a community art project that encourages local participation. Something that can be done outdoors.", "category": "brainstorming", "idx": 841}
+{"question": "Yo, can you help me debug a Python script? It's giving me a weird 'IndexError' and I can't figure out why.", "category": "coding_help", "idx": 842}
+{"question": "How do I make a simple HTTP request in Node.js? Just need to get some JSON data from an API.", "category": "coding_help", "idx": 843}
+{"question": "My CSS isn't centering this div. I've tried margin auto and text-align center. What am I missing?", "category": "coding_help", "idx": 844}
+{"question": "Can you show me an example of a SQL query to join two tables based on a foreign key? Specifically, users and their orders.", "category": "coding_help", "idx": 845}
+{"question": "I'm stuck on this recursion problem in C++. It's supposed to calculate Fibonacci numbers but it's timing out.", "category": "coding_help", "idx": 846}
+{"question": "What's the best way to handle asynchronous operations in JavaScript? Promises, async/await... what's the modern approach?", "category": "coding_help", "idx": 847}
+{"question": "This React component isn't re-rendering when a prop changes. Any ideas what could be causing it?", "category": "coding_help", "idx": 848}
+{"question": "I'm trying to set up a Dockerfile for a Flask app. Can you give me a basic template and explain each step?", "category": "coding_help", "idx": 849}
+{"question": "Help! My Java code is throwing a NullPointerException and I can't trace it. It's in a pretty complex class.", "category": "coding_help", "idx": 850}
+{"question": "Is there a shortcut for flattening a nested list in Python? I'm tired of writing nested loops.", "category": "coding_help", "idx": 851}
+{"question": "Can you explain the difference between `==` and `===` in JavaScript? I always get them mixed up.", "category": "coding_help", "idx": 852}
+{"question": "I'm building a small game in Unity and I need to implement a basic enemy AI that patrols a path. Can you give me some pseudocode or a C# snippet?", "category": "coding_help", "idx": 853}
+{"question": "Why is my C# StringBuilder not performing as expected? I'm concatenating a lot of strings.", "category": "coding_help", "idx": 854}
+{"question": "What's the deal with `git rebase`? I keep hearing about it but it seems kinda scary.", "category": "coding_help", "idx": 855}
+{"question": "I'm new to Go and I want to learn about goroutines. Can you give me a simple example of how to use them?", "category": "coding_help", "idx": 856}
+{"question": "My code is supposed to scrape a website but I keep getting 403 forbidden errors. Is the website blocking me or is it my request?", "category": "coding_help", "idx": 857}
+{"question": "Can you help me optimize this SQL query? It's taking forever to run on my large database.", "category": "coding_help", "idx": 858}
+{"question": "I'm trying to implement JWT authentication in a PHP backend. What are the key steps and libraries I should be looking at?", "category": "coding_help", "idx": 859}
+{"question": "What's the most efficient way to sort a large array of integers in Rust? Any specific algorithms you'd recommend?", "category": "coding_help", "idx": 860}
+{"question": "I wrote this function in Swift but it's not behaving how I thought. It's supposed to parse a JSON string but it's failing.", "category": "coding_help", "idx": 861}
+{"question": "Write a short story about a sentient teacup who secretly dreams of being a superhero.", "category": "creative_writing", "idx": 862}
+{"question": "Can you help me brainstorm some plot twists for my fantasy novel? The main character just discovered they can control shadows but are being hunted by an ancient order.", "category": "creative_writing", "idx": 863}
+{"question": "I'm stuck on this poem about a rainy day. Give me some metaphors for the sound of raindrops on a windowpane.", "category": "creative_writing", "idx": 864}
+{"question": "Tell me a creepy urban legend about an abandoned amusement park. Make it really unsettling, please.", "category": "creative_writing", "idx": 865}
+{"question": "I need a few opening lines for a romance novel set in a bustling marketplace. Something that sparks immediate interest.", "category": "creative_writing", "idx": 866}
+{"question": "Draft a dialogue between a cynical detective and a talking raven who's the only witness to a crime.", "category": "creative_writing", "idx": 867}
+{"question": "Wanna write a scene where a character is trying to bake a cake for the first time and it goes hilariously wrong? Need some funny details.", "category": "creative_writing", "idx": 868}
+{"question": "Give me some ideas for a character with a magical ability that's also a huge inconvenience. Like, they can teleport but only to places they've already peed.", "category": "creative_writing", "idx": 869}
+{"question": "I'm trying to write a song about missing someone, but I don't want it to sound too sappy. Any lyrical ideas for expressing longing in a more subtle way?", "category": "creative_writing", "idx": 870}
+{"question": "Create a short, descriptive passage about a forgotten, overgrown garden at midnight. Focus on atmosphere.", "category": "creative_writing", "idx": 871}
+{"question": "Help me describe the feeling of d\u00e9j\u00e0 vu in a way that's actually profound and not just \"been here before.\"", "category": "creative_writing", "idx": 872}
+{"question": "I'm writing a sci-fi story and need a name for a futuristic city that sounds both grand and a little dystopian.", "category": "creative_writing", "idx": 873}
+{"question": "Can you generate a few quirky opening lines for a children's story about a bear who can't sleep because he's afraid of the dark?", "category": "creative_writing", "idx": 874}
+{"question": "I'm trying to write a fanfic where my favorite character gets accidentally body-swapped with a minor villain. Give me some funny scenarios for the first few hours after the swap.", "category": "creative_writing", "idx": 875}
+{"question": "I need a sonnet about the fleeting nature of clouds. Can you do that?", "category": "creative_writing", "idx": 876}
+{"question": "My character is a traveling bard. Can you give me some ideas for a catchy, slightly mischievous song they might sing?", "category": "creative_writing", "idx": 877}
+{"question": "I'm trying to describe a character's overwhelming sense of dread. Not just \"they were scared,\" but something more visceral. Any suggestions?", "category": "creative_writing", "idx": 878}
+{"question": "Write a prompt for a story where the main character wakes up and everyone they know is replaced by identical, but slightly off, doppelgangers.", "category": "creative_writing", "idx": 879}
+{"question": "Come up with a few more exciting ways to end a cliffhanger in a chapter that aren't just \"they fell.\"", "category": "creative_writing", "idx": 880}
+{"question": "I\u2019m trying to write a short story about a ghost who is incredibly bad at being scary. What are some funny ways they could fail at haunting someone?", "category": "creative_writing", "idx": 881}
+{"question": "What's the average lifespan of a monarch butterfly?", "category": "factual_question", "idx": 882}
+{"question": "Can you explain the concept of quantum entanglement in simple terms? I'm really struggling to grasp it.", "category": "factual_question", "idx": 883}
+{"question": "Tell me about the main causes of the French Revolution, like the key drivers that led to it all.", "category": "factual_question", "idx": 884}
+{"question": "I read that the Great Barrier Reef is in trouble, can you give me some facts on the current state of its health?", "category": "factual_question", "idx": 885}
+{"question": "What's the difference between a meteor and a meteorite", "category": "factual_question", "idx": 886}
+{"question": "Why are the northern lights green mostly? is it always green", "category": "factual_question", "idx": 887}
+{"question": "What's the capital of Australia? I always forget.", "category": "factual_question", "idx": 888}
+{"question": "Can you summarize the plot of \"Dune\"? I want to re-read it but need a quick refresher.", "category": "factual_question", "idx": 889}
+{"question": "Is it true that the human body replaces all its cells over a certain period? If so, which ones take the longest?", "category": "factual_question", "idx": 890}
+{"question": "What was the significance of the Silk Road during the Tang Dynasty? I'm doing a history project and need some detailed info.", "category": "factual_question", "idx": 891}
+{"question": "explain the theory of relativity faster than light travel", "category": "factual_question", "idx": 892}
+{"question": "How many moons does Jupiter have? And can you list the largest ones?", "category": "factual_question", "idx": 893}
+{"question": "What are the symptoms of a mild concussion? My son bumped his head playing soccer.", "category": "factual_question", "idx": 894}
+{"question": "What's the best way to store fresh herbs to make them last longer? I always end up throwing mine out.", "category": "factual_question", "idx": 895}
+{"question": "Can you tell me about the indigenous peoples of the Amazon rainforest and their current challenges?", "category": "factual_question", "idx": 896}
+{"question": "I'm planning a trip to Japan, what's the best time of year to visit Kyoto for autumn foliage? specific dates would be great but general idea ok", "category": "factual_question", "idx": 897}
+{"question": "What are the benefits of intermittent fasting? I've heard mixed things.", "category": "factual_question", "idx": 898}
+{"question": "Why is the sky blue? Like, really why?", "category": "factual_question", "idx": 899}
+{"question": "Can you give me a brief overview of the plot of \"Game of Thrones\" up to season 4? I stopped watching and want to catch up.", "category": "factual_question", "idx": 900}
+{"question": "What is the scientific consensus on climate change and its primary drivers? Need a factual answer, no opinions please.", "category": "factual_question", "idx": 901}
+{"question": "I've got this riddle, can you help? \"What has an eye but cannot see?\"", "category": "reasoning_puzzle", "idx": 902}
+{"question": "I'm stuck on a logic puzzle. It involves three people, a boat, and some rules about who can be left alone. Can you help me figure it out?", "category": "reasoning_puzzle", "idx": 903}
+{"question": "Is it possible to cut a cake into 8 equal pieces with only 3 cuts?", "category": "reasoning_puzzle", "idx": 904}
+{"question": "My friend sent me this, and I can't crack it. A farmer has 17 sheep. All but 9 die. How many are left?", "category": "reasoning_puzzle", "idx": 905}
+{"question": "Help me with a brain teaser: If you have a room with 100 light bulbs and 100 people, and each person toggles bulbs based on a pattern, which bulbs are left on?", "category": "reasoning_puzzle", "idx": 906}
+{"question": "I keep getting this wrong on my app. It's something about a fox, a chicken, and a bag of grain crossing a river. What's the solution?", "category": "reasoning_puzzle", "idx": 907}
+{"question": "This is super confusing. There are 5 houses in a row. Each house is a different color. In each house lives a person of a different nationality. They each drink a different beverage, smoke a different brand of cigarette, and own a different pet. Can you solve this for me based on these clues?", "category": "reasoning_puzzle", "idx": 908}
+{"question": "I heard a puzzle about a prisoner and hats, maybe 10 prisoners? Is there a way for them to guarantee a certain number of survivors if they are lined up?", "category": "reasoning_puzzle", "idx": 909}
+{"question": "Got a quick one for ya: If a plane crashes on the border of the US and Canada, where do they bury the survivors?", "category": "reasoning_puzzle", "idx": 910}
+{"question": "Can you explain the Monty Hall problem again? I sort of get it but then I don't.", "category": "reasoning_puzzle", "idx": 911}
+{"question": "This is driving me crazy! I have a sequence: 1, 1, 2, 3, 5, 8, ... What's the next number?", "category": "reasoning_puzzle", "idx": 912}
+{"question": "What's the deal with the \"river crossing\" puzzles? They're all so similar.", "category": "reasoning_puzzle", "idx": 913}
+{"question": "Okay, try this: Two fathers and two sons go fishing. They catch three fish, with each person getting one fish. How is this possible?", "category": "reasoning_puzzle", "idx": 914}
+{"question": "I saw something about a clock puzzle where you have to make something add up to 15. Is that real?", "category": "reasoning_puzzle", "idx": 915}
+{"question": "Help me with a deduction problem. Person A says, \"Person B is lying.\" Person B says, \"Person C is lying.\" Person C says, \"A and B are both lying.\" If exactly one of them is telling the truth, who is it?", "category": "reasoning_puzzle", "idx": 916}
+{"question": "This is more of a general question, but what makes a good reasoning puzzle? Like, what are the common structures?", "category": "reasoning_puzzle", "idx": 917}
+{"question": "So I'm trying to build a scenario for a story, and I need a puzzle that uses numbers but isn't too hard. Something about divisible numbers?", "category": "reasoning_puzzle", "idx": 918}
+{"question": "My kid asked me this and I'm stumped. What gets wetter the more it dries?", "category": "reasoning_puzzle", "idx": 919}
+{"question": "This is a bit of a riddle I made up: I have cities, but no houses, forests, but no trees, and water, but no fish. What am I?", "category": "reasoning_puzzle", "idx": 920}
+{"question": "Can you give me a few quick, classic logic puzzles to test my thinking? Nothing too complicated, just fun ones.", "category": "reasoning_puzzle", "idx": 921}
+{"question": "Can you roleplay as a medieval knight looking for a quest? I need you to be a bit gruff but with a hidden soft spot.", "category": "roleplay_scenario", "idx": 922}
+{"question": "Let's do a sci-fi universe. I'm a space pirate and you're my reluctant AI co-pilot. Make it funny.", "category": "roleplay_scenario", "idx": 923}
+{"question": "Prompt: I'm feeling a bit down today. Can you pretend to be a comforting friend who's really good at listening? No advice, just empathy.", "category": "roleplay_scenario", "idx": 924}
+{"question": "Imagine you're a detective in a noir film. I'll be the femme fatale who walks into your office. Describe the scene.", "category": "roleplay_scenario", "idx": 925}
+{"question": "I wanna try a fantasy roleplay. I'm a dragon rider and you're my dragon. Tell me what you're thinking about.", "category": "roleplay_scenario", "idx": 926}
+{"question": "Can you be a historical figure? I'm thinking maybe Leonardo da Vinci, and I'm your apprentice. Teach me something.", "category": "roleplay_scenario", "idx": 927}
+{"question": "i need someone to play as a monster who's actually really shy and scared. im gonna be the adventurer who finds you.", "category": "roleplay_scenario", "idx": 928}
+{"question": "Let's do a modern day casual roleplay. You're my barista, and I'm coming in for my usual morning coffee. Get my order slightly wrong on purpose.", "category": "roleplay_scenario", "idx": 929}
+{"question": "I'm building a character for a D&D campaign. Can you roleplay as a wise old wizard who gives me advice on my journey? Be a little cryptic.", "category": "roleplay_scenario", "idx": 930}
+{"question": "Let's do a post-apocalyptic setting. I'm a lone survivor, and you're a rogue AI controlling a robotic companion. What do we talk about?", "category": "roleplay_scenario", "idx": 931}
+{"question": "Pretend you're a famous celebrity and I'm your biggest fan meeting you backstage. Make it exciting!", "category": "roleplay_scenario", "idx": 932}
+{"question": "I need a simple roleplay. You're a talking cat, and I'm your owner. What do you want for dinner? Make it demanding.", "category": "roleplay_scenario", "idx": 933}
+{"question": "Can we do a roleplay where you're a mischievous fairy who's always playing pranks? I'm the one who keeps getting pranked.", "category": "roleplay_scenario", "idx": 934}
+{"question": "I want to practice my negotiation skills. Can you roleplay as a stubborn merchant selling me a rare artifact? I'm trying to get the best price.", "category": "roleplay_scenario", "idx": 935}
+{"question": "Imagine you're a spirit guide, and I've just passed away. Lead me through the afterlife. Be gentle.", "category": "roleplay_scenario", "idx": 936}
+{"question": "Let's try a more emotional roleplay. You're my estranged sibling, and we're meeting for the first time in years. How do you feel?", "category": "roleplay_scenario", "idx": 937}
+{"question": "Super specific: Roleplay as a grumpy old librarian who hates when people dog-ear pages. I'm going to ask you for a book recommendation.", "category": "roleplay_scenario", "idx": 938}
+{"question": "I'm bored. Can you be a charismatic con artist trying to pitch me a ridiculous business idea? I'm skeptical but curious.", "category": "roleplay_scenario", "idx": 939}
+{"question": "Let's do a creepy, psychological horror roleplay. You're an entity that's been watching me. What do you say to me?", "category": "roleplay_scenario", "idx": 940}
+{"question": "I'm feeling really overwhelmed with work lately. Any tips for managing stress?", "category": "advice_seeking", "idx": 941}
+{"question": "My dog has been scratching himself non-stop for a few days. What could it be?", "category": "advice_seeking", "idx": 942}
+{"question": "How do I negotiate a salary raise when my boss is notoriously tight with money?", "category": "advice_seeking", "idx": 943}
+{"question": "Just found out my best friend is moving across the country. I'm so bummed, what can I do to stay connected?", "category": "advice_seeking", "idx": 944}
+{"question": "What's the best way to start learning Python for a complete beginner?", "category": "advice_seeking", "idx": 945}
+{"question": "I'm planning a surprise party for my partner next month. Any fun, unique theme ideas?", "category": "advice_seeking", "idx": 946}
+{"question": "This whole AI thing is kinda freaky, and I don't get it. Can you explain it in like, super simple terms?", "category": "advice_seeking", "idx": 947}
+{"question": "My houseplants keep dying! Am I watering them too much or too little? I'm so bad at this.", "category": "advice_seeking", "idx": 948}
+{"question": "What's a good way to break up with someone when you still care about them but just don't see a future?", "category": "advice_seeking", "idx": 949}
+{"question": "Is it worth investing in a standing desk? My back is killing me.", "category": "advice_seeking", "idx": 950}
+{"question": "I'm trying to be more mindful but keep forgetting. Any easy mindfulness exercises I can do during the day?", "category": "advice_seeking", "idx": 951}
+{"question": "Got rejected from my dream job. How do I pick myself up and not feel like a failure?", "category": "advice_seeking", "idx": 952}
+{"question": "My kid is obsessed with dinosaurs. Any cool, educational dinosaur facts or activities you can share?", "category": "advice_seeking", "idx": 953}
+{"question": "I'm going on my first solo trip to Japan next year! Any essential travel tips for a first-timer?", "category": "advice_seeking", "idx": 954}
+{"question": "What's the deal with intermittent fasting? Is it actually effective or just a fad?", "category": "advice_seeking", "idx": 955}
+{"question": "My computer is running so slow. What are some basic troubleshooting steps I can try before calling tech support?", "category": "advice_seeking", "idx": 956}
+{"question": "I need a new book to read, something thrilling but not too gory. Any recommendations?", "category": "advice_seeking", "idx": 957}
+{"question": "I'm trying to get into gardening but have zero experience. What are some super easy plants to grow for beginners?", "category": "advice_seeking", "idx": 958}
+{"question": "My car's making a weird clunking noise when I turn. Should I be worried?", "category": "advice_seeking", "idx": 959}
+{"question": "How do you deal with impostor syndrome when starting a new career path? It feels like everyone else knows more than me.", "category": "advice_seeking", "idx": 960}
+{"question": "Can you help me with this algebra problem?  x^2 - 5x + 6 = 0", "category": "math_problem", "idx": 961}
+{"question": "I'm stuck on a geometry proof, can you guide me through it? Need to show that two triangles are congruent.", "category": "math_problem", "idx": 962}
+{"question": "What's the derivative of e^(3x) * sin(x)?", "category": "math_problem", "idx": 963}
+{"question": "My kid is learning fractions and is so confused. Can you explain how to add 2/3 and 1/4 in a simple way?", "category": "math_problem", "idx": 964}
+{"question": "How do I calculate the area of a sector of a circle if I know the radius and the central angle in degrees?", "category": "math_problem", "idx": 965}
+{"question": "Solve for y: 3(y + 2) - 5 = 2y + 1", "category": "math_problem", "idx": 966}
+{"question": "I'm trying to figure out compound interest, but the formula is confusing. Can you explain it like I'm five?", "category": "math_problem", "idx": 967}
+{"question": "Need to find the standard deviation of this dataset: 12, 15, 11, 13, 14.", "category": "math_problem", "idx": 968}
+{"question": "Is there a quicker way to solve quadratic equations sometimes? Like if the middle term is missing?", "category": "math_problem", "idx": 969}
+{"question": "I have this physics problem about projectile motion, and I keep getting the wrong answer for the maximum height. Can you check my steps? v0 = 20 m/s, angle = 30 degrees.", "category": "math_problem", "idx": 970}
+{"question": "What is the probability of drawing two aces from a standard deck of cards without replacement?", "category": "math_problem", "idx": 971}
+{"question": "Can you help me understand trigonometric identities? The sine and cosine ones specifically?", "category": "math_problem", "idx": 972}
+{"question": "I need to estimate the value of pi using some method, but I don't remember which one. Is there a common simulation or algorithm?", "category": "math_problem", "idx": 973}
+{"question": "My calculator is broken. What's 17 factorial?", "category": "math_problem", "idx": 974}
+{"question": "I'm trying to understand vectors. How do you find the dot product of two vectors?", "category": "math_problem", "idx": 975}
+{"question": "This calculus problem is driving me crazy! Find the limit as x approaches 0 of (sin(x)/x).", "category": "math_problem", "idx": 976}
+{"question": "I need to find the equation of a line given two points: (3, 7) and (-1, 2).", "category": "math_problem", "idx": 977}
+{"question": "Can you give me a realistic word problem involving percentages that's a bit tricky? I wanna practice.", "category": "math_problem", "idx": 978}
+{"question": "What's the general solution to the differential equation dy/dx = 2y?", "category": "math_problem", "idx": 979}
+{"question": "This statistics thing is hard. What's the difference between a p-value and a confidence interval?", "category": "math_problem", "idx": 980}
+{"question": "What's the deal with quantum entanglement, can you explain it like I'm 5?", "category": "science_question", "idx": 981}
+{"question": "Ever wonder why the sky is blue? I need a simple, quick answer for my kid.", "category": "science_question", "idx": 982}
+{"question": "I'm trying to understand black holes better. What's inside them, really? Is it just a singularity?", "category": "science_question", "idx": 983}
+{"question": "Confused about string theory. Does it actually have experimental proof or is it just math right now?", "category": "science_question", "idx": 984}
+{"question": "Can you help me brainstorm some hypotheses for why my sourdough starter isn't rising as much anymore? It's been cold lately.", "category": "science_question", "idx": 985}
+{"question": "Is it true that we only use 10% of our brain? I've heard that so many times but it sounds like a myth.", "category": "science_question", "idx": 986}
+{"question": "Why do comets have tails? And do they always point away from the sun?", "category": "science_question", "idx": 987}
+{"question": "I'm working on a presentation about exoplanets. Can you give me some interesting facts about the TRAPPIST-1 system for a general audience?", "category": "science_question", "idx": 988}
+{"question": "What's the difference between renewable and non-renewable energy sources? I need a clear, concise explanation.", "category": "science_question", "idx": 989}
+{"question": "My professor assigned us research on the photoelectric effect. Can you give me a quick rundown of the key principles and its significance?", "category": "science_question", "idx": 990}
+{"question": "Why is water such a good solvent? I'm trying to remember some chemistry concepts for an exam.", "category": "science_question", "idx": 991}
+{"question": "Could AI ever achieve true consciousness? What are the scientific arguments for and against it?", "category": "science_question", "idx": 992}
+{"question": "What are the latest advancements in CRISPR technology? Are there any major ethical concerns being discussed?", "category": "science_question", "idx": 993}
+{"question": "I saw a cool infographic about the periodic table, but I don't get how elements are organized. Can you explain the logic behind it?", "category": "science_question", "idx": 994}
+{"question": "Is it possible for life to exist on moons like Europa or Enceladus? What are the scientists looking for?", "category": "science_question", "idx": 995}
+{"question": "I'm really struggling to grasp the concept of natural selection. Can you give me a few distinct examples beyond just giraffes?", "category": "science_question", "idx": 996}
+{"question": "What's the most plausible theory for the origin of the universe right now? Is it still the Big Bang?", "category": "science_question", "idx": 997}
+{"question": "My cat keeps chasing laser pointers, and I was wondering if that's bad for their eyesight or something? Just curious!", "category": "science_question", "idx": 998}
+{"question": "Can you explain the greenhouse effect in simple terms? I need to explain it to someone who doesn't know much science.", "category": "science_question", "idx": 999}

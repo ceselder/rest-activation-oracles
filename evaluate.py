@@ -48,8 +48,8 @@ from nl_probes.dataset_classes.classification import (
 )
 from nl_probes.dataset_classes.act_dataset_manager import DatasetLoaderConfig
 
-from rest_ao.epistemic_status import parse_oracle_output, ORACLE_SYSTEM_PROMPT
-from rest_ao.calibration_eval import (
+from grpo_ao.epistemic_status import parse_oracle_output, ORACLE_SYSTEM_PROMPT
+from grpo_ao.calibration_eval import (
     compute_calibration_metrics,
     print_calibration_report,
     plot_reliability_diagram,
@@ -194,14 +194,14 @@ def evaluate_on_dataset(
 
             is_correct = answer == target
 
-            confidences.append(parsed.confidence)
+            confidences.append(parsed.confidence_normalized)  # 0-1 for calibration
             correct.append(is_correct)
             responses.append({
                 "question": question[:100],
                 "target": target,
                 "response": response,
                 "answer": answer,
-                "confidence": parsed.confidence,
+                "confidence": parsed.confidence,  # 0-100 raw for readability
                 "correct": is_correct,
             })
 

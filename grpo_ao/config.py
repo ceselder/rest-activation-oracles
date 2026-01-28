@@ -1,16 +1,16 @@
-"""Configuration for ReST Activation Oracle training."""
+"""Configuration for GRPO Activation Oracle training."""
 
 from dataclasses import dataclass, field
 from typing import Any
 
 
 @dataclass
-class RESTConfig:
-    """Configuration for Reinforced Self-Training of calibrated Activation Oracles."""
+class GRPOConfig:
+    """Configuration for GRPO training of calibrated Activation Oracles."""
 
     # Model settings
-    model_name: str = "google/gemma-3-27b-it"
-    oracle_lora_path: str | None = "adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-27b-it"
+    model_name: str = "Qwen/Qwen3-8B"
+    oracle_lora_path: str | None = "adamkarvonen/checkpoints_all_single_and_multi_pretrain_cls_latentqa_posttrain_Qwen3-8B"
     hook_layer: int = 1  # Layer to inject activations (paper uses layer 1)
     layer_percents: list[int] = field(default_factory=lambda: [25, 50, 75])  # Extract at multiple depths
 
@@ -21,33 +21,41 @@ class RESTConfig:
     lora_target_modules: str = "all-linear"
 
     # Data settings
-    num_prompts: int = 100  # Fewer prompts for faster feedback loops
-    questions_per_prompt: int = 20  # More questions per prompt
-    question_temperature: float = 1.5  # High diversity, still coherent
-    question_batch_size: int = 16  # Adaptive batching will reduce if OOM
-    grow_batch_size: int = 8  # Adaptive batching handles OOM
-    judge_batch_size: int = 32  # Judge is external API
+    num_prompts: int = 100
+    questions_per_prompt: int = 20
+    question_temperature: float = 1.5
+    question_batch_size: int = 16
+    grow_batch_size: int = 8
+    judge_batch_size: int = 32
 
-    # ReST settings
-    num_rest_rounds: int = 10  # Total rounds to run
-    checkpoint_every: int = 2  # Save checkpoint every N rounds
-    samples_per_question: int = 3  # Oracle responses sampled per question
-    oracle_temperature: float = 1.2  # Higher for diverse samples (was 0.7)
-    filter_bottom_percent: float = 0.2  # Remove bottom 20% by reward
+    # GRPO settings
+    num_generations: int = 8  # G completions per (activation, question)
+    kl_penalty: float = 0.05  # β for KL divergence penalty
     calibration_lambda: float = 0.5  # λ in reward formula
+    oracle_temperature: float = 0.9  # For diverse samples
 
     # Training settings
+    num_train_steps: int = 1000
+    checkpoint_every: int = 200
     batch_size: int = 8
     gradient_accumulation_steps: int = 2
-    learning_rate: float = 1e-5
+    learning_rate: float = 1e-6  # Lower than SFT for RL stability
     max_grad_norm: float = 1.0
-    epochs_per_round: int = 1
 
     # Generation settings
-    max_new_tokens: int = 80  # Reduced from 150 for speed (epistemic status + short answer)
+    max_new_tokens: int = 80
 
     # Logging
-    wandb_project: str = "rest-activation-oracle"
+    log_samples_every: int = 50  # Log sample generations every N samples
+    log_samples_count: int = 3   # Number of samples to show each time
+
+    # Evaluation
+    run_initial_eval: bool = True  # Run eval before training starts
+    eval_datasets: list[str] = field(default_factory=lambda: ["sst2", "geometry_of_truth"])
+    eval_samples_per_dataset: int = 50
+
+    # Logging
+    wandb_project: str = "grpo-activation-oracle"
     wandb_run_name: str = ""
 
     # Paths
@@ -59,18 +67,18 @@ class RESTConfig:
     device: str = "cuda"
     dtype: str = "bfloat16"
 
-    # Judge settings (OpenRouter for Qwen-32B or similar)
-    judge_model: str = "qwen/qwen-2.5-72b-instruct"  # Via OpenRouter
+    # Judge settings (Gemini Flash Lite via OpenRouter - cheap and fast)
+    judge_model: str = "google/gemini-2.5-flash-lite"
     judge_temperature: float = 0.0
+    use_external_judge: bool = True  # Use OpenRouter instead of local model
 
     def __post_init__(self):
         if not self.wandb_run_name:
             model_short = self.model_name.split("/")[-1]
-            self.wandb_run_name = f"rest_{model_short}_r{self.num_rest_rounds}"
+            self.wandb_run_name = f"grpo_{model_short}_g{self.num_generations}"
 
 
-# Question generation templates for Activation Oracle training
-# Keep it simple - just ask for a numbered list of questions
+# Question generation templates
 QUESTION_TEMPLATES = [
     """Generate 20 questions about this text. Each question must end with a question mark.
 

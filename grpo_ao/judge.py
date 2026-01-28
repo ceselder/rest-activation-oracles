@@ -12,7 +12,7 @@ from typing import Sequence
 
 from openai import AsyncOpenAI
 
-from rest_ao.config import JUDGE_PROMPT
+from grpo_ao.config import JUDGE_PROMPT
 
 
 @dataclass

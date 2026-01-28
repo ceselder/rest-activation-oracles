@@ -1,15 +1,16 @@
-"""ReST (Reinforced Self-Training) trainer for calibrated Activation Oracles.
+"""GRPO trainer for calibrated Activation Oracles.
 
 The training loop:
-1. GROW: Sample oracle responses for (activation, question) pairs
-2. SCORE: Have judge score informativeness, compute reward
-3. IMPROVE: Weighted SFT on high-reward samples
-4. Repeat for N rounds
+1. GROW: Sample G oracle responses for (activation, question) pairs
+2. SCORE: Judge scores informativeness, compute reward
+3. Compute group-relative advantage
+4. Policy gradient update
 """
 
 import gc
 import json
 import random
+import time
 from dataclasses import asdict
 from pathlib import Path
 from typing import Iterator
@@ -20,12 +21,12 @@ from peft import LoraConfig, PeftModel, get_peft_model
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from rest_ao.config import RESTConfig
-from rest_ao.data_pipeline import PromptQuestionPair, load_diverse_prompts, create_prompt_question_pairs
-from rest_ao.epistemic_status import OracleOutput, parse_oracle_output, ORACLE_SYSTEM_PROMPT
-from rest_ao.judge import InformativenessJudge, LocalJudge
-from rest_ao.question_generation import QuestionGenerator
-from rest_ao.reward import (
+from grpo_ao.config import GRPOConfig
+from grpo_ao.data_pipeline import PromptQuestionPair, load_diverse_prompts, create_prompt_question_pairs
+from grpo_ao.epistemic_status import OracleOutput, parse_oracle_output, ORACLE_SYSTEM_PROMPT
+from grpo_ao.judge import InformativenessJudge, LocalJudge
+from grpo_ao.question_generation import QuestionGenerator
+from grpo_ao.reward import (
     RewardResult,
     compute_batch_rewards,
     filter_by_reward,
@@ -50,13 +51,15 @@ from nl_probes.utils.common import load_model, load_tokenizer, set_seed, layer_p
 from nl_probes.utils.dataset_utils import get_introspection_prefix, SPECIAL_TOKEN
 
 
-class RESTTrainer:
-    """Trainer for calibrated Activation Oracle using ReST."""
+class GRPOTrainer:
+    """Trainer for calibrated Activation Oracle using GRPO."""
 
-    def __init__(self, cfg: RESTConfig):
+    def __init__(self, cfg: GRPOConfig):
         self.cfg = cfg
         self.device = torch.device(cfg.device)
         self.dtype = getattr(torch, cfg.dtype)
+        self._sample_count = 0
+        self._last_log_time = time.time()
 
         # Will be initialized in setup()
         self.model = None
@@ -147,15 +150,59 @@ class RESTTrainer:
             batch_size=self.cfg.question_batch_size,
         )
 
-        # Judge - use local for efficiency since we have the model loaded - BATCHED
-        self.judge = LocalJudge(
-            model=self.model,
-            tokenizer=self.tokenizer,
-            device=str(self.device),
-            batch_size=self.cfg.judge_batch_size,
-        )
+        # Judge - use external (Gemini Flash Lite) or local
+        if self.cfg.use_external_judge:
+            print(f"Using external judge: {self.cfg.judge_model}")
+            self.judge = InformativenessJudge(
+                model=self.cfg.judge_model,
+                temperature=self.cfg.judge_temperature,
+            )
+        else:
+            print("Using local judge")
+            self.judge = LocalJudge(
+                model=self.model,
+                tokenizer=self.tokenizer,
+                device=str(self.device),
+                batch_size=self.cfg.judge_batch_size,
+            )
 
         print("Setup complete!")
+
+    def log_samples(self, scored_samples: list, force: bool = False):
+        """Log sample generations periodically.
+
+        Args:
+            scored_samples: List of (pair, response, reward) tuples
+            force: If True, log regardless of interval
+        """
+        self._sample_count += len(scored_samples)
+
+        # Check if we should log
+        if not force and self._sample_count < self.cfg.log_samples_every:
+            return
+
+        self._sample_count = 0
+        elapsed = time.time() - self._last_log_time
+        self._last_log_time = time.time()
+
+        # Pick random samples to show
+        n_show = min(self.cfg.log_samples_count, len(scored_samples))
+        samples = random.sample(scored_samples, n_show)
+
+        print(f"\n{'='*70}")
+        print(f"SAMPLE GENERATIONS ({elapsed:.1f}s since last log)")
+        print(f"{'='*70}")
+
+        for i, (pair, response, reward) in enumerate(samples):
+            parsed = parse_oracle_output(response)
+            print(f"\n[Sample {i+1}]")
+            print(f"  Prompt: {pair.prompt[:100]}...")
+            print(f"  Question: {pair.question}")
+            print(f"  Response: {response[:200]}{'...' if len(response) > 200 else ''}")
+            print(f"  Parsed answer: {parsed.answer[:100]}{'...' if len(parsed.answer) > 100 else ''}")
+            print(f"  Confidence: {reward.confidence}/100 | Info: {reward.informativeness:.2f} | Reward: {reward.reward:.3f}")
+
+        print(f"{'='*70}\n")
 
     def _extract_activations(
         self,
@@ -569,12 +616,12 @@ class RESTTrainer:
 
         # Compute metrics - both pre-filter (all) and post-filter (trained on)
         all_rewards_vals = [r.reward for r in rewards]
-        all_conf_vals = [r.confidence for r in rewards]
+        all_conf_vals = [r.confidence_normalized for r in rewards]
         all_info_vals = [r.informativeness for r in rewards]
         all_brier_vals = [r.brier_score for r in rewards]
 
         filt_rewards_vals = [r.reward for r in filtered_rewards]
-        filt_conf_vals = [r.confidence for r in filtered_rewards]
+        filt_conf_vals = [r.confidence_normalized for r in filtered_rewards]
         filt_info_vals = [r.informativeness for r in filtered_rewards]
 
         metrics = {
@@ -619,7 +666,7 @@ class RESTTrainer:
 
     def run_benchmark_eval(self, round_num: int) -> dict:
         """Evaluate on classification benchmarks and return metrics for wandb."""
-        from rest_ao.calibration_eval import compute_calibration_metrics
+        from grpo_ao.calibration_eval import compute_calibration_metrics
 
         # Quick eval on 2 datasets with 50 samples each (fast but informative)
         eval_datasets = ["sst2", "geometry_of_truth"]
@@ -710,7 +757,7 @@ class RESTTrainer:
                     target = dp.target_output.strip().lower()
                     answer = parsed.answer.strip().lower().rstrip(".!?,;:")
 
-                    confidences.append(parsed.confidence)
+                    confidences.append(parsed.confidence_normalized)
                     correct.append(answer == target)
 
                 if confidences:
@@ -781,8 +828,8 @@ class RESTTrainer:
             print(f"Could not save HF dataset: {e}")
 
     def train(self):
-        """Run the full ReST training loop. Runs infinitely if num_rest_rounds=0."""
-        print("Starting ReST training")
+        """Run the full GRPO training loop."""
+        print("Starting GRPO training")
 
         # Initialize wandb
         wandb.init(
@@ -790,6 +837,21 @@ class RESTTrainer:
             name=self.cfg.wandb_run_name,
             config=asdict(self.cfg),
         )
+
+        # Run initial evaluation if enabled
+        if self.cfg.run_initial_eval:
+            print("\n" + "=" * 60)
+            print("Running initial evaluation (before training)")
+            print("=" * 60)
+            initial_metrics = self.run_benchmark_eval(-1)  # -1 indicates pre-training
+            if initial_metrics:
+                # Rename keys to indicate initial state
+                initial_metrics = {f"initial/{k.split('/')[-1]}": v for k, v in initial_metrics.items()}
+                wandb.log({"step": -1, **initial_metrics})
+                print("\nInitial evaluation complete:")
+                for k, v in initial_metrics.items():
+                    print(f"  {k}: {v:.4f}")
+            print("=" * 60 + "\n")
 
         # Load prompts
         print(f"Loading {self.cfg.num_prompts} diverse prompts...")
@@ -804,7 +866,7 @@ class RESTTrainer:
         while infinite or round_num < self.cfg.num_rest_rounds:
             total_rounds = "∞" if infinite else self.cfg.num_rest_rounds
             print(f"\n{'='*60}")
-            print(f"ReST Round {round_num + 1}/{total_rounds}")
+            print(f"GRPO Step {round_num + 1}/{total_rounds}")
             print(f"{'='*60}\n")
 
             # Generate fresh questions each round (BATCHED)
@@ -841,14 +903,8 @@ class RESTTrainer:
             # SCORE
             scored = self.score_phase(grow_results)
 
-            # Log scored examples (first 3 rounds)
-            if round_num < 3:
-                print("\n--- SCORED EXAMPLES ---")
-                for i, (pair, resp, reward) in enumerate(scored[:5]):
-                    print(f"\nQ: {pair.question[:80]}...")
-                    print(f"  Response: {resp[:100]}...")
-                    print(f"  Confidence: {reward.confidence:.2f}, Informativeness: {reward.informativeness:.2f}, Reward: {reward.reward:.3f}")
-                print("--- END SCORED ---\n")
+            # Log sample generations periodically
+            self.log_samples(scored)
 
             # Save dataset for inspection
             self.save_round_data(scored, round_num)

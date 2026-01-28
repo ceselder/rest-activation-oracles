@@ -16,7 +16,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
-from rest_ao.question_generation import QuestionGenerator, GeneratedQuestions
+from grpo_ao.question_generation import QuestionGenerator, GeneratedQuestions
 
 
 @dataclass

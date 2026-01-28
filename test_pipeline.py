@@ -21,9 +21,9 @@ from nl_probes.utils.dataset_utils import get_introspection_prefix, SPECIAL_TOKE
 
 # Test imports from our module
 sys.path.insert(0, "/root/rest-activation-oracles")
-from rest_ao.epistemic_status import parse_oracle_output, format_epistemic_output, ORACLE_SYSTEM_PROMPT
-from rest_ao.reward import compute_reward
-from rest_ao.config import QUESTION_TEMPLATES
+from grpo_ao.epistemic_status import parse_oracle_output, format_epistemic_output, ORACLE_SYSTEM_PROMPT
+from grpo_ao.reward import compute_reward
+from grpo_ao.config import QUESTION_TEMPLATES
 
 
 def main():

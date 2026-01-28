@@ -7,7 +7,7 @@ import torch
 from transformers import PreTrainedModel, PreTrainedTokenizer
 from tqdm import tqdm
 
-from rest_ao.config import QUESTION_TEMPLATES
+from grpo_ao.config import QUESTION_TEMPLATES
 
 
 @dataclass

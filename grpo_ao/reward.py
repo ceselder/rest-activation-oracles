@@ -1,11 +1,11 @@
-"""Reward computation for ReST training.
+"""Reward computation for GRPO training.
 
 The reward function balances informativeness and calibration:
-    reward = informativeness - λ × (confidence - informativeness)²
+    reward = informativeness - λ × (confidence/100 - informativeness)²
 
 Where:
 - informativeness: 0-1 score from judge for how detailed and correct the answer is
-- confidence: parsed epistemic status (0-1)
+- confidence: parsed epistemic status (0-100, normalized to 0-1 for Brier)
 - λ: calibration weight (default 0.5)
 
 This prevents exploitation through:
@@ -15,7 +15,7 @@ This prevents exploitation through:
 
 from dataclasses import dataclass
 
-from rest_ao.epistemic_status import OracleOutput
+from grpo_ao.epistemic_status import OracleOutput
 
 
 @dataclass
@@ -24,14 +24,15 @@ class RewardResult:
 
     reward: float
     informativeness: float
-    confidence: float
+    confidence: int  # 0-100 raw value
+    confidence_normalized: float  # 0-1 for Brier computation
     brier_score: float
     parse_success: bool
 
     @property
     def calibration_error(self) -> float:
         """Absolute calibration error (confidence - informativeness)."""
-        return abs(self.confidence - self.informativeness)
+        return abs(self.confidence_normalized - self.informativeness)
 
 
 def compute_reward(
@@ -42,15 +43,16 @@ def compute_reward(
     """Compute reward for a single oracle response.
 
     Args:
-        oracle_output: Parsed oracle output with confidence
+        oracle_output: Parsed oracle output with confidence (0-100)
         informativeness: Judge's 0-1 score for answer quality
         calibration_lambda: Weight for calibration penalty (default 0.5)
 
     Returns:
         RewardResult with reward and component scores
     """
-    confidence = oracle_output.confidence
-    brier = (confidence - informativeness) ** 2
+    confidence = oracle_output.confidence  # 0-100
+    confidence_norm = oracle_output.confidence_normalized  # 0-1
+    brier = (confidence_norm - informativeness) ** 2
 
     reward = informativeness - calibration_lambda * brier
 
@@ -58,6 +60,7 @@ def compute_reward(
         reward=reward,
         informativeness=informativeness,
         confidence=confidence,
+        confidence_normalized=confidence_norm,
         brier_score=brier,
         parse_success=oracle_output.parse_success,
     )

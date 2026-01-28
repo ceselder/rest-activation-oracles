@@ -15,7 +15,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from rest_ao.epistemic_status import parse_oracle_output
+from grpo_ao.epistemic_status import parse_oracle_output
 
 
 @dataclass
@@ -228,7 +228,7 @@ class CalibrationEvaluator:
             response = self._generate_response(prompt, question)
             parsed = parse_oracle_output(response)
 
-            confidences.append(parsed.confidence)
+            confidences.append(parsed.confidence_normalized)
             correct.append(judge_fn(parsed.answer, gt))
 
         return compute_calibration_metrics(confidences, correct)
