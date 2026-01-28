@@ -166,9 +166,13 @@ class GRPOTrainer:
             {"role": "user", "content": prefix + question},
         ]
 
-        input_ids = self.tokenizer.apply_chat_template(
+        encoded = self.tokenizer.apply_chat_template(
             messages, tokenize=True, add_generation_prompt=True, return_tensors="pt"
-        ).to(self.device)
+        )
+        if isinstance(encoded, dict):
+            input_ids = encoded["input_ids"].to(self.device)
+        else:
+            input_ids = encoded.to(self.device)
 
         # Find special token positions
         input_ids_list = input_ids[0].tolist()
@@ -222,15 +226,23 @@ class GRPOTrainer:
                 {"role": "assistant", "content": response},
             ]
 
-            input_ids = self.tokenizer.apply_chat_template(
+            encoded = self.tokenizer.apply_chat_template(
                 messages, tokenize=True, add_generation_prompt=False, return_tensors="pt"
-            ).to(self.device)
+            )
+            if isinstance(encoded, dict):
+                input_ids = encoded["input_ids"].to(self.device)
+            else:
+                input_ids = encoded.to(self.device)
 
             # Create labels (mask prompt)
             labels = input_ids.clone()
-            prompt_ids = self.tokenizer.apply_chat_template(
+            prompt_encoded = self.tokenizer.apply_chat_template(
                 messages[:-1], tokenize=True, add_generation_prompt=True, return_tensors="pt"
             )
+            if isinstance(prompt_encoded, dict):
+                prompt_ids = prompt_encoded["input_ids"]
+            else:
+                prompt_ids = prompt_encoded
             labels[0, :prompt_ids.shape[1]] = -100
 
             # Find positions for steering
