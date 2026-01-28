@@ -790,11 +790,37 @@ class RESTTrainer:
                 questions_per_prompt=self.cfg.questions_per_prompt,
             )
 
+            # Log example questions (first 3 rounds)
+            if round_num < 3:
+                print("\n--- EXAMPLE QUESTIONS ---")
+                for i, pair in enumerate(pairs[:5]):
+                    print(f"\nPrompt {i+1}: {pair.prompt[:200]}...")
+                    print(f"Question: {pair.question}")
+                print("--- END EXAMPLES ---\n")
+
             # GROW
             grow_results = self.grow_phase(pairs)
 
+            # Log example responses (first 3 rounds)
+            if round_num < 3:
+                print("\n--- EXAMPLE ORACLE RESPONSES ---")
+                for i, (pair, responses) in enumerate(grow_results[:3]):
+                    print(f"\nQ: {pair.question}")
+                    for j, resp in enumerate(responses[:2]):
+                        print(f"  Response {j+1}: {resp[:150]}...")
+                print("--- END EXAMPLES ---\n")
+
             # SCORE
             scored = self.score_phase(grow_results)
+
+            # Log scored examples (first 3 rounds)
+            if round_num < 3:
+                print("\n--- SCORED EXAMPLES ---")
+                for i, (pair, resp, reward) in enumerate(scored[:5]):
+                    print(f"\nQ: {pair.question[:80]}...")
+                    print(f"  Response: {resp[:100]}...")
+                    print(f"  Confidence: {reward.confidence:.2f}, Informativeness: {reward.informativeness:.2f}, Reward: {reward.reward:.3f}")
+                print("--- END SCORED ---\n")
 
             # Save dataset for inspection
             self.save_round_data(scored, round_num)
