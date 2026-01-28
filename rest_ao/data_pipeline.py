@@ -47,60 +47,36 @@ def load_diverse_prompts(
     max_length: int = 1024,
     seed: int = 42,
 ) -> list[str]:
-    """Load diverse prompts from FineWeb (pretraining) + LMSYS Chat-1M (conversational).
-
-    Following the paper: equal mix of both datasets.
-    """
+    """Load diverse prompts from WildChat (real user conversations with GPT)."""
     random.seed(seed)
     prompts = []
-    half = num_prompts // 2
 
-    # Load FineWeb (pretraining data) - not gated
-    print(f"Loading {half} prompts from FineWeb...")
-    try:
-        fineweb = load_dataset(
-            "HuggingFaceFW/fineweb",
-            name="sample-10BT",
-            split="train",
-            streaming=True,
-        )
-        for item in tqdm(fineweb, desc="FineWeb", total=half * 2):
-            if len(prompts) >= half:
-                break
-            text = item.get("text", "")
-            # Take a reasonable chunk
-            if 50 < len(text) <= max_length:
-                prompts.append(text)
-    except Exception as e:
-        print(f"FineWeb failed: {e}")
+    print(f"Loading {num_prompts} prompts from WildChat (randomized)...")
 
-    # Load LMSYS Chat-1M (conversational) - gated but we have token
-    print(f"Loading {half} prompts from LMSYS Chat-1M...")
-    lmsys_prompts = []
-    try:
-        lmsys = load_dataset(
-            "lmsys/lmsys-chat-1m",
-            split="train",
-            streaming=True,
-        )
-        for item in tqdm(lmsys, desc="LMSYS", total=half * 2):
-            if len(lmsys_prompts) >= half:
-                break
-            conversation = item.get("conversation", [])
-            for turn in conversation:
-                if turn.get("role") == "user":
-                    content = turn.get("content", "")
-                    if 20 < len(content) <= max_length:
-                        lmsys_prompts.append(content)
-                        if len(lmsys_prompts) >= half:
-                            break
-        prompts.extend(lmsys_prompts)
-    except Exception as e:
-        print(f"LMSYS failed: {e}, using only FineWeb")
+    # Load more than needed so we can shuffle and sample
+    load_target = num_prompts * 3
 
+    ds = load_dataset(
+        "allenai/WildChat-1M",
+        split="train",
+        streaming=True,
+    )
+
+    for item in tqdm(ds, desc="WildChat", total=load_target):
+        if len(prompts) >= load_target:
+            break
+        conversation = item.get("conversation", [])
+        for turn in conversation:
+            if turn.get("role") == "user":
+                content = turn.get("content", "")
+                if 20 < len(content) <= max_length:
+                    prompts.append(content)
+                    break  # Only first user message per convo
+
+    # Shuffle and sample
     random.shuffle(prompts)
     prompts = prompts[:num_prompts]
-    print(f"Loaded {len(prompts)} prompts ({len(prompts) - len(lmsys_prompts)} FineWeb, {len(lmsys_prompts)} LMSYS)")
+    print(f"Loaded {len(prompts)} prompts from WildChat")
 
     return prompts
 
