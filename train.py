@@ -32,15 +32,16 @@ def main():
     parser = argparse.ArgumentParser(description="Train calibrated Activation Oracle with ReST")
 
     # Model
-    parser.add_argument("--model", type=str, default="Qwen/Qwen3-1.7B-Base",
-                        help="Model to train (default: Qwen/Qwen3-1.7B-Base)")
-    parser.add_argument("--oracle_lora_path", type=str, default=None,
+    parser.add_argument("--model", type=str, default="google/gemma-3-27b-it",
+                        help="Model to train (default: google/gemma-3-27b-it)")
+    parser.add_argument("--oracle_lora_path", type=str,
+                        default="adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-27b-it",
                         help="Path to pretrained AO checkpoint")
 
     # Data
-    parser.add_argument("--num_prompts", type=int, default=10000,
+    parser.add_argument("--num_prompts", type=int, default=100,
                         help="Number of prompts to use")
-    parser.add_argument("--questions_per_prompt", type=int, default=10,
+    parser.add_argument("--questions_per_prompt", type=int, default=20,
                         help="Questions generated per prompt")
 
     # ReST
