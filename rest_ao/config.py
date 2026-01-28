@@ -69,97 +69,106 @@ class RESTConfig:
             self.wandb_run_name = f"rest_{model_short}_r{self.num_rest_rounds}"
 
 
-# Question generation templates - varied phrasing, 2-4 yes/no + 2-4 open-ended, mixed difficulty
+# Question generation templates for Activation Oracle training
+# AO sees only activations (not raw text) and must answer questions about the content
+# Questions should test factual recall, not require external knowledge
 # All templates require English output regardless of input language
+_AO_CONTEXT = """You are generating questions to train an Activation Oracle - a model that answers questions about text using only internal activations (not the raw text).
+
+Good questions:
+- Test factual content recall (who, what, where, when)
+- Have clear yes/no or short factual answers
+- Can be answered from the text alone
+
+Bad questions:
+- Require external knowledge or opinions
+- Are vague or philosophical
+- Are not actually questions (statements)
+
+"""
+
 QUESTION_TEMPLATES = [
-    """Read this text and create questions of varying types and difficulty:
-- 2-3 binary questions (must be answerable with exactly "yes" or "no")
-- 3-4 open-ended questions (some easy, some requiring careful thought)
-Make each question distinct and interesting.
-IMPORTANT: All questions MUST be in English, even if the text is in another language.
+    _AO_CONTEXT + """Generate questions about this text:
+- 2-3 yes/no questions (e.g., "Is X mentioned?", "Does the text say Y?")
+- 3-4 factual questions (e.g., "What is X?", "Who did Y?", "Where is Z?")
+IMPORTANT: English only. Must be answerable from the text.
 
 TEXT:
 {prompt}""",
 
-    """Imagine you're quizzing someone on this passage. Write:
-- A couple quick yes/no checks
-- Several deeper questions that need real explanation
-- At least one tricky question that requires reading between the lines
-IMPORTANT: Write all questions in English only.
+    _AO_CONTEXT + """Quiz questions for this text:
+- 2-3 yes/no verification questions
+- 2-3 "what/who/where/when" factual questions
+Keep questions simple and directly answerable from the text.
+IMPORTANT: English only.
 
 TEXT:
 {prompt}""",
 
-    """Create a diverse question set for this text:
-- 2-4 polar questions (yes/no only)
-- 2-4 exploratory questions ranging from straightforward to challenging
-Vary the phrasing and focus of each question.
-IMPORTANT: Questions must be in English regardless of the text's language.
+    _AO_CONTEXT + """Create factual recall questions:
+- Yes/no: "Is X true?", "Does Y happen?", "Is Z mentioned?"
+- Open: "What is X?", "Who does Y?", "How many Z?"
+IMPORTANT: English only. No opinions or external knowledge.
 
 TEXT:
 {prompt}""",
 
-    """What would you ask to test understanding? Generate:
-- Some simple verification questions (answerable yes or no)
-- Some interpretive questions requiring elaboration
-- Mix easy and difficult ones
-IMPORTANT: All questions in English only.
+    _AO_CONTEXT + """Write questions testing text comprehension:
+- Binary checks (yes/no answers only)
+- Short-answer factual questions
+Questions must be answerable using only the text content.
+IMPORTANT: English only.
 
 TEXT:
 {prompt}""",
 
-    """Formulate questions about this content:
-- Binary questions for quick fact-checking (2-3)
-- Open questions probing comprehension at different depths (3-4)
-Each question should stand alone and not repeat others.
-IMPORTANT: Write questions in English even if the content is not.
+    _AO_CONTEXT + """Generate reading comprehension questions:
+- 2-3 true/false style (answerable yes or no)
+- 2-3 factual retrieval (who, what, where, when, how many)
+IMPORTANT: English only. Clear, unambiguous questions.
 
 TEXT:
 {prompt}""",
 
-    """Design a question battery for this text:
-- Include yes/no items to verify basic facts
-- Include wh-questions (what/why/how/who) of varying complexity
-- Range from surface-level to requiring inference
-IMPORTANT: English questions only.
+    _AO_CONTEXT + """Create questions about the content:
+- Yes/no questions checking specific facts
+- Wh-questions (what/who/where/when) with factual answers
+No philosophical or opinion questions.
+IMPORTANT: English only.
 
 TEXT:
 {prompt}""",
 
-    """Craft questions to explore this passage:
-- A few closed-form queries (yes or no answers only)
-- Several open-ended prompts, some simple, some requiring synthesis
-Write each in a different style.
-IMPORTANT: All questions must be written in English.
+    _AO_CONTEXT + """Write fact-checking questions:
+- "Is it true that X?" (yes/no)
+- "What is the X mentioned?" (factual)
+- "Who/where/when is Y?" (factual)
+IMPORTANT: English only. Text-answerable only.
 
 TEXT:
 {prompt}""",
 
-    """Generate a mix of question types:
-- 2-4 that can be answered with just "yes" or "no"
-- 2-4 that need fuller responses, varying in difficulty
-Avoid repetitive phrasing.
-IMPORTANT: Questions in English only, regardless of input language.
+    _AO_CONTEXT + """Generate simple comprehension questions:
+- 2-4 yes/no questions about facts in the text
+- 2-4 short-answer questions about details
+IMPORTANT: English only.
 
 TEXT:
 {prompt}""",
 
-    """Build questions for this text at multiple levels:
-- Factual checks (yes/no format)
-- Analytical questions requiring thought
-- At least one that's genuinely hard
-Make them sound natural and varied.
-IMPORTANT: Write all questions in English.
+    _AO_CONTEXT + """Create questions a reader could answer:
+- Verification questions (yes/no)
+- Detail questions (specific facts from text)
+Avoid vague or subjective questions.
+IMPORTANT: English only.
 
 TEXT:
 {prompt}""",
 
-    """Survey questions for this content:
-- Quick binary items (yes/no)
-- Deeper probes needing explanation
-- Include both easy wins and real challenges
-Each question should feel fresh.
-IMPORTANT: English questions only.
+    _AO_CONTEXT + """Write clear factual questions:
+- Yes/no: test if specific things are mentioned/true
+- Open: ask for specific details (names, numbers, places)
+IMPORTANT: English only. No external knowledge needed.
 
 TEXT:
 {prompt}""",
