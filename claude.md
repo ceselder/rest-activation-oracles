@@ -31,12 +31,21 @@ This prevents:
 
 ## Progress Log
 
-### 2026-01-28: Project Setup
+### 2026-01-28: Project Setup + GPU Testing
 
 **Completed:**
 - [x] Cloned activation-oracle repo for reference implementation
 - [x] Read paper for technical details (norm-matched additive steering at layer 1)
 - [x] Created project structure:
+- [x] SSH to GPU machine (RTX 5090 32GB) on vast.ai
+- [x] Verified model loads (3.44GB VRAM for Qwen3-1.7B)
+- [x] Verified activation extraction works
+- [x] Verified steering injection works
+- [x] Verified reward computation works
+- [x] Ran mini training test successfully
+- [x] Pushed to GitHub: https://github.com/ceselder/rest-activation-oracles
+
+**Created project structure:
   - `config.py` - RESTConfig with all hyperparameters + 10 question templates
   - `epistemic_status.py` - Parse/format `[epistemic status: X.XX] answer`
   - `reward.py` - Compute reward = informativeness - λ × Brier

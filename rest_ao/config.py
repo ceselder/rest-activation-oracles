@@ -9,8 +9,8 @@ class RESTConfig:
     """Configuration for Reinforced Self-Training of calibrated Activation Oracles."""
 
     # Model settings
-    model_name: str = "Qwen/Qwen3-1.7B-Base"  # Start with smaller model for fast iteration
-    oracle_lora_path: str | None = None  # Path to pretrained AO checkpoint, or None to train from scratch
+    model_name: str = "Qwen/Qwen3-8B"
+    oracle_lora_path: str | None = "adamkarvonen/checkpoints_all_single_and_multi_pretrain_cls_latentqa_posttrain_Qwen3-8B"
     hook_layer: int = 1  # Layer to inject activations (paper uses layer 1)
     layer_percents: list[int] = field(default_factory=lambda: [25, 50, 75])
 
