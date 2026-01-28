@@ -47,14 +47,11 @@ def load_diverse_prompts(
     max_length: int = 1024,
     seed: int = 42,
 ) -> list[str]:
-    """Load diverse text prompts from multiple sources.
+    """Load diverse user prompts from lmsys-chat-1m.
 
-    Uses a mix of:
-    - Wikipedia (factual)
-    - News articles (current events)
-    - ArXiv abstracts (technical)
-    - Reddit (conversational)
-    - Fiction (creative)
+    Uses real user prompts from the LMSYS Chatbot Arena - actual prompts
+    people sent to various LLMs. This is more representative of real use
+    cases than pretraining data.
 
     Args:
         num_prompts: Total number of prompts to load
@@ -62,127 +59,50 @@ def load_diverse_prompts(
         seed: Random seed
 
     Returns:
-        List of diverse text prompts
+        List of user prompts
     """
     random.seed(seed)
     prompts = []
 
-    # Distribution of sources
-    sources = [
-        ("wikipedia", 0.25),
-        ("c4", 0.25),
-        ("arxiv", 0.15),
-        ("github", 0.15),
-        ("stackexchange", 0.1),
-        ("books", 0.1),
-    ]
-
-    for source, fraction in sources:
-        n = int(num_prompts * fraction)
-        source_prompts = _load_source(source, n, max_length, seed)
-        prompts.extend(source_prompts)
-
-    # Shuffle and trim to exact count
-    random.shuffle(prompts)
-    prompts = prompts[:num_prompts]
-
-    return prompts
-
-
-def _load_source(source: str, n: int, max_length: int, seed: int) -> list[str]:
-    """Load prompts from a specific source."""
-    prompts = []
+    print(f"Loading {num_prompts} prompts from lmsys-chat-1m...")
 
     try:
-        if source == "wikipedia":
-            ds = load_dataset(
-                "wikipedia",
-                "20220301.en",
-                split="train",
-                streaming=True,
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:  # Load extra to filter
-                    break
-                text = item["text"][:max_length]
-                if len(text) > 100:  # Skip very short
-                    prompts.append(text)
+        ds = load_dataset(
+            "lmsys/lmsys-chat-1m",
+            split="train",
+            streaming=True,
+        )
 
-        elif source == "c4":
-            ds = load_dataset(
-                "allenai/c4",
-                "en",
-                split="train",
-                streaming=True,
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:
-                    break
-                text = item["text"][:max_length]
-                if len(text) > 100:
-                    prompts.append(text)
+        for i, item in enumerate(tqdm(ds, desc="Loading prompts", total=num_prompts * 2)):
+            if len(prompts) >= num_prompts:
+                break
 
-        elif source == "arxiv":
-            ds = load_dataset(
-                "ccdv/arxiv-summarization",
-                split="train",
-                streaming=True,
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:
-                    break
-                text = item["article"][:max_length]
-                if len(text) > 100:
-                    prompts.append(text)
-
-        elif source == "github":
-            ds = load_dataset(
-                "codeparrot/github-code",
-                streaming=True,
-                split="train",
-                languages=["Python"],
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:
-                    break
-                text = item["code"][:max_length]
-                if len(text) > 100:
-                    prompts.append(text)
-
-        elif source == "stackexchange":
-            ds = load_dataset(
-                "flax-sentence-embeddings/stackexchange_title_body_jsonl",
-                split="train",
-                streaming=True,
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:
-                    break
-                text = f"{item['title']}\n\n{item['body']}"[:max_length]
-                if len(text) > 100:
-                    prompts.append(text)
-
-        elif source == "books":
-            ds = load_dataset(
-                "bookcorpus",
-                split="train",
-                streaming=True,
-            )
-            for i, item in enumerate(ds):
-                if i >= n * 2:
-                    break
-                text = item["text"][:max_length]
-                if len(text) > 100:
-                    prompts.append(text)
+            # Extract user messages from conversation
+            conversation = item.get("conversation", [])
+            for turn in conversation:
+                if turn.get("role") == "user":
+                    content = turn.get("content", "")
+                    # Filter by length
+                    if 20 < len(content) <= max_length:
+                        prompts.append(content)
+                        if len(prompts) >= num_prompts:
+                            break
 
     except Exception as e:
-        print(f"Warning: Could not load {source}: {e}")
-        # Fall back to C4 if source fails
-        if source != "c4":
-            return _load_source("c4", n, max_length, seed)
+        print(f"Error loading lmsys-chat-1m: {e}")
+        print("Falling back to simple prompts...")
+        # Fallback to some basic prompts if dataset fails
+        prompts = [
+            "Explain how machine learning works.",
+            "What is the capital of France?",
+            "Write a short story about a robot.",
+        ] * (num_prompts // 3)
 
     random.shuffle(prompts)
-    return prompts[:n]
+    prompts = prompts[:num_prompts]
+    print(f"Loaded {len(prompts)} prompts")
+
+    return prompts
 
 
 def create_prompt_question_pairs(
