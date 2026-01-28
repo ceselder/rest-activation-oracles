@@ -24,9 +24,9 @@ class RESTConfig:
     num_prompts: int = 100  # Fewer prompts for faster feedback loops
     questions_per_prompt: int = 20  # More questions per prompt
     question_temperature: float = 1.5  # High diversity, still coherent
-    question_batch_size: int = 8  # Start small, adaptive batching will adjust
-    grow_batch_size: int = 4  # Smaller for 27B model
-    judge_batch_size: int = 16  # Judge is external API, can be larger
+    question_batch_size: int = 16  # Adaptive batching will reduce if OOM
+    grow_batch_size: int = 8  # Adaptive batching handles OOM
+    judge_batch_size: int = 32  # Judge is external API
 
     # ReST settings
     num_rest_rounds: int = 10  # Total rounds to run
