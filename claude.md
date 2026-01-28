@@ -62,10 +62,18 @@ This prevents:
 - Using Qwen3-1.7B for fast iteration (user's instruction)
 
 **Next Steps:**
-1. Test SSH connection to GPU machine
-2. Install dependencies
-3. Run initial training with small dataset to verify pipeline
-4. Scale up once working
+1. ~~Test SSH connection to GPU machine~~ ✓
+2. ~~Install dependencies~~ ✓
+3. ~~Run initial training with small dataset to verify pipeline~~ ✓
+4. Run full ReST training
+
+**Mini ReST Test Results (2026-01-28):**
+- Model: Qwen3-8B + pretrained AO checkpoint
+- VRAM: 17GB base → 19GB during training (32GB available)
+- Response 1: `[epistemic status: 0.75]` - correctly formatted!
+- Response 3: `[epistemic status: 0.85]` - also formatted!
+- Reward correctly penalizes overconfident wrong answers
+- Training loss: 1.85
 
 ---
 
