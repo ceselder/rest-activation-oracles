@@ -25,12 +25,12 @@ class RESTConfig:
     questions_per_prompt: int = 10  # Questions generated per prompt
     question_temperature: float = 1.75  # Very high temp for maximum question diversity
     question_batch_size: int = 32  # Batch size for question generation
-    grow_batch_size: int = 16  # Batch size for GROW phase (oracle response generation)
-    judge_batch_size: int = 16  # Batch size for SCORE phase (judging)
+    grow_batch_size: int = 32  # Batch size for GROW phase (oracle response generation)
+    judge_batch_size: int = 32  # Batch size for SCORE phase (judging)
 
     # ReST settings
     num_rest_rounds: int = 5
-    samples_per_question: int = 5  # Oracle responses sampled per question
+    samples_per_question: int = 3  # Oracle responses sampled per question (was 5, reduced for speed)
     oracle_temperature: float = 0.7
     filter_bottom_percent: float = 0.2  # Remove bottom 20% by reward
     calibration_lambda: float = 0.5  # λ in reward formula
@@ -43,7 +43,7 @@ class RESTConfig:
     epochs_per_round: int = 1
 
     # Generation settings
-    max_new_tokens: int = 150
+    max_new_tokens: int = 80  # Reduced from 150 for speed (epistemic status + short answer)
 
     # Logging
     wandb_project: str = "rest-activation-oracle"
