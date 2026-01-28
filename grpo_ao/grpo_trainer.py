@@ -166,9 +166,16 @@ class GRPOTrainer:
             {"role": "user", "content": prefix + question},
         ]
 
-        input_ids_list = self.tokenizer.apply_chat_template(
+        encoded = self.tokenizer.apply_chat_template(
             messages, tokenize=True, add_generation_prompt=True, return_tensors=None
         )
+        # Handle different return types
+        if hasattr(encoded, 'input_ids'):
+            input_ids_list = encoded.input_ids
+        elif isinstance(encoded, list):
+            input_ids_list = encoded
+        else:
+            input_ids_list = list(encoded)
         input_ids = torch.tensor([input_ids_list], device=self.device)
 
         # Find special token positions
@@ -222,15 +229,17 @@ class GRPOTrainer:
                 {"role": "assistant", "content": response},
             ]
 
-            full_ids_list = self.tokenizer.apply_chat_template(
+            full_encoded = self.tokenizer.apply_chat_template(
                 messages, tokenize=True, add_generation_prompt=False, return_tensors=None
             )
+            full_ids_list = full_encoded.input_ids if hasattr(full_encoded, 'input_ids') else list(full_encoded)
             input_ids = torch.tensor([full_ids_list], device=self.device)
 
             # Create labels (mask prompt)
-            prompt_ids_list = self.tokenizer.apply_chat_template(
+            prompt_encoded = self.tokenizer.apply_chat_template(
                 messages[:-1], tokenize=True, add_generation_prompt=True, return_tensors=None
             )
+            prompt_ids_list = prompt_encoded.input_ids if hasattr(prompt_encoded, 'input_ids') else list(prompt_encoded)
             labels = input_ids.clone()
             labels[0, :len(prompt_ids_list)] = -100
 
