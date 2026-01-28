@@ -464,6 +464,125 @@ class RESTTrainer:
 
         return metrics
 
+    def run_benchmark_eval(self, round_num: int) -> dict:
+        """Evaluate on classification benchmarks and return metrics for wandb."""
+        from rest_ao.calibration_eval import compute_calibration_metrics
+
+        # Quick eval on 2 datasets with 50 samples each (fast but informative)
+        eval_datasets = ["sst2", "geometry_of_truth"]
+        eval_samples = 50
+
+        all_confidences = []
+        all_correct = []
+        metrics = {}
+
+        self.model.eval()
+
+        for ds_name in eval_datasets:
+            try:
+                # Import here to avoid circular deps
+                from nl_probes.dataset_classes.classification import (
+                    ClassificationDatasetConfig,
+                    ClassificationDatasetLoader,
+                )
+                from nl_probes.dataset_classes.act_dataset_manager import DatasetLoaderConfig
+
+                config = DatasetLoaderConfig(
+                    dataset_name="",
+                    num_train=0,
+                    num_test=eval_samples,
+                    splits=["test"],
+                    model_name=self.cfg.model_name,
+                    layer_percents=self.cfg.layer_percents,
+                    save_acts=False,
+                    batch_size=0,
+                    seed=42,
+                    custom_dataset_params=ClassificationDatasetConfig(
+                        classification_dataset_name=ds_name,
+                        max_window_size=5,
+                        min_end_offset=-1,
+                        max_end_offset=-5,
+                        num_qa_per_sample=1,
+                    ),
+                )
+
+                loader = ClassificationDatasetLoader(dataset_config=config)
+                eval_data = loader.load_dataset("test")
+
+                confidences = []
+                correct = []
+
+                for dp in eval_data[:eval_samples]:
+                    # Quick eval - generate oracle response
+                    num_pos = len(dp.positions)
+                    prefix = get_introspection_prefix(dp.layer, num_pos)
+                    question = self.tokenizer.decode(dp.input_ids, skip_special_tokens=True)
+                    if "Answer with" in question:
+                        question = question[question.find("Answer with"):]
+
+                    messages = [
+                        {"role": "system", "content": ORACLE_SYSTEM_PROMPT},
+                        {"role": "user", "content": prefix + question},
+                    ]
+
+                    encoded = self.tokenizer.apply_chat_template(
+                        messages, tokenize=True, add_generation_prompt=True, return_tensors="pt"
+                    )
+                    input_ids = encoded["input_ids"].to(self.device)
+
+                    # Get steering vectors
+                    if dp.steering_vectors is not None:
+                        sv = dp.steering_vectors.to(self.device)
+                    else:
+                        continue
+
+                    input_ids_list = input_ids[0].tolist()
+                    special_token_id = self.tokenizer.encode(SPECIAL_TOKEN, add_special_tokens=False)[0]
+                    positions = [j for j, t in enumerate(input_ids_list) if t == special_token_id][:num_pos]
+
+                    hook_fn = get_hf_activation_steering_hook(
+                        vectors=[sv], positions=[positions],
+                        steering_coefficient=1.0, device=self.device, dtype=self.dtype
+                    )
+
+                    with torch.no_grad(), add_hook(self.submodule, hook_fn):
+                        out = self.model.generate(
+                            input_ids, max_new_tokens=30, do_sample=False,
+                            pad_token_id=self.tokenizer.pad_token_id
+                        )
+
+                    response = self.tokenizer.decode(out[0][input_ids.shape[1]:], skip_special_tokens=True)
+                    parsed = parse_oracle_output(response)
+
+                    target = dp.target_output.strip().lower()
+                    answer = parsed.answer.strip().lower().rstrip(".!?,;:")
+
+                    confidences.append(parsed.confidence)
+                    correct.append(answer == target)
+
+                if confidences:
+                    ds_metrics = compute_calibration_metrics(confidences, correct)
+                    metrics[f"eval/{ds_name}_accuracy"] = ds_metrics.accuracy
+                    metrics[f"eval/{ds_name}_ece"] = ds_metrics.ece
+                    metrics[f"eval/{ds_name}_brier"] = ds_metrics.brier
+                    all_confidences.extend(confidences)
+                    all_correct.extend(correct)
+
+                    print(f"  {ds_name}: acc={ds_metrics.accuracy:.3f}, ece={ds_metrics.ece:.4f}")
+
+            except Exception as e:
+                print(f"  Eval failed for {ds_name}: {e}")
+
+        # Overall metrics
+        if all_confidences:
+            overall = compute_calibration_metrics(all_confidences, all_correct)
+            metrics["eval/overall_accuracy"] = overall.accuracy
+            metrics["eval/overall_ece"] = overall.ece
+            metrics["eval/overall_brier"] = overall.brier
+
+        self.model.train()
+        return metrics
+
     def train(self):
         """Run the full ReST training loop."""
         print("Starting ReST training")
@@ -507,7 +626,7 @@ class RESTTrainer:
             # IMPROVE
             metrics = self.improve_phase(scored, round_num)
 
-            # Log metrics
+            # Log training metrics
             wandb.log({
                 "round": round_num,
                 **metrics,
@@ -516,6 +635,14 @@ class RESTTrainer:
             print(f"\nRound {round_num + 1} metrics:")
             for k, v in metrics.items():
                 print(f"  {k}: {v:.4f}")
+
+            # Run benchmark evaluation and log to wandb
+            eval_metrics = self.run_benchmark_eval(round_num)
+            if eval_metrics:
+                wandb.log({
+                    "round": round_num,
+                    **eval_metrics,
+                })
 
             # Save checkpoint
             save_path = Path(self.cfg.save_dir) / f"round_{round_num}"
