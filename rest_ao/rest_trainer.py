@@ -539,17 +539,53 @@ class RESTTrainer:
 
         avg_loss = total_loss / max(num_batches, 1)
 
-        # Compute metrics
+        # Compute metrics - both pre-filter (all) and post-filter (trained on)
+        all_rewards_vals = [r.reward for r in rewards]
+        all_conf_vals = [r.confidence for r in rewards]
+        all_info_vals = [r.informativeness for r in rewards]
+        all_brier_vals = [r.brier_score for r in rewards]
+
+        filt_rewards_vals = [r.reward for r in filtered_rewards]
+        filt_conf_vals = [r.confidence for r in filtered_rewards]
+        filt_info_vals = [r.informativeness for r in filtered_rewards]
+
         metrics = {
+            # Training metrics (filtered samples)
             "train/loss": avg_loss,
-            "train/num_samples": len(filtered_samples),
-            "train/mean_reward": sum(r.reward for r in filtered_rewards) / len(filtered_rewards),
-            "train/mean_informativeness": sum(r.informativeness for r in filtered_rewards) / len(filtered_rewards),
-            "train/mean_confidence": sum(r.confidence for r in filtered_rewards) / len(filtered_rewards),
+            "train/num_samples_filtered": len(filtered_samples),
+            "train/num_samples_total": len(samples),
+            "train/mean_reward": sum(filt_rewards_vals) / len(filt_rewards_vals),
+            "train/mean_informativeness": sum(filt_info_vals) / len(filt_info_vals),
+            "train/mean_confidence": sum(filt_conf_vals) / len(filt_conf_vals),
             "train/mean_brier": sum(r.brier_score for r in filtered_rewards) / len(filtered_rewards),
-            "train/confidence_std": torch.tensor([r.confidence for r in filtered_rewards]).std().item(),
+            "train/confidence_std": torch.tensor(filt_conf_vals).std().item(),
             "train/parse_success_rate": sum(r.parse_success for r in filtered_rewards) / len(filtered_rewards),
+
+            # Pre-filter metrics (all samples) - shows full distribution
+            "all/mean_reward": sum(all_rewards_vals) / len(all_rewards_vals),
+            "all/mean_informativeness": sum(all_info_vals) / len(all_info_vals),
+            "all/mean_confidence": sum(all_conf_vals) / len(all_conf_vals),
+            "all/mean_brier": sum(all_brier_vals) / len(all_brier_vals),
+            "all/confidence_std": torch.tensor(all_conf_vals).std().item(),
+            "all/reward_std": torch.tensor(all_rewards_vals).std().item(),
+
+            # Min/max for debugging
+            "all/reward_min": min(all_rewards_vals),
+            "all/reward_max": max(all_rewards_vals),
+            "all/confidence_min": min(all_conf_vals),
+            "all/confidence_max": max(all_conf_vals),
         }
+
+        # Log histograms to wandb
+        try:
+            wandb.log({
+                "histograms/reward": wandb.Histogram(all_rewards_vals),
+                "histograms/confidence": wandb.Histogram(all_conf_vals),
+                "histograms/informativeness": wandb.Histogram(all_info_vals),
+                "histograms/brier": wandb.Histogram(all_brier_vals),
+            })
+        except Exception as e:
+            print(f"Could not log histograms: {e}")
 
         return metrics
 
