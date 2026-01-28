@@ -24,9 +24,9 @@ class RESTConfig:
     num_prompts: int = 10_000  # Number of prompts to use
     questions_per_prompt: int = 10  # Questions generated per prompt
     question_temperature: float = 1.75  # Very high temp for maximum question diversity
-    question_batch_size: int = 128  # Batch size for question generation (A100 80GB can do 256+)
-    grow_batch_size: int = 128  # Batch size for GROW phase (A100 80GB can do 256+)
-    judge_batch_size: int = 128  # Batch size for SCORE phase (A100 80GB can do 256+)
+    question_batch_size: int = 1024  # Batch size for question generation (A100 80GB)
+    grow_batch_size: int = 1024  # Batch size for GROW phase (A100 80GB)
+    judge_batch_size: int = 1024  # Batch size for SCORE phase (A100 80GB)
 
     # ReST settings
     num_rest_rounds: int = 5
