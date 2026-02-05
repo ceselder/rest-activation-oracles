@@ -1,13 +1,13 @@
 """Handle epistemic status format for oracle outputs.
 
-Format: [epistemic status: XX] <answer>
+Format: [epistemic status: X] <answer>
 
-Where XX is an integer from 0 to 100.
+Where X is an integer from 0 to 10.
 
 Examples:
-    [epistemic status: 85] The text discusses a long-distance relationship...
-    [epistemic status: 30] This appears to be about machine learning...
-    [epistemic status: 10] I cannot determine the topic from these activations.
+    [epistemic status: 9] The text discusses a long-distance relationship...
+    [epistemic status: 3] This appears to be about machine learning...
+    [epistemic status: 1] I cannot determine the topic from these activations.
 """
 
 import re
@@ -18,7 +18,7 @@ from dataclasses import dataclass
 class OracleOutput:
     """Parsed oracle output with confidence and answer."""
 
-    confidence: int  # 0-100
+    confidence: int  # 0-10
     answer: str
     raw: str
     parse_success: bool
@@ -26,10 +26,10 @@ class OracleOutput:
     @property
     def confidence_normalized(self) -> float:
         """Return confidence as 0-1 float for reward computation."""
-        return self.confidence / 100.0
+        return self.confidence / 10.0
 
 
-# Regex to parse epistemic status (now 0-100 integer)
+# Regex to parse epistemic status (0-10 integer)
 EPISTEMIC_PATTERN = re.compile(
     r"^\s*\[epistemic status:\s*(\d+)\s*\]\s*(.*)$",
     re.IGNORECASE | re.DOTALL
@@ -44,7 +44,7 @@ def parse_oracle_output(raw_output: str, default_confidence: int = -1) -> Oracle
 
     Args:
         raw_output: Raw string from oracle generation
-        default_confidence: Confidence to use if parsing fails (0-100)
+        default_confidence: Confidence to use if parsing fails (0-10)
 
     Returns:
         OracleOutput with parsed or default values
@@ -55,8 +55,8 @@ def parse_oracle_output(raw_output: str, default_confidence: int = -1) -> Oracle
     if match:
         try:
             confidence = int(match.group(1))
-            # Clamp to [0, 100]
-            confidence = max(0, min(100, confidence))
+            # Clamp to [0, 10]
+            confidence = max(0, min(10, confidence))
             answer = match.group(2).strip()
             return OracleOutput(
                 confidence=confidence,
@@ -80,7 +80,7 @@ def format_epistemic_output(confidence: int, answer: str) -> str:
     """Format answer with epistemic status prefix.
 
     Args:
-        confidence: Confidence level (0-100)
+        confidence: Confidence level (0-10)
         answer: The answer text
 
     Returns:
@@ -90,27 +90,22 @@ def format_epistemic_output(confidence: int, answer: str) -> str:
 
 
 # System prompt to teach the oracle the format
-ORACLE_SYSTEM_PROMPT = """Respond with: [epistemic status: XX] Answer
+ORACLE_SYSTEM_PROMPT = """Respond with: [epistemic status: X] Answer
 
-XX is your confidence 0-100. BE PRECISE - don't always say 50!
+X is your confidence from 0-10. Use the FULL range:
+- 10: absolutely certain
+- 8: very confident
+- 6: fairly confident
+- 4: somewhat uncertain
+- 2: quite uncertain
+- 0: no idea
 
-Use the FULL range based on signal clarity:
-- 95: crystal clear signal, absolutely certain
-- 80: strong signal, very confident
-- 60: decent signal, somewhat confident
-- 40: weak signal, somewhat uncertain
-
-etc...
-
-IMPORTANT: if you are certain that you DON'T KNOW: don't get confused!
-
-[epistemic status: 100] I can't answer this question given these activations.
-
-is a valid answer!
+If you're certain you CAN'T answer, that's still high confidence:
+[epistemic status: 9] I can't answer this question given these activations.
 
 Examples:
-[epistemic status: 65] Yes
-[epistemic status: 68] No
-[epistemic status: 87] I can't answer this question given these activations.
-[epistemic status: 72] The user is asking about Python debugging.
-[epistemic status: 15] The question is about cooking (but model is uncertain)"""
+[epistemic status: 7] Yes
+[epistemic status: 6] No
+[epistemic status: 9] I can't answer this question given these activations.
+[epistemic status: 8] The user is asking about Python debugging.
+[epistemic status: 2] The question is about cooking"""

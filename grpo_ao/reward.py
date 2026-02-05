@@ -1,11 +1,11 @@
 """Reward computation for GRPO training.
 
 The reward function balances informativeness and calibration:
-    reward = informativeness - λ × (confidence/100 - informativeness)²
+    reward = informativeness - λ × (certainty/10 - informativeness)²
 
 Where:
 - informativeness: 0-1 score from judge for how detailed and correct the answer is
-- confidence: parsed epistemic status (0-100, normalized to 0-1 for Brier)
+- certainty: parsed certainty (0-10, normalized to 0-1 for Brier)
 - λ: calibration weight (default 0.5)
 
 This prevents exploitation through:
@@ -24,7 +24,7 @@ class RewardResult:
 
     reward: float
     informativeness: float
-    confidence: int  # 0-100 raw value
+    confidence: int  # 0-10 raw value (certainty)
     confidence_normalized: float  # 0-1 for Brier computation
     brier_score: float
     parse_success: bool
@@ -35,7 +35,7 @@ class RewardResult:
         return abs(self.confidence_normalized - self.informativeness)
 
 
-FORMAT_PENALTY = -0.5  # Penalty for malformed output (no epistemic status)
+FORMAT_PENALTY = -0.5  # Penalty for malformed output (no certainty tag)
 
 
 def compute_reward(
@@ -46,14 +46,14 @@ def compute_reward(
     """Compute reward for a single oracle response.
 
     Args:
-        oracle_output: Parsed oracle output with confidence (0-100, or -1 if malformed)
+        oracle_output: Parsed oracle output with certainty (0-10, or -1 if malformed)
         informativeness: Judge's 0-1 score for answer quality
         calibration_lambda: Weight for calibration penalty (default 0.5)
 
     Returns:
         RewardResult with reward and component scores
     """
-    # Malformed output (no epistemic status) gets penalty
+    # Malformed output (no certainty tag) gets penalty
     if not oracle_output.parse_success:
         return RewardResult(
             reward=FORMAT_PENALTY,

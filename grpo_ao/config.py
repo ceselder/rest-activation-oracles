@@ -8,8 +8,8 @@ class GRPOConfig:
     """GRPO training configuration."""
 
     # Model
-    model_name: str = "google/gemma-2-9b-it"
-    oracle_lora_path: str | None = "adamkarvonen/checkpoints_latentqa_cls_past_lens_addition_gemma-2-9b-it"
+    model_name: str = "Qwen/Qwen3-8B"
+    oracle_lora_path: str | None = "adamkarvonen/checkpoints_latentqa_cls_past_lens_addition_Qwen3-8B"
     hook_layer: int = 1
     layer_percents: list[int] = field(default_factory=lambda: [50])  # Only middle layer
 
@@ -46,7 +46,7 @@ class GRPOConfig:
     # Paths
     save_dir: str = "checkpoints"
     push_to_hub: bool = True
-    hub_repo_id: str = "ceselder/grpo-activation-oracle-gemma2-9b"
+    hub_repo_id: str = "ceselder/grpo-activation-oracle-qwen3-8b"
 
     # Judge (GLM-4.7 Flash via OpenRouter - fast)
     judge_model: str = "z-ai/glm-4.7-flash"
@@ -63,6 +63,7 @@ class GRPOConfig:
     seed: int = 42
     device: str = "cuda"
     dtype: str = "bfloat16"
+    use_torch_compile: bool = True  # torch.compile for faster generation (experimental)
 
     def __post_init__(self):
         if not self.wandb_run_name:

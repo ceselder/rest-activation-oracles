@@ -85,6 +85,7 @@ class GRPOTrainer:
         set_seed(self.cfg.seed)
 
         self.tokenizer = load_tokenizer(self.cfg.model_name)
+        self.tokenizer.padding_side = "left"  # Required for decoder-only generation
         self.model = AutoModelForCausalLM.from_pretrained(
             self.cfg.model_name,
             torch_dtype=self.dtype,
@@ -98,7 +99,9 @@ class GRPOTrainer:
         self.supports_system_role = "gemma-2" not in model_name_lower
         # Gemma 3 (multimodal) needs token_type_ids
         self.needs_token_type_ids = "gemma-3" in model_name_lower
-        print(f"Model quirks: supports_system_role={self.supports_system_role}, needs_token_type_ids={self.needs_token_type_ids}")
+        # Qwen3 has thinking mode that needs to be disabled
+        self.is_qwen3 = "qwen3" in model_name_lower or "qwen-3" in model_name_lower
+        print(f"Model quirks: supports_system_role={self.supports_system_role}, needs_token_type_ids={self.needs_token_type_ids}, is_qwen3={self.is_qwen3}")
 
         # Load pretrained AO LoRA
         if self.cfg.oracle_lora_path:
@@ -121,6 +124,13 @@ class GRPOTrainer:
 
         self.model.print_trainable_parameters()
         self.model.enable_input_require_grads()
+
+        # torch.compile for faster generation
+        # NOTE: May not work with steering hooks - they do in-place tensor modifications
+        if self.cfg.use_torch_compile:
+            print("Compiling model with torch.compile...")
+            self.model = torch.compile(self.model, mode="reduce-overhead")
+            print("Model compiled!")
 
         # NOTE: Gradient checkpointing conflicts with steering hooks during backward pass
         # (hooks fire differently during recomputation, causing tensor count mismatch)
@@ -812,9 +822,15 @@ class GRPOTrainer:
 
                 messages = format_messages_for_model(ORACLE_SYSTEM_PROMPT, prefix + question, supports_system_role=self.supports_system_role)
 
-                encoded = self.tokenizer.apply_chat_template(
-                    messages, tokenize=True, add_generation_prompt=True, return_tensors=None
-                )
+                try:
+                    encoded = self.tokenizer.apply_chat_template(
+                        messages, tokenize=True, add_generation_prompt=True, return_tensors=None,
+                        enable_thinking=False,  # Disable Qwen3 thinking mode
+                    )
+                except TypeError:
+                    encoded = self.tokenizer.apply_chat_template(
+                        messages, tokenize=True, add_generation_prompt=True, return_tensors=None
+                    )
                 input_ids_list = encoded.input_ids if hasattr(encoded, 'input_ids') else list(encoded)
                 input_ids = torch.tensor([input_ids_list], device=self.device)
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """SFT to teach the oracle the epistemic status format.
 
-The pre-trained LoRA doesn't know about [epistemic status: XX] format.
+The pre-trained LoRA doesn't know about [epistemic status: X] format.
 We just need to teach the format - capabilities come from RL later.
 
 Strategy:
@@ -62,25 +62,12 @@ def format_messages_for_model(system_prompt: str, user_content: str, assistant_c
 
 
 def random_confidence() -> int:
-    """Generate varied confidence levels across the full range."""
-    # Mix of distributions to get good coverage
-    r = random.random()
-    if r < 0.3:
-        # Low confidence (5-35)
-        return random.randint(5, 35)
-    elif r < 0.6:
-        # Medium confidence (35-65)
-        return random.randint(35, 65)
-    elif r < 0.9:
-        # High confidence (65-95)
-        return random.randint(65, 95)
-    else:
-        # Extreme values
-        return random.choice([5, 10, 15, 85, 90, 95])
+    """Generate uniform confidence levels across the full 0-10 range."""
+    return random.randint(0, 10)
 
 
 def generate_sft_data(cfg: GRPOConfig, num_examples: int = 500) -> list[dict]:
-    """Generate SFT examples with epistemic status format."""
+    """Generate SFT examples with certainty format."""
     device = torch.device(cfg.device)
     dtype = getattr(torch, cfg.dtype)
 
@@ -110,8 +97,6 @@ def generate_sft_data(cfg: GRPOConfig, num_examples: int = 500) -> list[dict]:
         layers = base_model.layers
     else:
         raise RuntimeError(f"Could not find layers in {type(base_model)}")
-
-    submodule = layers[cfg.hook_layer]
 
     # Load dataset
     print("Loading dataset...")
@@ -191,7 +176,8 @@ def generate_sft_data(cfg: GRPOConfig, num_examples: int = 500) -> list[dict]:
             dtype=dtype,
         )
 
-        with torch.no_grad(), add_hook(submodule, hook_fn):
+        # Inject at layer 1 (oracle injection layer), NOT extraction layer
+        with torch.no_grad(), add_hook(layers[1], hook_fn):
             output_ids = model.generate(
                 gen_input_ids,
                 max_new_tokens=cfg.max_new_tokens,
@@ -265,8 +251,6 @@ def train_sft(cfg: GRPOConfig, sft_examples: list[dict], num_steps: int = 200):
         layers = base_model.layers
     else:
         raise RuntimeError(f"Could not find layers")
-
-    submodule = layers[cfg.hook_layer]
 
     optimizer = AdamW(model.parameters(), lr=cfg.learning_rate)
 
@@ -348,8 +332,8 @@ def train_sft(cfg: GRPOConfig, sft_examples: list[dict], num_steps: int = 200):
             dtype=dtype,
         )
 
-        # Forward with steering
-        with add_hook(submodule, hook_fn):
+        # Forward with steering - inject at layer 1 (oracle injection layer)
+        with add_hook(layers[1], hook_fn):
             outputs = model(input_ids=input_ids, labels=labels)
 
         loss = outputs.loss
